@@ -30,8 +30,8 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
           <p
             className={`md:text-1xl mx-auto mb-8 max-w-3xl text-xl leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}
           >
-            Crafting exceptional digital experiences through innovative design. Turning ideas into
-            modern, high-performance web solutions.
+            Building intelligent, scalable software solutions. Turning complex challenges into
+            efficient, high-performance applications
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

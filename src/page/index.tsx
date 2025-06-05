@@ -56,7 +56,7 @@ const Portfolio = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-              © 2025 Portfolio. Developed by Nathan.
+              © Developed by Nathan - {new Date().getUTCFullYear()} .
             </p>
           </div>
         </div>
