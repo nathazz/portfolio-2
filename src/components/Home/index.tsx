@@ -43,7 +43,9 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </button>
 
-            <button
+            <a
+              href="https://drive.google.com/drive/folders/1iyZk7tzUxNuwv0AXRFAcBowORuKGVl9q?usp=sharing"
+              target="_blank"
               className={`flex cursor-pointer items-center gap-2 rounded-full border-2 px-8 py-4 font-semibold transition-all duration-300 hover:scale-105 ${
                 darkMode
                   ? 'border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white'
@@ -52,7 +54,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
             >
               <Download className="h-5 w-5" />
               Download CV
-            </button>
+            </a>
           </div>
         </div>
       </div>
