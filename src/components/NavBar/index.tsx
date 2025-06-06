@@ -33,7 +33,7 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full h-16 transition-all duration-300 ${
         activeSection === 'home'
           ? darkMode
             ? 'border-transparent bg-transparent'

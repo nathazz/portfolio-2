@@ -9,7 +9,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="mb-6">
-            <div className="mx-auto h-64 w-64 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-lg">
+            <div className="mx-auto h-55 w-55 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-lg sm:h-52 sm:w-52 md:h-64 md:w-64">
               <div
                 className={`h-full w-full overflow-hidden rounded-full ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
               >
@@ -22,16 +22,16 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
             </div>
           </div>
 
-          <h1 className="mb-5 text-5xl leading-tight font-bold md:text-5xl">
+          <h1 className="mb-4 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
               Software <span className={darkMode ? 'text-white' : 'text-gray-900'}>Developer</span>
             </span>
           </h1>
           <p
-            className={`md:text-1xl mx-auto mb-8 max-w-3xl text-xl leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}
+            className={`mx-auto mb-6 max-w-md text-base leading-relaxed sm:max-w-xl sm:text-lg md:max-w-3xl md:text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}
           >
             Building intelligent, scalable software solutions. Turning complex challenges into
-            efficient, high-performance applications
+            efficient, high-performance applications.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

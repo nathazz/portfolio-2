@@ -17,7 +17,7 @@ export const experiences = [
       company: 'ScoreMilk',
       link: 'https://www.scoremilk.com/',
       role: 'Full Stack Developer',
-      date: 'Jul 2024 – Present',
+      date: 'Jul 2024 – Jun 2025',
       location: 'Remote, United States',
       description: `Contributed to a blockchain-based gaming platform by enhancing the UI, integrating TON and Telegram crypto wallets, and optimizing performance with React Query. Improved user experience with real-time feedback systems and resolved key UI/UX bugs. On the backend, optimized SQL for features like rankings and lobbies, worked on TON-based microservices for payouts, and supported development of real-time systems and automation bots.`,
       tech: ['React', 'Node.js', 'TypeScript', 'Golang', 'PostgreSQL', 'AWS', 'Docker'],
