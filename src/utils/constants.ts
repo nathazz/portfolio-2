@@ -32,7 +32,7 @@ export const projects = [
       image: logoScraper,
       tech: ["Golang", "Colly", "GinGonic"],
       github: "https://github.com/nathazz/etf-scraper-api",
-      live: "https://etf-scraper.up.railway.app/"
+      live: "https://etf-scraper-pudc.onrender.com/etf/LU1737652310"
     },
     {
       title: "MedTime",
@@ -43,7 +43,7 @@ export const projects = [
       Apk: "https://drive.google.com/file/d/1huyPXqLWxL6mx4KtxoAj4uqE6Ap5Nd0G/view?usp=sharing"
     },
     {
-      title: "Cadê meu trampo? ( Where is my Job?)",
+      title: "Cadê meu trampo? (Where is my Job?)",
       description: "Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.",
       image: logoJob,
       tech: ["Dart", "Firebase", "Flutter"],
