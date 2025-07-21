@@ -38,7 +38,7 @@ export const images: Record<number, string> = {
 
 export const customRepoData: Record<number, Partial<IRepoResponse>> = {
   736647382:{
-   description:"My first portfolio. i used React, i28n, and Styled-Components",
+   description:"My first portfolio. i used React, i18n, and Styled-Components",
     homepage: "https://meu-portifolio-8bca8.web.app/"
   },
   1005165341: {
@@ -50,11 +50,11 @@ export const customRepoData: Record<number, Partial<IRepoResponse>> = {
   687245167: {
     homepage: "https://drive.google.com/file/d/1huyPXqLWxL6mx4KtxoAj4uqE6Ap5Nd0G/view?usp=sharing",
     description: 'An Android app built with Android Studio and Kotlin to help users take their medications on time, featuring local CRUD functionality for easy management.',
-    topics: ["SQL-lite", "Android Studio"],
+    topics: ["SQL-lite", "Android Studio", "Compose"],
   },
   620526289: {
     homepage: "https://drive.google.com/file/d/1XatbBKi-elad0EBpYIkFzQo0wCAuSWTJ/view?usp=share_link", 
-    description: '(en: Where is My Work?) Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.',
+    description: '(en: Where is my Work?) Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.',
     topics: ['Dart', 'firebase storage', 'flutter'],
   },
 };
