@@ -2,6 +2,9 @@ import { Code, Palette, Zap } from 'lucide-react';
 import logoScraper from '/assets/images/banners/logoScraper.png'
 import logoMedTime from '/assets/images/banners/medtime.svg'
 import logoJob from '/assets/images/banners/where_is_job.svg'
+import logoEtherWatch from '/assets/images/banners/etherWatch.png'
+import logoPortfolio1 from '/assets/images/banners/user.png'
+import type { IRepoResponse } from '../services/github';
 
 export const sections = ['home', 'about', 'projects', 'experience', 'contact'];
 
@@ -10,7 +13,6 @@ export const sections = ['home', 'about', 'projects', 'experience', 'contact'];
     { name: "Backend", icon: Zap, items: ["Node.js", "Golang", "SQl", "NoSQL", "Tests"] },
     { name: "Others", icon: Palette, items: ["Figma", "Docker", "Linux", "Orm's"] }
   ];
-
 
 export const experiences = [
     {
@@ -25,29 +27,34 @@ export const experiences = [
   ];
 
 
-export const projects = [
-    {
-      title: "Etf-Scraper",
-      description: "A web scraper and REST API for extracting real-time data on ETFs (Exchange-Traded Funds) from TrackingDifferences.com.",
-      image: logoScraper,
-      tech: ["Golang", "Colly", "GinGonic"],
-      github: "https://github.com/nathazz/etf-scraper-api",
-      live: "https://etf-scraper-pudc.onrender.com/etf/LU1737652310"
-    },
-    {
-      title: "MedTime",
-      description: "An Android app built with Android Studio and Kotlin to help users take their medications on time, featuring local CRUD functionality for easy management.",
-      image:logoMedTime,
-      tech: ["Kotlin", "Mobile App", "Android Studio", "Compose"],
-      github: "https://github.com/nathazz/MedTime",
-      Apk: "https://drive.google.com/file/d/1huyPXqLWxL6mx4KtxoAj4uqE6Ap5Nd0G/view?usp=sharing"
-    },
-    {
-      title: "Cadê meu trampo? (Where is my Job?)",
-      description: "Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.",
-      image: logoJob,
-      tech: ["Dart", "Firebase", "Flutter"],
-      github: "https://github.com/nathazz/Projeto-Cade-Meu-Trampo",
-      Apk: "https://drive.google.com/file/d/1XatbBKi-elad0EBpYIkFzQo0wCAuSWTJ/view?usp=share_link"
-    }
-  ];
+export const images: Record<number, string> = {
+  994994606: logoEtherWatch,
+  978289300: logoScraper,
+  1005165341: logoEtherWatch, 
+  687245167: logoMedTime,
+  736647382: logoPortfolio1, 
+  620526289: logoJob,
+};
+
+export const customRepoData: Record<number, Partial<IRepoResponse>> = {
+  736647382:{
+   description:"My first portfolio. i used React, i28n, and Styled-Components",
+    homepage: "https://meu-portifolio-8bca8.web.app/"
+  },
+  1005165341: {
+    description: "Frontend app for monitoring the Ethereum network, providing real-time gas prices, market data, Ethereum info, and live pending transactions via WebSockets. Supports MetaMask integration for transactions and balance checks."
+  },
+  994994606: {
+    description: "Backend service for etherWatch providing real-time Ethereum network data via REST and WebSocket. Features pending transaction streaming, MetaMask authentication, Zod validation, and Docker-ready deployment."
+  },
+  687245167: {
+    homepage: "https://drive.google.com/file/d/1huyPXqLWxL6mx4KtxoAj4uqE6Ap5Nd0G/view?usp=sharing",
+    description: 'An Android app built with Android Studio and Kotlin to help users take their medications on time, featuring local CRUD functionality for easy management.',
+    topics: ["SQL-lite", "Android Studio"],
+  },
+  620526289: {
+    homepage: "https://drive.google.com/file/d/1XatbBKi-elad0EBpYIkFzQo0wCAuSWTJ/view?usp=share_link", 
+    description: '(en: Where is My Work?) Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.',
+    topics: ['Dart', 'firebase storage', 'flutter'],
+  },
+};

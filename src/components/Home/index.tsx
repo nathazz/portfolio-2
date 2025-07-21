@@ -1,8 +1,26 @@
 import { ArrowRight, Download } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
-import logoMe from '/assets/images/icon/me.jpg';
+import { useEffect, useState } from 'react';
+import { getAvatar, type IAvatarResponse } from '../../services/github';
 
 const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
+  const [avatar, setAvatar] = useState<IAvatarResponse>();
+
+
+  useEffect(() => {
+    const fetchAvatar = async () => {
+      try {
+        const res = await getAvatar();
+         console.log(res)
+        setAvatar(res);
+      } catch (err) {
+        console.error('Error to get avatar', err);
+      }
+    };
+
+    fetchAvatar();
+  }, []);
+
   return (
     <>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-cyan-500/10 to-transparent"></div>
@@ -14,7 +32,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
                 className={`h-full w-full overflow-hidden rounded-full ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
               >
                 <img
-                  src={logoMe}
+                  src={avatar?.avatar_url}
                   alt="My profile"
                   className="h-full w-full object-cover object-center"
                 />
