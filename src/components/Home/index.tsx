@@ -11,7 +11,6 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
     const fetchAvatar = async () => {
       try {
         const res = await getAvatar();
-         console.log(res)
         setAvatar(res);
       } catch (err) {
         console.error('Error to get avatar', err);

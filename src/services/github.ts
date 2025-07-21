@@ -26,8 +26,7 @@ export interface IAvatarResponse {
 
 export async function getAvatar(){
   const { data } = await axios.get<IAvatarResponse>(`https://api.github.com/users/${GITHUB_USERNAME}`);
-
-  console.log(data)
+  
   return data
 }
  
