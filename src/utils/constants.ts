@@ -4,6 +4,7 @@ import logoMedTime from '/assets/images/banners/medtime.svg'
 import logoJob from '/assets/images/banners/where_is_job.svg'
 import logoEtherWatch from '/assets/images/banners/etherWatch.png'
 import logoPortfolio1 from '/assets/images/banners/user.png'
+import logoPwaNotes from  '/assets/images/banners/logoPwa.png'
 import type { IRepoResponse } from '../services/github';
 
 export const sections = ['home', 'about', 'projects', 'experience', 'contact'];
@@ -29,6 +30,7 @@ export const experiences = [
 
 export const images: Record<number, string> = {
   994994606: logoEtherWatch,
+  1028620732: logoPwaNotes,
   978289300: logoScraper,
   1005165341: logoEtherWatch, 
   687245167: logoMedTime,

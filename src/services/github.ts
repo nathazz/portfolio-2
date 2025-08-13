@@ -15,7 +15,7 @@ const GITHUB_USERNAME = 'nathazz';
 export async function getRepos() {
   const { data } = await axios.get<IRepoResponse[]>(`https://api.github.com/users/${GITHUB_USERNAME}/repos`);
 
-  const excludedRepoIds = [1019837821, 997002495, 745668491];
+  const excludedRepoIds = [1019837821, 997002495, 745668491, 1037553560];
 
   return data.filter(repo => !excludedRepoIds.includes(repo.id))
 }
