@@ -1,13 +1,8 @@
 import axios from 'axios';
 import { GITHUB_USERNAME } from '../utils/constants';
 
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN; 
-
 const api = axios.create({
   baseURL: 'https://api.github.com',
-  headers: {
-    Authorization: `token ${GITHUB_TOKEN}`,
-  },
 });
 
 export interface IRepoResponse {
