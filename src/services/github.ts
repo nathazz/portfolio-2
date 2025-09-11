@@ -1,4 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
+import { GITHUB_USERNAME } from '../utils/constants';
+
+const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN; 
+
+const api = axios.create({
+  baseURL: 'https://api.github.com',
+  headers: {
+    Authorization: `token ${GITHUB_TOKEN}`,
+  },
+});
 
 export interface IRepoResponse {
   name: string;
@@ -10,24 +20,19 @@ export interface IRepoResponse {
   homepage?: string;
 }
 
-const GITHUB_USERNAME = 'nathazz';
-
 export async function getRepos() {
-  const { data } = await axios.get<IRepoResponse[]>(`https://api.github.com/users/${GITHUB_USERNAME}/repos`);
+  const { data } = await api.get<IRepoResponse[]>(`/users/${GITHUB_USERNAME}/repos`);
 
   const excludedRepoIds = [1019837821, 997002495, 745668491, 1037553560];
 
-  return data.filter(repo => !excludedRepoIds.includes(repo.id))
+  return data.filter((repo) => !excludedRepoIds.includes(repo.id));
 }
 
 export interface IAvatarResponse {
-  avatar_url: string
+  avatar_url: string;
 }
 
-export async function getAvatar(){
-  const { data } = await axios.get<IAvatarResponse>(`https://api.github.com/users/${GITHUB_USERNAME}`);
-  
-  return data
+export async function getAvatar() {
+  const { data } = await api.get<IAvatarResponse>(`/users/${GITHUB_USERNAME}`);
+  return data;
 }
- 
-

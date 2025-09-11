@@ -2,10 +2,13 @@ import { Menu, Moon, Sun, X } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
 import { useEffect, useState } from 'react';
 import { sections } from '../../utils/constants';
+import LanguageSelector from '../../i18n/options';
+import { useTranslation } from 'react-i18next';
 
 const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSection }) => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +36,7 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full h-16 transition-all duration-300 ${
+      className={`fixed top-0 z-50 h-16 w-full transition-all duration-300 ${
         activeSection === 'home'
           ? darkMode
             ? 'border-transparent bg-transparent'
@@ -63,14 +66,14 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
                 }`}
               >
                 {section === 'experience'
-                  ? 'Experience'
+                  ? t('navbar.xp')
                   : section === 'home'
-                    ? 'Home'
+                    ? t('navbar.home')
                     : section === 'about'
-                      ? 'About'
+                      ? t('navbar.about')
                       : section === 'projects'
-                        ? 'Projects'
-                        : 'Contact'}
+                        ? t('navbar.project')
+                        : t('navbar.contacts')}
               </button>
             ))}
           </div>
@@ -84,6 +87,8 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
             >
               {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
+
+            <LanguageSelector darkMode={darkMode} />
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

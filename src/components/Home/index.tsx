@@ -2,10 +2,11 @@ import { ArrowRight, Download } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
 import { useEffect, useState } from 'react';
 import { getAvatar, type IAvatarResponse } from '../../services/github';
+import { useTranslation } from 'react-i18next';
 
 const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
   const [avatar, setAvatar] = useState<IAvatarResponse>();
-
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchAvatar = async () => {
@@ -41,14 +42,14 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
 
           <h1 className="mb-4 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-              Software <span className={darkMode ? 'text-white' : 'text-gray-900'}>Developer</span>
+              {t('title.first')}{' '}
+              <span className={darkMode ? 'text-white' : 'text-gray-900'}>{t('title.second')}</span>
             </span>
           </h1>
           <p
             className={`mx-auto mb-6 max-w-md text-base leading-relaxed sm:max-w-xl sm:text-lg md:max-w-3xl md:text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}
           >
-            Building intelligent, scalable software solutions. Turning complex challenges into
-            efficient, high-performance applications.
+            {t('subtitle')}
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -56,7 +57,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
               onClick={() => scrollToSection?.('projects')}
               className="group flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
-              View Projects
+              {t('links-home.see-projects')}
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </button>
 
@@ -70,7 +71,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
               }`}
             >
               <Download className="h-5 w-5" />
-              Download CV
+              {t('links-home.download-cv')}
             </a>
           </div>
         </div>

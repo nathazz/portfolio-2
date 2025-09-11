@@ -1,0 +1,98 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "xp": "Experience",
+    "project": "Projects",
+    "contacts": "Contact"
+  },
+    "title": {
+    "first": "Software",
+    "second": "Developer"
+  },
+      "links-home": {
+      "see-projects": "View Projects",
+      "download-cv": "Download CV"
+    },
+    "subtitle": "Building intelligent, scalable software solutions. Turning complex challenges into efficient, high-performance applications.",
+    "about-me": {
+      "title": "About me",
+      "text": "Hi! I'm Nathan. I've been involved in tech for a while, studying and practicing since my first contact with programming during a computer course. From that moment on, I never stopped exploring and learning more. I participated in selection processes and campaigns, and in 2024, I landed my first job — and it was abroad! Since then, I continue studying, contributing to projects, doing what I love and always exploring what comes my way."
+    },
+    "others": "Others",
+  "experience": {
+    "title": "Professional Experience",
+    "description": "A brief overview of my professional journey and the roles I've taken on.",
+    "show-more": "Show More",
+    "show-less": "Show Less",
+    "jobs": [
+      {
+        "role": "Full Stack Developer",
+        "period": "Jul 2024 – Jun 2025",
+        "company": "ScoreMilk",
+        "location": "Remote, United States",
+        "description": "Front-end: Built and refined UI components, enhanced responsiveness, and optimized performance with React Query. Integrated crypto wallets (Telegram Wallet, Tonkeeper) and improved DApp user flows. Delivered better UX through in-app feedback systems and resolved bugs across wallet integration, chats, and UI/UX. Back-end: Optimized SQL queries for features like user rankings and lobbies. Contributed to microservices development, including a payout system on the TON blockchain. Supported real-time and automated features, debugging backend components such as bots.",
+        "stack": ["React.Js", "Rest", "Blockchain/Web3", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "ETF Web Scraper & REST API",
+        "description": "A web scraper and REST API for extracting real-time data on ETFs (Exchange-Traded Funds) from TrackingDifferences.com.",
+        "match": "etf-scraper-api"
+      },
+      {
+        "title": "etherWatch Backend",
+        "description": "Backend service for etherWatch providing real-time Ethereum network data via REST and WebSocket. Features pending transaction streaming, MetaMask authentication, Zod validation, and Docker.",
+        "match": "etherwatch-backend"
+      },
+      {
+        "title": "etherWatch Frontend",
+        "description": "Frontend app for monitoring the Ethereum network, providing real-time gas prices, market data, Ethereum info, and live pending transactions via WebSockets. Supports MetaMask integration for transactions and balance checks.",
+        "match": "etherwatch-front"
+      },
+      {
+        "title": "MedTime",
+        "description": "An Android app built with Android Studio and Kotlin to help users take their medications on time, featuring local CRUD functionality for easy management.",
+        "match": "medtime"
+      },
+      {
+        "title": "First Portfolio",
+        "description": "My first portfolio. I used React, i18n, and Styled-Components.",
+        "match": "my-portfolio-1"
+      },
+      {
+        "title": "Where is my work?",
+        "description": "(Where is my work?) Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.",
+        "match": "projeto-cade-meu-trampo"
+      },
+      {
+        "title": "PWA Notes",
+        "description": "PWA Notes is a Progressive Web App for sharing notes directly between devices using WebRTC.",
+        "match": "pwa-notes"
+      }
+    ]
+  },
+      "links-project": {
+      "code": "Code",
+      "live": "Live",
+      "apk": "Apk",
+      "see-projects": "See Projects",
+      "download-cv": "Download CV"
+    },
+     "contact": {
+     "title": "Let's talk",
+     "text": "I'm always open to new opportunities and interesting projects. Get in touch!",
+     "name": "Your Name",
+     "email": "Your Email",
+     "msg": "Message",
+     "send": "Send Message",
+     "sending-msg": "Sending message..."
+    },
+    "footer":{
+      "by": "Developed by Nathan"
+    }
+  }

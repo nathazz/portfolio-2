@@ -5,10 +5,11 @@ import About from '../components/About';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contact';
 import Experience from '../components/Experience';
+import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
-
+  const { t } = useTranslation();
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -56,7 +57,7 @@ const Portfolio = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-              © Developed by Nathan - {new Date().getUTCFullYear()} .
+              © {t('footer.by')} - {new Date().getUTCFullYear()} .
             </p>
           </div>
         </div>

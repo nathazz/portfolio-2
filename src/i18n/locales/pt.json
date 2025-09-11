@@ -1,0 +1,99 @@
+
+{
+   "navbar": {
+   "home": "Home",
+   "about": "Sobre",
+   "xp": "Experiência",
+   "project": "Projetos",
+   "contacts": "Contato"
+  },
+  "title": {
+    "first": "Desenvolvedor",
+    "second": "de software"
+  },
+    "subtitle": "Construindo soluções de software inteligentes e escaláveis. Transformando desafios complexos em aplicações eficientes e de alta performance.",
+    "about-me": {
+      "title": "Sobre mim",
+      "text": "Olá! Eu sou o Nathan. Estou envolvido com tecnologia há um tempo, estudando e praticando desde o meu primeiro contato com programação durante um curso de informática. Desde então, nunca parei de explorar e aprender mais. Participei de processos seletivos e campanhas e, em 2024, conquistei meu primeiro emprego — e foi no exterior! Desde então, continuo estudando, contribuindo com projetos, fazendo o que amo e sempre explorando o que aparece no caminho."
+    },
+    "links-home": {
+      "see-projects": "Ver Projetos",
+      "download-cv": "Baixar Cv"
+    },
+    "others": "Outros",
+    "experience": {
+      "title": "Experiência Profissional",
+      "description": "Um breve resumo da minha trajetória profissional e dos cargos que ocupei.",
+      "show-more": "Mostrar mais",
+      "show-less": "Mostrar menos",
+      "jobs": [
+        {
+          "role": "Desenvolvedor Full Stack",
+          "period": "Jul 2024 – Jun 2025",
+          "company": "ScoreMilk",
+          "location": "Remoto, Estados Unidos",
+          "description": "Front-end: Desenvolvimento e refinamento de componentes de UI, melhoria de responsividade e otimização de performance com React Query. Integração de carteiras cripto (Telegram Wallet, Tonkeeper) e aprimoramento de fluxos de DApp. Implementação de sistemas de feedback no app e correção de bugs em integração de carteiras, chats e inconsistências de UI/UX. Back-end: Otimização de queries SQL para recursos como rankings de usuários e sistemas de lobby. Desenvolvimento de microsserviços, incluindo sistema de pagamentos na blockchain TON. Suporte a recursos em tempo real e automações, com depuração de componentes de backend como bots.",
+          "stack": ["React.Js", "Rest", "Blockchain/Web3", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
+        }
+      ]
+    },
+  "projects": {
+    "title": "Projetos",
+    "items": [
+      {
+        "title": "ETF Web Scraper & REST API",
+        "description": "Um web scraper e API REST para extrair dados em tempo real de ETFs (Exchange-Traded Funds) do site TrackingDifferences.com.",
+        "match": "etf-scraper-api"
+      },
+      {
+        "title": "etherWatch Backend",
+        "description": "Backend para o etherWatch, fornecendo dados em tempo real da rede Ethereum via REST e WebSocket. Possui streaming de transações pendentes, autenticação via MetaMask, validação com Zod e Docker.",
+        "match": "etherwatch-backend"
+      },
+      {
+        "title": "etherWatch Frontend",
+        "description": "Aplicativo frontend para monitoramento da rede Ethereum, fornecendo preços de gás em tempo real, dados de mercado, informações da Ethereum e transações pendentes ao vivo via WebSockets. Suporta integração com MetaMask para transações e verificação de saldo.",
+        "match": "etherwatch-front"
+      },
+      {
+        "title": "MedTime",
+        "description": "Um aplicativo Android desenvolvido com Android Studio e Kotlin para ajudar os usuários a tomar seus medicamentos na hora certa, com funcionalidade CRUD local para fácil gerenciamento.",
+        "match": "medtime"
+      },
+      {
+        "title": "Primeiro Portfolio",
+        "description": "Meu primeiro portfólio. Usei React, i18n e Styled-Components.",
+        "match": "my-portfolio-1"
+      },
+      {
+        "title": "Projeto Cadê Meu Trampo",
+        "description": "Usando a linguagem Dart e o framework Flutter, o objetivo deste projeto é ajudar os usuários a encontrar oportunidades de trabalho em sua região. Sinta-se à vontade para explorar o código-fonte.",
+        "match": "projeto-cade-meu-trampo"
+      },
+      {
+        "title": "Notas PWA",
+        "description": "O PWA Notes é um aplicativo web progressivo para compartilhar notas diretamente entre dispositivos usando WebRTC.",
+        "match": "pwa-notes"
+      }
+    ]
+  },
+    "links-project": {
+    "code": "Código",
+    "live": "Live",
+    "apk": "Apk",
+    "see-projects": "Ver Projetos",
+    "download-cv": "Baixar CV"
+  },
+     "contact": {
+     "title": "Vamos Conversar",
+     "text": "Estou sempre aberto para novas oportunidades!",
+     "name": "Seu Nome",
+     "email": "Seu Email",
+     "msg": "Mensagem",
+     "send": "Enviar Mensagem",
+     "sending-msg": "Enviando Mensagem..."
+    },
+    "footer":{
+      "by": "Desenvolvido por Nathan"
+    }
+}

@@ -1,21 +1,20 @@
 import type { IstyleProps } from '../../types/types';
 import { skills } from '../../utils/constants';
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC<IstyleProps> = ({ darkMode }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mb-16 text-center">
         <h2 className="mb-6 text-4xl font-bold md:text-5xl">
           <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-            About me
+            {t('about-me.title')}
           </span>
         </h2>
         <p className={`mx-auto max-w-3xl text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-          Hi! I'm Nathan. I've been involved in tech for a while, studying and practicing since my
-          first contact with programming during a computer course. From that moment on, I never
-          stopped exploring and learning more. I participated in selection processes and campaigns,
-          and in 2024, I landed my first job — and it was abroad! Since then, I continue studying,
-          contributing to projects, doing what I love and always exploring what comes my way.
+          {t('about-me.text')}
         </p>
       </div>
 

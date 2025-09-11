@@ -1,0 +1,4 @@
+ 1. put all texts in the en and pt json
+ 2. use the hook for switch languagens ( useState )
+
+ // watch: https://www.youtube.com/watch?v=0n2nLY_bebM

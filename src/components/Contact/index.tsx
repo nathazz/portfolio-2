@@ -1,18 +1,21 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
 import SendEmail from './sendEmail';
+import { useTranslation } from 'react-i18next';
 
 const Contacts: React.FC<IstyleProps> = ({ darkMode }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mb-16 text-center">
         <h2 className="mb-6 text-4xl font-bold md:text-5xl">
           <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-            let's talk
+            {t("contact.title")}
           </span>
         </h2>
         <p className={`mx-auto max-w-3xl text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-          I'm always open to new opportunities and interesting projects. Get in touch!
+         {t("contact.text")}
         </p>
       </div>
 
