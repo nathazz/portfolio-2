@@ -29,7 +29,9 @@ const About: React.FC<IstyleProps> = ({ darkMode }) => {
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-500">
               <skill.icon className="h-8 w-8 text-white" />
             </div>
-            <h3 className="mb-4 text-center text-xl font-bold">{skill.name}</h3>
+            <h3 className="mb-4 text-center text-xl font-bold">
+              {t(`${skill.name.toLowerCase()}`)}
+            </h3>
             <div className="flex flex-wrap justify-center gap-2">
               {skill.items.map((item, i) => (
                 <span
