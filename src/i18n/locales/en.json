@@ -17,7 +17,7 @@
     "subtitle": "Building intelligent, scalable software solutions. Turning complex challenges into efficient, high-performance applications.",
     "about-me": {
       "title": "About me",
-      "text": "Hi! I'm Nathan. I've been involved in tech for a while, studying and practicing since my first contact with programming during a computer course. From that moment on, I never stopped exploring and learning more. I participated in selection processes and campaigns, and in 2024, I landed my first job — and it was abroad! Since then, I continue studying, contributing to projects, doing what I love and always exploring what comes my way."
+      "text": "Hi! I'm Nathan. I've been involved in tech for a while, studying and practicing since my first contact with programming during a computer course. From that moment on, I never stopped exploring and learning more. I participated in selection processes and campaigns, and in 2023, I landed my first job. Since then, I continue studying, contributing to projects, doing what I love and always exploring what comes my way."
     },
     "others": "others",
   "experience": {
@@ -33,7 +33,15 @@
         "location": "Remote, United States",
         "description": "Front-end: Built and refined UI components, enhanced responsiveness, and optimized performance with React Query. Integrated crypto wallets (Telegram Wallet, Tonkeeper) and improved DApp user flows. Delivered better UX through in-app feedback systems and resolved bugs across wallet integration, chats, and UI/UX. Back-end: Optimized SQL queries for features like user rankings and lobbies. Contributed to microservices development, including a payout system on the TON blockchain. Supported real-time and automated features, debugging backend components such as bots.",
         "stack": ["React.Js", "Rest", "Blockchain/Web3", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
-      }
+      },
+       {
+          "role": "Freelance Backed Engineer",
+          "period": "Sep 2023 – Mar 2024",
+          "company": "Sollydus",
+          "location": "Remote, Fortaleza-CE-Brazil",
+          "description": "As a Backend Developer, I worked on the development of a WhatsApp-based SaaS customer service platform, implementing APIs with Node.js + TypeScript and integrating real-time communication via WebSocket. I participated in the construction and modeling of the PostgreSQL database and the implementation of caching and messaging with Redis, contributing to the delivery of a functional MVP that supported multiple simultaneous customer interactions.",
+          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "AWS", "Redis", "Linux"]
+        }
     ]
   },
   "projects": {

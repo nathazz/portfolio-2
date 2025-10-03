@@ -14,7 +14,7 @@
     "subtitle": "Construindo soluções de software inteligentes e escaláveis. Transformando desafios complexos em aplicações eficientes e de alta performance.",
     "about-me": {
       "title": "Sobre mim",
-      "text": "Olá! Eu sou o Nathan. Estou envolvido com tecnologia há um tempo, estudando e praticando desde o meu primeiro contato com programação durante um curso de informática. Desde então, nunca parei de explorar e aprender mais. Participei de processos seletivos e campanhas e, em 2024, conquistei meu primeiro emprego — e foi no exterior! Desde então, continuo estudando, contribuindo com projetos, fazendo o que amo e sempre explorando o que aparece no caminho."
+      "text": "Olá! Eu sou o Nathan. Estou envolvido com tecnologia há um tempo, estudando e praticando desde o meu primeiro contato com programação durante um curso de informática. Desde então, nunca parei de explorar e aprender mais. Participei de processos seletivos e campanhas e, em 2023, conquistei meu primeiro emprego. Desde então, continuo estudando, contribuindo com projetos, fazendo o que amo e sempre explorando o que aparece no caminho."
     },
     "links-home": {
       "see-projects": "Ver Projetos",
@@ -34,6 +34,14 @@
           "location": "Remoto, Estados Unidos",
           "description": "Front-end: Desenvolvimento e refinamento de componentes de UI, melhoria de responsividade e otimização de performance com React Query. Integração de carteiras cripto (Telegram Wallet, Tonkeeper) e aprimoramento de fluxos de DApp. Implementação de sistemas de feedback no app e correção de bugs em integração de carteiras, chats e inconsistências de UI/UX. Back-end: Otimização de queries SQL para recursos como rankings de usuários e sistemas de lobby. Desenvolvimento de microsserviços, incluindo sistema de pagamentos na blockchain TON. Suporte a recursos em tempo real e automações, com depuração de componentes de backend como bots.",
           "stack": ["React.Js", "Rest", "Blockchain/Web3", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
+        },
+       {
+          "role": "Desenvolvedor Backend Freelancer",
+          "period": "Set 2023 – Mar 2024",
+          "company": "Sollydus",
+          "location": "Remoto, Fortaleza-CE",
+          "description": "Como desenvolvedor Backend, atuei no desenvolvimento de uma plataforma SaaS de atendimento via WhatsApp, com implementação de APIs em Node.js + TypeScript e integração de comunicação em tempo real via WebSocket. Participei da construção e modelação do banco de dados em PostgreSQL e da implementação de cache e mensageria com Redis, contribuindo para a entrega de um MVP funcional que suportou múltiplos atendimentos simultâneos.",
+          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "AWS", "Redis", "Linux"]
         }
       ]
     },
