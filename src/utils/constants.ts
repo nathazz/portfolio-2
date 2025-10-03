@@ -1,26 +1,42 @@
 import { Code, Palette, Zap } from 'lucide-react';
-import logoScraper from '/assets/images/banners/logoScraper.png'
-import logoMedTime from '/assets/images/banners/medtime.svg'
-import logoJob from '/assets/images/banners/where_is_job.svg'
-import logoEtherWatch from '/assets/images/banners/etherWatch.png'
-import logoPortfolio1 from '/assets/images/banners/user.png'
-import logoPwaNotes from  '/assets/images/banners/logoPwa.png'
+import logoScraper from '/assets/images/banners/logoScraper.png';
+import logoMedTime from '/assets/images/banners/medtime.svg';
+import logoJob from '/assets/images/banners/where_is_job.svg';
+import logoEtherWatch from '/assets/images/banners/etherWatch.png';
+import logoPortfolio1 from '/assets/images/banners/user.png';
+import logoPwaNotes from '/assets/images/banners/logoPwa.png';
 
 export const sections = ['home', 'about', 'projects', 'experience', 'contact'];
 
- export const skills = [
-    { name: "Frontend", icon: Code, items: ["React", "TypeScript", "Tailwind", "React-Query"] },
-    { name: "Backend", icon: Zap, items: ["Node.js (Express/Nest.js)", "Golang (Gin/Fiber)", "SQl", "NoSQL", "Tests", "AWS"] },
-    { name: "Others", icon: Palette, items: ["Figma", "Docker", "Linux", "Orm's", "Redis", "Swagger"] }
-  ];
+export const skills = [
+  { name: 'Frontend', icon: Code, items: ['React', 'TypeScript', 'Tailwind', 'React-Query'] },
+  {
+    name: 'Backend',
+    icon: Zap,
+    items: [
+      'Node.js (Express/Nest.js)',
+      'Golang (Gin/Fiber)',
+      'Java (Spring Boot)',
+      'SQl',
+      'NoSQL',
+      'Tests',
+      'AWS',
+    ],
+  },
+  {
+    name: 'Others',
+    icon: Palette,
+    items: ['Figma', 'Docker', 'Linux', "Orm's", 'Redis', 'Swagger'],
+  },
+];
 
 export const images: Record<number, string> = {
   994994606: logoEtherWatch,
   1028620732: logoPwaNotes,
   978289300: logoScraper,
-  1005165341: logoEtherWatch, 
+  1005165341: logoEtherWatch,
   687245167: logoMedTime,
-  736647382: logoPortfolio1, 
+  736647382: logoPortfolio1,
   620526289: logoJob,
 };
 
