@@ -10,12 +10,12 @@ const Contacts: React.FC<IstyleProps> = ({ darkMode }) => {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mb-16 text-center">
         <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-          <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-            {t("contact.title")}
+          <span className={`${darkMode ? 'text-white' : 'text-gray-900'}`}>
+            {t('contact.title')}
           </span>
         </h2>
         <p className={`mx-auto max-w-3xl text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-         {t("contact.text")}
+          {t('contact.text')}
         </p>
       </div>
 
@@ -44,6 +44,7 @@ const Contacts: React.FC<IstyleProps> = ({ darkMode }) => {
             <a
               key={index}
               href={contact.href}
+              rel="noopener noreferrer"
               target="_blank"
               className={`group flex flex-col items-center rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                 darkMode
@@ -51,7 +52,7 @@ const Contacts: React.FC<IstyleProps> = ({ darkMode }) => {
                   : 'border border-gray-200 bg-white hover:border-gray-300'
               }`}
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 transition-transform group-hover:scale-110">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 transition-transform group-hover:scale-110">
                 <contact.icon className="h-6 w-6 text-white" />
               </div>
               <h3 className="mb-1 font-semibold">{contact.label}</h3>

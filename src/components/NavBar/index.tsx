@@ -48,7 +48,7 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
-          <div className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-2xl font-bold text-transparent">
+          <div className="bg-blue-500 bg-clip-text text-2xl font-bold text-transparent">
             Nathan's
           </div>
 

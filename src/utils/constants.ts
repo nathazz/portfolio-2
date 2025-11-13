@@ -9,7 +9,18 @@ import logoPwaNotes from '/assets/images/banners/logoPwa.png';
 export const sections = ['home', 'about', 'projects', 'experience', 'contact'];
 
 export const skills = [
-  { name: 'Frontend', icon: Code, items: ['React', 'TypeScript', 'Tailwind', 'React-Query'] },
+  {
+    name: 'Frontend',
+    icon: Code,
+    items: [
+      'React',
+      'TypeScript',
+      'Tailwind',
+      'React-Query',
+      'Zustand/Context API/Redux',
+      'TanStack Router',
+    ],
+  },
   {
     name: 'Backend',
     icon: Zap,
@@ -19,6 +30,7 @@ export const skills = [
       'Java (Spring Boot)',
       'SQl',
       'NoSQL',
+      'RabbitMQ',
       'Tests',
       'AWS',
     ],
@@ -26,7 +38,17 @@ export const skills = [
   {
     name: 'Others',
     icon: Palette,
-    items: ['Figma', 'Docker', 'Linux', "Orm's", 'Redis', 'Swagger'],
+    items: [
+      'Figma',
+      'Docker',
+      'Git/Github/Git Actions',
+      'Auth',
+      'AI',
+      'Linux',
+      "Orm's",
+      'Redis',
+      'Swagger',
+    ],
   },
 ];
 

@@ -21,15 +21,11 @@ const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mb-16 text-center">
         <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-          <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+          <span className={`${darkMode ? 'text-white' : 'text-gray-900'}`}>
             {t('experience.title')}
           </span>
         </h2>
-        <p
-          className={`mx-auto max-w-2xl text-lg ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}
-        >
+        <p className={`mx-auto max-w-2xl text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
           {t('experience.description')}
         </p>
       </div>
@@ -39,31 +35,19 @@ const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
           <div
             key={index}
             className={`rounded-2xl p-6 shadow-md transition-all ${
-              darkMode
-                ? 'border border-gray-700 bg-gray-800'
-                : 'border border-gray-200 bg-white'
+              darkMode ? 'border border-gray-700 bg-gray-800' : 'border border-gray-200 bg-white'
             }`}
           >
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               <h3 className="text-2xl font-semibold">{exp.role}</h3>
-              <span className="mt-1 text-sm text-blue-500 sm:mt-0">
-                {exp.period}
-              </span>
+              <span className="mt-1 text-sm text-blue-500 sm:mt-0">{exp.period}</span>
             </div>
             <p className="text-sm font-medium text-blue-400">{exp.company}</p>
-            <p
-              className={`text-sm ${
-                darkMode ? 'text-gray-400' : 'text-gray-500'
-              }`}
-            >
+            <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
               {exp.location}
             </p>
 
-            <p
-              className={`mt-4 ${
-                darkMode ? 'text-gray-300' : 'text-gray-700'
-              }`}
-            >
+            <p className={`mt-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               {exp.description}
             </p>
 
@@ -73,9 +57,7 @@ const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
                   <span
                     key={i}
                     className={`rounded-full px-3 py-1 text-xs font-medium ${
-                      darkMode
-                        ? 'bg-gray-700 text-white'
-                        : 'bg-gray-100 text-gray-800'
+                      darkMode ? 'bg-gray-700 text-white' : 'bg-gray-100 text-gray-800'
                     }`}
                   >
                     {tech}

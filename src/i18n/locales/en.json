@@ -10,14 +10,24 @@
     "first": "Software",
     "second": "Developer"
   },
+    "error": {
+    "invalid": "Invalid Email!",
+    "success": "Message sent successfully!",
+    "failed":"Failed to send message. Please try again later."
+  },
+    "terminal": {
+    "welcome": "welcome",
+    "first": "Hey",
+    "second": "what's up?!"
+  },
       "links-home": {
       "see-projects": "View Projects",
-      "download-cv": "Download CV"
+      "download-cv": "My Resume"
     },
     "subtitle": "Building intelligent, scalable software solutions. Turning complex challenges into efficient, high-performance applications.",
     "about-me": {
       "title": "About me",
-      "text": "Hi! I'm Nathan. I've been involved in tech for a while, studying and practicing since my first contact with programming during a computer course. From that moment on, I never stopped exploring and learning more. I participated in selection processes and campaigns, and in 2023, I landed my first job. Since then, I continue studying, contributing to projects, doing what I love and always exploring what comes my way."
+      "text": "Hi! I’m Nathan, a Full Stack developer passionate about technology and creating solutions that make a difference. My journey began in 2022, when I had my first contact with programming during a technical computing course. Since then, I’ve been continuously learning and growing as a developer, with around three years of study and two years of real-world experience. I enjoy understanding how things work behind the code and turning ideas into something functional and well structured. I’m always looking to improve, learning new technologies, refining my skills, and exploring different ways to solve problems simply and effectively."
     },
     "others": "others",
   "experience": {

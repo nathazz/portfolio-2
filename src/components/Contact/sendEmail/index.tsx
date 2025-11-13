@@ -23,7 +23,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
 
     if (!regex.test(email)) {
       console.error('Invalid Email!');
-      alert('Invalid Email!');
+      alert(t('error.invalid'));
       return;
     }
 
@@ -37,11 +37,11 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
       await emailjs.sendForm(serviceId, templateId, form.current, { publicKey });
 
       setLoading(false);
-      alert('Message sent successfully!');
+      alert(t('error.success'));
       form.current.reset();
     } catch (err) {
       console.error('Error sending email:', err);
-      alert('Failed to send message. Please try again later.');
+      alert(t('error.failed'));
     }
   };
 
@@ -97,7 +97,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 py-4 font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] hover:shadow-xl"
+            className="w-full cursor-pointer rounded-lg bg-blue-400 py-4 font-semibold text-white shadow-lg transition-transform hover:scale-[1.02] hover:shadow-xl"
           >
             {loading ? t('contact.sending-msg') : t('contact.send')}
           </button>
