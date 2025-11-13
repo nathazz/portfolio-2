@@ -28,8 +28,8 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
           className={`absolute inset-0 ${darkMode ? 'opacity-20' : 'opacity-10'}`}
           style={{
             backgroundImage: `
-              linear-gradient(${darkMode ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.05)'} 1px, transparent 1px),
-              linear-gradient(90deg, ${darkMode ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.05)'} 1px, transparent 1px)
+              linear-gradient(${darkMode ? 'rgba(0, 98, 255, 0.315)' : 'rgba(59, 131, 246, 0.863)'} 1px, transparent 1px),
+              linear-gradient(90deg, ${darkMode ? 'rgba(59, 131, 246, 0.342)' : 'rgba(59, 131, 246, 0.829)'} 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
           }}
@@ -75,7 +75,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
                   <div className={`h-px w-8 ${darkMode ? 'bg-blue-400' : 'bg-blue-500'}`}></div>
                 </div>
 
-                <h1 className="text-5xl leading-none font-black sm:text-1xl md:text-4xl lg:text-5xl">
+                <h1 className="text-3xl leading-tight font-black sm:text-3xl md:text-5xl">
                   <span className={darkMode ? 'text-white' : 'text-gray-900'}>
                     {t('title.first')}{' '}
                   </span>
