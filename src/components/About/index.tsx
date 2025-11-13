@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { skills } from '../../utils/constants';
 
@@ -11,12 +10,7 @@ export default function About({ darkMode }: AboutProps) {
 
   return (
     <section className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-20">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-      >
+      <div>
         <h2
           className={`mb-12 text-center text-4xl font-bold sm:text-5xl ${
             darkMode ? 'text-white' : 'text-gray-900'
@@ -32,15 +26,11 @@ export default function About({ darkMode }: AboutProps) {
 
           <div className="space-y-8">
             {skills.map(({ name, icon: Icon, items }) => (
-              <motion.div
+              <div
                 key={name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
                 className={`rounded-2xl p-[1.5px] ${
                   darkMode
-                    ? 'bg-gradient-to-r bg-cyan-300/30'
+                    ? 'bg-cyan-300/30 bg-gradient-to-r'
                     : 'bg-gradient-to-r from-cyan-500/10 to-cyan-600/10'
                 }`}
               >
@@ -73,11 +63,11 @@ export default function About({ darkMode }: AboutProps) {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
