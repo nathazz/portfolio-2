@@ -47,7 +47,7 @@
         },
        {
           "role": "Desenvolvedor Backend Freelancer",
-          "period": "Set 2023 – Mar 2024",
+          "period": "Abr 2023 – Mar 2024",
           "company": "Sollydus",
           "location": "Remoto, Fortaleza-CE",
           "description": "Como desenvolvedor Backend, atuei no desenvolvimento de uma plataforma SaaS de atendimento via WhatsApp, com implementação de APIs em Node.js + TypeScript e integração de comunicação em tempo real via WebSocket. Participei da construção e modelação do banco de dados em PostgreSQL e da implementação de cache e mensageria com Redis, contribuindo para a entrega de um MVP funcional que suportou múltiplos atendimentos simultâneos.",

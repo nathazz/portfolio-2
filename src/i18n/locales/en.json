@@ -46,7 +46,7 @@
       },
        {
           "role": "Freelance Backed Engineer",
-          "period": "Sep 2023 – Mar 2024",
+          "period": "Apr 2023 – Mar 2024",
           "company": "Sollydus",
           "location": "Remote, Fortaleza-CE-Brazil",
           "description": "As a Backend Developer, I worked on the development of a WhatsApp-based SaaS customer service platform, implementing APIs with Node.js + TypeScript and integrating real-time communication via WebSocket. I participated in the construction and modeling of the PostgreSQL database and the implementation of caching and messaging with Redis, contributing to the delivery of a functional MVP that supported multiple simultaneous customer interactions.",
