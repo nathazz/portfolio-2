@@ -23,7 +23,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
 
     if (!regex.test(email)) {
       console.error('Invalid Email!');
-      alert(t('error.invalid'));
+      alert(t('email_messages.invalid'));
       return;
     }
 
@@ -37,11 +37,13 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
       await emailjs.sendForm(serviceId, templateId, form.current, { publicKey });
 
       setLoading(false);
-      alert(t('error.success'));
+
+      alert(t('email_messages.success'));
+
       form.current.reset();
     } catch (err) {
       console.error('Error sending email:', err);
-      alert(t('error.failed'));
+      alert(t('email_messages.failed'));
     }
   };
 

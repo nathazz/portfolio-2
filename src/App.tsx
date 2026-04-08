@@ -1,11 +1,7 @@
 import Portfolio from './page';
 
 function App() {
-  return (
-    <div>
-      <Portfolio />
-    </div>
-  );
+  return <Portfolio />;
 }
 
 export default App;

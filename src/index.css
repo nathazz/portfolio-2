@@ -1,21 +1,5 @@
 @import 'tailwindcss';
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #3b82f6;
-  top: 45%;
-  width: 48px;
-  height: 48px;
-}
-
-.swiper-button-next {
-  right: -2.5rem;
-}
-
-.swiper-button-prev {
-  left: -2.5rem;
-}
-
 
 .swiper {
   width: 100%;
@@ -36,4 +20,16 @@
   flex-direction: column;
   min-height: 500px;
   box-sizing: border-box;
+}
+
+@keyframes softFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

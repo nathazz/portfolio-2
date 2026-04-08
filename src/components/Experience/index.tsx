@@ -73,7 +73,7 @@ const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
         <div className="mt-10 text-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="cursor-pointer rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-2 text-sm font-medium text-white shadow-md transition-all hover:scale-105"
+            className="cursor-pointer rounded-lg bg-blue-500 px-6 py-2 text-sm font-medium text-white shadow-md transition-all hover:scale-105"
           >
             {showAll ? t('experience.show-less') : t('experience.show-more')}
           </button>

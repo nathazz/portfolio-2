@@ -1,12 +1,4 @@
 import { Code, Palette, Zap } from 'lucide-react';
-import logoScraper from '/assets/images/banners/logoScraper.png';
-import logoMedTime from '/assets/images/banners/medtime.svg';
-import logoJob from '/assets/images/banners/where_is_job.svg';
-import logoEtherWatch from '/assets/images/banners/etherWatch.png';
-import logoPortfolio1 from '/assets/images/banners/user.png';
-import logoPwaNotes from '/assets/images/banners/logoPwa.png';
-
-export const sections = ['home', 'about', 'projects', 'experience', 'contact'];
 
 export const skills = [
   {
@@ -27,11 +19,11 @@ export const skills = [
     items: [
       'Node.js (Express/Nest.js)',
       'Golang (Gin/Fiber)',
-      'Java (Spring Boot)',
-      'SQl',
-      'NoSQL',
+      'Java (Spring Boot) | Basics',
+      'SQl (MySQL, PostgreSQL)',
+      'NoSQL (Redis, MongoDB)',
       'RabbitMQ',
-      'Tests',
+      'API Restful',
       'AWS',
     ],
   },
@@ -39,27 +31,25 @@ export const skills = [
     name: 'Others',
     icon: Palette,
     items: [
-      'Figma',
-      'Docker',
-      'Git/Github/Git Actions',
-      'Auth',
-      'AI',
-      'Linux',
-      "Orm's",
-      'Redis',
+      'Jest, SuperTest, Vitest, Native tests (Golang)',
+      'Docker & Docker Compose',
+      'CI/CD',
+      'Git/Github',
+      'LLM & Agents (Gemini, OpenAI, Ollama, Claude)',
+      'Linux (Ubuntu)',
       'Swagger',
+      'Figma',
     ],
   },
 ];
 
-export const images: Record<number, string> = {
-  994994606: logoEtherWatch,
-  1028620732: logoPwaNotes,
-  978289300: logoScraper,
-  1005165341: logoEtherWatch,
-  687245167: logoMedTime,
-  736647382: logoPortfolio1,
-  620526289: logoJob,
-};
+
+export const SECTIONS = [
+  { id: 'home', label: 'navbar.home' },
+  { id: 'about', label: 'navbar.about' },
+  { id: 'experience', label: 'navbar.xp' },
+  { id: 'projects', label: 'navbar.project' },
+  { id: 'contact', label: 'navbar.contacts' },
+];
 
 export const GITHUB_USERNAME = 'nathazz';

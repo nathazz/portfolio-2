@@ -1,25 +1,10 @@
 import { ArrowRight, Download, Terminal } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
-import { useEffect, useState } from 'react';
-import { getAvatar, type IAvatarResponse } from '../../services/github';
 import { useTranslation } from 'react-i18next';
+import Avatar from './Avatar';
 
 const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
-  const [avatar, setAvatar] = useState<IAvatarResponse>();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const fetchAvatar = async () => {
-      try {
-        const res = await getAvatar();
-        setAvatar(res);
-      } catch (err) {
-        console.error('Error to get avatar', err);
-      }
-    };
-
-    fetchAvatar();
-  }, []);
 
   return (
     <>
@@ -41,16 +26,12 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
           <div className="flex flex-col items-center space-y-10 text-center">
             <div className="relative order-1">
               <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64">
-                <div className="animate-spin-slow absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500"></div>
+                <div className="animate-spin-slow absolute inset-0 rounded-full bg-blue-400"></div>
                 <div
                   className={`absolute inset-1 rounded-full ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
                 ></div>
                 <div className="absolute inset-2 overflow-hidden rounded-full">
-                  <img
-                    src={avatar?.avatar_url}
-                    alt="Profile"
-                    className="h-full w-full object-cover"
-                  />
+                  <Avatar />
                 </div>
               </div>
 
@@ -65,23 +46,11 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
 
             <div className="order-2 space-y-8">
               <div className="space-y-4">
-                <div className="flex items-center justify-center gap-2">
-                  <div className={`h-px w-8 ${darkMode ? 'bg-blue-400' : 'bg-blue-500'}`}></div>
-                  <span
-                    className={`font-mono text-sm ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}
-                  >
-                    developer.init()
-                  </span>
-                  <div className={`h-px w-8 ${darkMode ? 'bg-blue-400' : 'bg-blue-500'}`}></div>
-                </div>
-
                 <h1 className="text-3xl leading-tight font-black sm:text-3xl md:text-5xl">
                   <span className={darkMode ? 'text-white' : 'text-gray-900'}>
                     {t('title.first')}{' '}
                   </span>
-                  <span className="bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                    {t('title.second')}
-                  </span>
+                  <span className="text-blue-400">{t('title.second')}</span>
                 </h1>
 
                 <p

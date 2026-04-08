@@ -10,10 +10,13 @@
     "first": "Software",
     "second": "Developer"
   },
-    "error": {
+    "email_messages": {
     "invalid": "Invalid Email!",
     "success": "Message sent successfully!",
     "failed":"Failed to send message. Please try again later."
+  },
+  "states": {
+    "loading": "loading..."
   },
     "terminal": {
     "welcome": "welcome",
@@ -26,6 +29,9 @@
     },
     "subtitle": "Developing smart and scalable solutions that turn complex challenges into efficient, high-performance systems.",
     "about-me": {
+      
+      "techs": "Technologies",
+      "hero-phrase": "“Code with purpose, not just features.”",
       "title": "About me",
       "text": "Hi! I’m Nathan, a Full Stack developer passionate about technology and creating solutions that make a difference. My journey began in 2022, when I had my first contact with programming during a technical computing course. Since then, I’ve been continuously learning and growing as a developer, with around three years of study and two years of real-world experience. I enjoy understanding how things work behind the code and turning ideas into something functional and well structured. I’m always looking to improve, learning new technologies, refining my skills, and exploring different ways to solve problems simply and effectively."
     },
@@ -36,63 +42,78 @@
     "show-more": "Show More",
     "show-less": "Show Less",
     "jobs": [
+        {
+          "role": "Freelance Full Stack Developer (Automation)",
+          "period": "Nov 2025 – Mar 2026",
+          "company": "Nexa Roofing",
+          "location": "Remote, United States",
+          "description": "At Nexa Roofing, I automated internal workflows using n8n, Airtable, and Glide, improving lead management, interview processes, reporting, and data consistency. I worked on restructuring complex databases, eliminating redundancies, and creating automated pipelines that reduced errors and manual effort.",
+          "stack": ["N8N", "Javascript", "Glide", "OpenAI", "Automation Engineering", "WebHook", "Airtable"]
+      },
       {
         "role": "Full Stack Developer",
         "period": "Jul 2024 – Jun 2025",
         "company": "ScoreMilk",
         "location": "Remote, United States",
         "description": "Front-end: Built and refined UI components, enhanced responsiveness, and optimized performance with React Query. Integrated crypto wallets (Telegram Wallet, Tonkeeper) and improved DApp user flows. Delivered better UX through in-app feedback systems and resolved bugs across wallet integration, chats, and UI/UX. Back-end: Optimized SQL queries for features like user rankings and lobbies. Contributed to microservices development, including a payout system on the TON blockchain. Supported real-time and automated features, debugging backend components such as bots.",
-        "stack": ["React.Js", "Rest", "Blockchain/Web3", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
-      },
+         "stack": ["React.Js", "Rest", "Blockchain/Web3", "Ethers.js", "MetaMask", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
+       },
        {
-          "role": "Freelance Backed Engineer",
+          "role": "Backend Developer",
           "period": "Apr 2023 – Mar 2024",
           "company": "Sollydus",
           "location": "Remote, Fortaleza-CE-Brazil",
-          "description": "As a Backend Developer, I worked on the development of a WhatsApp-based SaaS customer service platform, implementing APIs with Node.js + TypeScript and integrating real-time communication via WebSocket. I participated in the construction and modeling of the PostgreSQL database and the implementation of caching and messaging with Redis, contributing to the delivery of a functional MVP that supported multiple simultaneous customer interactions.",
-          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "AWS", "Redis", "Linux"]
+          "description": "Developed core services for an omnichannel platform supporting 15+ companies concurrently. Designed data models and system architecture for multiple clients. Implemented real-time communication via WebSockets, reducing message latency by ~50%. Improved system performance by ~40% using Redis caching and asynchronous processing with RabbitMQ. Automated internal processes, reducing manual work by ~55%.",
+          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
         }
     ]
   },
   "projects": {
     "title": "Projects",
-    "items": [
-      {
-        "title": "ETF Web Scraper & REST API",
-        "description": "A web scraper and REST API for extracting real-time data on ETFs (Exchange-Traded Funds) from TrackingDifferences.com.",
-        "match": "etf-scraper-api"
-      },
-      {
-        "title": "etherWatch Backend",
-        "description": "Backend service for etherWatch providing real-time Ethereum network data via REST and WebSocket. Features pending transaction streaming, MetaMask authentication, Zod validation, and Docker.",
-        "match": "etherwatch-backend"
-      },
-      {
-        "title": "etherWatch Frontend",
-        "description": "Frontend app for monitoring the Ethereum network, providing real-time gas prices, market data, Ethereum info, and live pending transactions via WebSockets. Supports MetaMask integration for transactions and balance checks.",
-        "match": "etherwatch-front"
-      },
-      {
-        "title": "MedTime",
-        "description": "An Android app built with Android Studio and Kotlin to help users take their medications on time, featuring local CRUD functionality for easy management.",
-        "match": "medtime"
-      },
-      {
-        "title": "First Portfolio",
-        "description": "My first portfolio. I used React, i18n, and Styled-Components.",
-        "match": "my-portfolio-1"
-      },
-      {
-        "title": "Where is my work?",
-        "description": "(Where is my work?) Using the Dart language and the Flutter framework, the goal of this project is to help users find job opportunities in their region. Feel free to explore the source code.",
-        "match": "projeto-cade-meu-trampo"
-      },
-      {
-        "title": "PWA Notes",
-        "description": "PWA Notes is a Progressive Web App for sharing notes directly between devices using WebRTC.",
-        "match": "pwa-notes"
-      }
-    ]
+      "items": [
+    {
+      "title": "ETF Web Scraper & REST API",
+      "description": "A web scraper and REST API for extracting real-time data from ETFs (Exchange-Traded Funds) on TrackingDifferences.com.",
+      "match": "etf-scraper-api",
+      "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596832/logoScraper_qgqqil.png",
+      "git": "https://github.com/nathazz/etf-scraper-api",
+      "link": "https://etf-scraper-pudc.onrender.com/"
+    },
+    {
+      "title": "EtherWatch Backend",
+      "description": "Backend for EtherWatch, providing real-time data from the Ethereum network via REST and WebSocket. Includes pending transaction streaming, MetaMask authentication, validation with Zod, and Docker support.",
+      "match": "etherwatch-backend",
+      "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596823/etherWatch_t4lsyd.png",
+      "git": "https://github.com/nathazz/EtherWatch-backend",
+      "link": ""
+    },
+    {
+      "title": "EtherWatch Frontend",
+      "description": "Frontend application for monitoring the Ethereum network, providing real-time gas prices, market data, blockchain information, and live pending transactions via WebSockets. Supports MetaMask integration for transactions and balance checks.",
+      "match": "etherwatch-front",
+      "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596823/etherWatch_t4lsyd.png",
+      "git": "https://github.com/nathazz/EtherWatch-front",
+      "link": "https://www.loom.com/share/ab79c4fd527248af8949741eea1a89a4?sid=9bd4df55-440e-4df4-a318-1d57dc6014ed"
+    },
+    {
+      "title": "EngliBot",
+      "description": "A WhatsApp bot for learning English through games, slang, and phrases, featuring a personal vocabulary system. It helps users expand vocabulary, practice grammar, learn real-world English, and build a personal dictionary.",
+      "match": "engli-bot",
+      "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596933/Screenshot_From_2026-04-07_18-00-44_ywbhwx.png",
+      "git": "https://github.com/nathazz/EngliBot-whatsapp",
+      "link": ""
+    },
+    {
+      "title": "PWA Notes",
+      "description": "A Progressive Web App for sharing notes directly between devices using WebRTC.",
+      "match": "pwa-notes",
+      "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596471/manifest-icon-512.maskable_npzgfp.png",
+      "git": "https://github.com/nathazz/pwa-notes",
+      "link": "https://pwa-notes-7fca6.web.app/"
+    }
+  ],
+  "swipe": "swipe",
+  "footer": "See all projects"
   },
       "links-project": {
       "code": "Code",

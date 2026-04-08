@@ -35,7 +35,10 @@ const Portfolio = () => {
         <Home darkMode={darkMode} scrollToSection={scrollToSection} />
       </section>
 
-      <section id="about" className={`py-20 ${darkMode ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
+      <section
+        id="about"
+        className={`py-20 ${darkMode ? 'bg-[color-mix(in_oklab,_oklch(0.3_0.04_256.8)_50%,_transparent)]' : 'bg-gray-50'}`}
+      >
         <About darkMode={darkMode} />
       </section>
 

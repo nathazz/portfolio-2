@@ -11,10 +11,13 @@
     "first": "Desenvolvedor",
     "second": "de software"
   },
-  "error": {
+  "email_messages": {
     "invalid": "Email inválido",
     "success": "Mensagem enviada com sucesso!",
     "failed":"Ocorreu algum erro ao tentar enviar o Email. Tente novamente"
+  },
+    "states": {
+    "loading": "carregando..."
   },
   "terminal": {
      "welcome": "bemVindo",
@@ -23,6 +26,8 @@
   },
     "subtitle": "Desenvolvendo soluções inteligentes e escaláveis que transformam desafios complexos em sistemas eficientes e de alta performance.",
     "about-me": {
+      "techs": "Tecnologias",
+      "hero-phrase": "“Não é só código. É propósito.”",
       "title": "Sobre mim",
       "text": "Olá! Eu sou o Nathan, desenvolvedor Full Stack apaixonado por tecnologia e por criar soluções que façam a diferença. Minha jornada começou em 2022, quando tive meu primeiro contato com programação durante um curso técnico em Informática. Desde então, venho estudando e me dedicando ao desenvolvimento, somando cerca de três anos de aprendizado e dois anos de experiência prática em projetos reais. Gosto de entender como as coisas funcionam por trás do código e transformar ideias em algo funcional e bem estruturado. Estou sempre em busca de evoluir, aprendendo novas tecnologias, aprimorando minhas habilidades e explorando diferentes formas de resolver problemas de forma simples e eficiente."
     },
@@ -37,21 +42,29 @@
       "show-more": "Mostrar mais",
       "show-less": "Mostrar menos",
       "jobs": [
+             {
+          "role": "Desenvolvedor Full Stack Freelance (Automação)",
+          "period": "Nov 2025 – Mar 2026",
+          "company": "Nexa Roofing",
+          "location": "Remoto, Estados Unidos",
+          "description": "Na Nexa Roofing, atuei na automação de fluxos internos com n8n, Airtable e Glide, melhorando a gestão de leads, os processos de entrevista, os relatórios e a consistência dos dados. Trabalhei na reestruturação de bases de dados complexas, na eliminação de redundâncias e na criação de pipelines automatizados, o que reduziu erros e o trabalho manual.",
+          "stack": ["N8N", "Javascript", "Glide", "OpenAI", "Automation Engineering", "WebHook", "Airtable"]
+        },
         {
           "role": "Desenvolvedor Full Stack",
           "period": "Jul 2024 – Jun 2025",
           "company": "ScoreMilk",
           "location": "Remoto, Estados Unidos",
           "description": "Front-end: Desenvolvimento e refinamento de componentes de UI, melhoria de responsividade e otimização de performance com React Query. Integração de carteiras cripto (Telegram Wallet, Tonkeeper) e aprimoramento de fluxos de DApp. Implementação de sistemas de feedback no app e correção de bugs em integração de carteiras, chats e inconsistências de UI/UX. Back-end: Otimização de queries SQL para recursos como rankings de usuários e sistemas de lobby. Desenvolvimento de microsserviços, incluindo sistema de pagamentos na blockchain TON. Suporte a recursos em tempo real e automações, com depuração de componentes de backend como bots.",
-          "stack": ["React.Js", "Rest", "Blockchain/Web3", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
+          "stack": ["React.Js", "Rest", "Blockchain/Web3", "Ethers.js", "MetaMask", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
         },
        {
-          "role": "Desenvolvedor Backend Freelancer",
+          "role": "Desenvolvedor Backend",
           "period": "Abr 2023 – Mar 2024",
           "company": "Sollydus",
           "location": "Remoto, Fortaleza-CE",
-          "description": "Como desenvolvedor Backend, atuei no desenvolvimento de uma plataforma SaaS de atendimento via WhatsApp, com implementação de APIs em Node.js + TypeScript e integração de comunicação em tempo real via WebSocket. Participei da construção e modelação do banco de dados em PostgreSQL e da implementação de cache e mensageria com Redis, contribuindo para a entrega de um MVP funcional que suportou múltiplos atendimentos simultâneos.",
-          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "AWS", "Redis", "Linux"]
+          "description": "Desenvolvi serviços centrais de uma plataforma omnichannel com suporte a 15+ empresas simultâneas e alto volume de atendimentos, contribuindo para o lançamento do MVP em produção. \n- Estruturei Modelagem de Dados, System Design e Arquitetura para diversos clientes. \n- Implementei comunicação em tempo real via WebSocket, reduzindo a latência de entrega de mensagens em ~50% em relação à solução anterior baseada em polling. \n- Melhorei o desempenho geral da aplicação em ~40% com o uso de cache Redis e de processamento assíncrono via filas do RabbitMQ.\n - Padronizei pipelines de automação em Python e Node.JS que reduziram tarefas manuais repetitivas em ~55% e minimizaram erros operacionais nos relatórios internos.",
+          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
         }
       ]
     },
@@ -61,39 +74,46 @@
       {
         "title": "ETF Web Scraper & REST API",
         "description": "Um web scraper e API REST para extrair dados em tempo real de ETFs (Exchange-Traded Funds) do site TrackingDifferences.com.",
-        "match": "etf-scraper-api"
+        "match": "etf-scraper-api",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596832/logoScraper_qgqqil.png",
+        "git": "https://github.com/nathazz/etf-scraper-api",
+        "link": "https://etf-scraper-pudc.onrender.com/"
       },
       {
-        "title": "etherWatch Backend",
+        "title": "EtherWatch Backend",
         "description": "Backend para o etherWatch, fornecendo dados em tempo real da rede Ethereum via REST e WebSocket. Possui streaming de transações pendentes, autenticação via MetaMask, validação com Zod e Docker.",
-        "match": "etherwatch-backend"
+        "match": "etherwatch-backend",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596823/etherWatch_t4lsyd.png",
+        "git": "https://github.com/nathazz/EtherWatch-backend",
+        "link": ""
       },
       {
-        "title": "etherWatch Frontend",
-        "description": "Aplicativo frontend para monitoramento da rede Ethereum, fornecendo preços de gás em tempo real, dados de mercado, informações da Ethereum e transações pendentes ao vivo via WebSockets. Suporta integração com MetaMask para transações e verificação de saldo.",
-        "match": "etherwatch-front"
+        "title": "EtherWatch Frontend",
+        "description": "Frontend para monitoramento da rede Ethereum, fornecendo preços de gás em tempo real, dados de mercado, informações da Ethereum e transações pendentes ao vivo via WebSockets. Suporta integração com MetaMask para transações e verificação de saldo.",
+        "match": "etherwatch-front",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596823/etherWatch_t4lsyd.png",
+        "git": "https://github.com/nathazz/EtherWatch-front",
+        "link": "https://www.loom.com/share/ab79c4fd527248af8949741eea1a89a4?sid=9bd4df55-440e-4df4-a318-1d57dc6014ed"
       },
-      {
-        "title": "MedTime",
-        "description": "Um aplicativo Android desenvolvido com Android Studio e Kotlin para ajudar os usuários a tomar seus medicamentos na hora certa, com funcionalidade CRUD local para fácil gerenciamento.",
-        "match": "medtime"
-      },
-      {
-        "title": "Primeiro Portfolio",
-        "description": "Meu primeiro portfólio. Usei React, i18n e Styled-Components.",
-        "match": "my-portfolio-1"
-      },
-      {
-        "title": "Projeto Cadê Meu Trampo",
-        "description": "Usando a linguagem Dart e o framework Flutter, o objetivo deste projeto é ajudar os usuários a encontrar oportunidades de trabalho em sua região. Sinta-se à vontade para explorar o código-fonte.",
-        "match": "projeto-cade-meu-trampo"
+       {
+        "title": "EngliBot",
+        "description": "Um bot do WhatsApp para aprender inglês através de jogos, gírias, frases e um sistema de vocabulário pessoal. Ele ajuda os usuários a expandir o vocabulário 📚, praticar gramática ✍️, aprender inglês do dia a dia 🗣️ e construir um dicionário pessoal 🧠.",
+        "match": "engli-bot",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596933/Screenshot_From_2026-04-07_18-00-44_ywbhwx.png",
+        "git": "https://github.com/nathazz/EngliBot-whatsapp",
+        "link": ""
       },
       {
         "title": "Notas PWA",
         "description": "O PWA Notes é um aplicativo web progressivo para compartilhar notas diretamente entre dispositivos usando WebRTC.",
-        "match": "pwa-notes"
+        "match": "pwa-notes",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596471/manifest-icon-512.maskable_npzgfp.png",
+        "git": "https://github.com/nathazz/pwa-notes",
+        "link": "https://pwa-notes-7fca6.web.app/"
       }
-    ]
+    ],
+     "swipe": "deslize",
+    "footer": "Ver todos os projetos"
   },
     "links-project": {
     "code": "Código",
