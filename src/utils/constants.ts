@@ -20,11 +20,11 @@ export const skills = [
       'Node.js (Express/Nest.js)',
       'Golang (Gin/Fiber)',
       'Java (Spring Boot) | Basics',
-      'SQl (MySQL, PostgreSQL)',
+      'SQL (MySQL, PostgreSQL)',
       'NoSQL (Redis, MongoDB)',
       'RabbitMQ',
       'API Restful',
-      'AWS',
+      'AWS (RDS, CloudWatch, VPC, ECR, ECS, EC2, S3, Lambda, ELB, Fargate',
     ],
   },
   {
@@ -42,7 +42,6 @@ export const skills = [
     ],
   },
 ];
-
 
 export const SECTIONS = [
   { id: 'home', label: 'navbar.home' },
