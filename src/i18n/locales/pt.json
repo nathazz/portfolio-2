@@ -95,14 +95,6 @@
         "git": "https://github.com/nathazz/EtherWatch-front",
         "link": "https://www.loom.com/share/ab79c4fd527248af8949741eea1a89a4?sid=9bd4df55-440e-4df4-a318-1d57dc6014ed"
       },
-       {
-        "title": "EngliBot",
-        "description": "Um bot do WhatsApp para aprender inglês através de jogos, gírias, frases e um sistema de vocabulário pessoal. Ele ajuda os usuários a expandir o vocabulário 📚, praticar gramática ✍️, aprender inglês do dia a dia 🗣️ e construir um dicionário pessoal 🧠.",
-        "match": "engli-bot",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596933/Screenshot_From_2026-04-07_18-00-44_ywbhwx.png",
-        "git": "https://github.com/nathazz/EngliBot-whatsapp",
-        "link": ""
-      },
       {
         "title": "Notas PWA",
         "description": "O PWA Notes é um aplicativo web progressivo para compartilhar notas diretamente entre dispositivos usando WebRTC.",
