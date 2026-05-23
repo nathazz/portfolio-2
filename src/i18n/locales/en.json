@@ -47,7 +47,7 @@
           "period": "Nov 2025 – Mar 2026",
           "company": "Nexa Roofing",
           "location": "Remote, United States",
-          "description": "At Nexa Roofing, I automated internal workflows using n8n, Airtable, and Glide, improving lead management, interview processes, reporting, and data consistency. I worked on restructuring complex databases, eliminating redundancies, and creating automated pipelines that reduced errors and manual effort.",
+          "description": "At Nexa Roofing, a company specializing in roofing solutions and construction services, I automated internal workflows, improving lead management, interview processes, reporting, and data consistency. improving lead management, interview processes, reporting, and data consistency. I worked on restructuring complex databases, eliminating redundancies, and creating automated pipelines that reduced errors and manual effort.",
           "stack": ["N8N", "Javascript", "Glide", "OpenAI", "Automation Engineering", "WebHook", "Airtable"]
       },
       {
@@ -55,16 +55,16 @@
         "period": "Jul 2024 – Jun 2025",
         "company": "ScoreMilk",
         "location": "Remote, United States",
-        "description": "Front-end: Built and refined UI components, enhanced responsiveness, and optimized performance with React Query. Integrated crypto wallets (Telegram Wallet, Tonkeeper) and improved DApp user flows. Delivered better UX through in-app feedback systems and resolved bugs across wallet integration, chats, and UI/UX. Back-end: Optimized SQL queries for features like user rankings and lobbies. Contributed to microservices development, including a payout system on the TON blockchain. Supported real-time and automated features, debugging backend components such as bots.",
+        "description": "Contributing to the development and improvement of a competitive gaming platform that integrates blockchain and Web3 technologies.\n\nFront-end contributions:\n\n- Reduced unnecessary re-renders in sidebar and lobby/game pages, improving performance through component and state optimization.\n- Implemented lazy loading and error handling, reducing page failures during API request issues.\n- Refactored legacy code and removed redundant hooks, decreasing code complexity.\n- Optimized image loading, reducing load time.\n- Designed and developed a Quests system, implementing user flows for missions, rewards, and progression tracking.\n- Improved data fetching and caching efficiency using React Query, reducing redundant API calls.\n- Integrated cryptocurrency wallets (Telegram Wallet, Tonkeeper) and managed DApp flows.\n- Enhanced user experience with in-app feedback systems.\n- Implemented idempotency in lobby action buttons, preventing duplicate requests and inconsistent game states.\n\nBack-end contributions:\n\n- Refactored the user balance system, reducing update latency and improving transaction consistency.\n- Implemented filtering and ranking logic (winner, crypto type, free games), improving data usability.\n- Developed microservices, including a TON blockchain payment system and authentication module, increasing scalability.\n- Contributed to the development of a Telegram bot and mini-app, expanding platform reach and functionality.",
          "stack": ["React.Js", "Rest", "Blockchain/Web3", "Ethers.js", "MetaMask", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
        },
        {
-          "role": "Backend Developer",
+          "role": "Software Developer",
           "period": "Apr 2023 – Mar 2024",
           "company": "Sollydus",
           "location": "Remote, Fortaleza-CE-Brazil",
-          "description": "Developed core services for an omnichannel platform supporting 15+ companies concurrently. Designed data models and system architecture for multiple clients. Implemented real-time communication via WebSockets, reducing message latency by ~50%. Improved system performance by ~40% using Redis caching and asynchronous processing with RabbitMQ. Automated internal processes, reducing manual work by ~55%.",
-          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
+          "description": "At Sollydus, a company focused on technology and omnichannel communication solutions, I worked on scalable platforms, system architecture, and performance optimization.\n\n- Developed core services and React interfaces for an omnichannel platform supporting 15+ companies, simultaneously delivering a production-ready MVP.\n- Designed data models and system architecture for multiple clients.\n- Implemented real-time communication via WebSockets, reducing message delivery latency compared to the previous polling-based solution.\n- Improved overall system performance using Redis caching and asynchronous processing with RabbitMQ.\n- Standardized automation pipelines in Python and Node.js, reducing repetitive manual tasks and minimizing operational errors in internal reports.",
+            "stack": ["Rest", "Node.js", "React.Js", "TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
         }
     ]
   },

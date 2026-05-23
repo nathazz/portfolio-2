@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { IstyleProps } from '../../types/types';
 import { useTranslation } from 'react-i18next';
+import { renderDescription } from './RenderDescription';
 
 const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
   const { t } = useTranslation();
@@ -47,9 +48,9 @@ const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
               {exp.location}
             </p>
 
-            <p className={`mt-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              {exp.description}
-            </p>
+            <div className={`mt-4 space-y-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+              {renderDescription(exp.description)}
+            </div>
 
             {exp.stack && (
               <div className="mt-4 flex flex-wrap gap-2">

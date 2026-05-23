@@ -47,7 +47,7 @@
           "period": "Nov 2025 – Mar 2026",
           "company": "Nexa Roofing",
           "location": "Remoto, Estados Unidos",
-          "description": "Na Nexa Roofing, atuei na automação de fluxos internos com n8n, Airtable e Glide, melhorando a gestão de leads, os processos de entrevista, os relatórios e a consistência dos dados. Trabalhei na reestruturação de bases de dados complexas, na eliminação de redundâncias e na criação de pipelines automatizados, o que reduziu erros e o trabalho manual.",
+          "description": "Na Nexa Roofing, empresa especializada em soluções de roofing e serviços para o setor de construção , atuei na automação de processos internos. Trabalhei na otimização de fluxos relacionados à gestão de leads, processos de entrevistas, relatórios e consistência de dados, além da reestruturação de bancos de dados complexos e criação de pipelines automatizados para reduzir erros e esforço manual.",
           "stack": ["N8N", "Javascript", "Glide", "OpenAI", "Automation Engineering", "WebHook", "Airtable"]
         },
         {
@@ -55,16 +55,16 @@
           "period": "Jul 2024 – Jun 2025",
           "company": "ScoreMilk",
           "location": "Remoto, Estados Unidos",
-          "description": "Front-end: Desenvolvimento e refinamento de componentes de UI, melhoria de responsividade e otimização de performance com React Query. Integração de carteiras cripto (Telegram Wallet, Tonkeeper) e aprimoramento de fluxos de DApp. Implementação de sistemas de feedback no app e correção de bugs em integração de carteiras, chats e inconsistências de UI/UX. Back-end: Otimização de queries SQL para recursos como rankings de usuários e sistemas de lobby. Desenvolvimento de microsserviços, incluindo sistema de pagamentos na blockchain TON. Suporte a recursos em tempo real e automações, com depuração de componentes de backend como bots.",
+          "description": "Contribuí para o desenvolvimento e aprimoramento de uma plataforma de jogos competitivos que integra tecnologias de blockchain e Web3.\n\nContribuições para o front-end:\n\n- Reduzi renderizações desnecessárias na sidebar e nas páginas de lobby/jogos, melhorando a performance por meio de otimizações de componentes e estado.\n- Implementei lazy loading e tratamento de erros, reduzindo falhas de carregamento durante problemas em requisições.\n- Otimizei o carregamento de imagens, reduzindo o tempo de carregamento.\n- Modelei e desenvolvi um sistema de Quests, implementando fluxos de missões, recompensas e progressão do usuário.\n- Melhorei a eficiência de requisições e cache com React Query, reduzindo chamadas redundantes à API.\n- Integrei carteiras de criptomoedas (Telegram Wallet, Tonkeeper) e gerenciei fluxos de DApps.\n- Aprimorei a experiência do usuário com sistemas de feedback in-app.\n- Implementei idempotência em botões de ações nos lobbies, evitando requisições duplicadas e estados inconsistentes.\n\nContribuições para o Back-end:\n\n- Refatorei o sistema de saldo dos usuários, reduzindo a latência e melhorando a consistência das transações.\n- Implementei filtros e lógica de classificação (vencedor, tipo de cripto, jogos gratuitos), melhorando a usabilidade dos dados.\n- Desenvolvi microsserviços, incluindo sistema de pagamentos via blockchain TON e módulo de autenticação, aumentando a escalabilidade.\n- Participei do desenvolvimento de bot e miniaplicativo integrados ao Telegram, ampliando o alcance e as funcionalidades da plataforma.",
           "stack": ["React.Js", "Rest", "Blockchain/Web3", "Ethers.js", "MetaMask", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
         },
        {
-          "role": "Desenvolvedor Backend",
+          "role": "Desenvolvedor De Software",
           "period": "Abr 2023 – Mar 2024",
           "company": "Sollydus",
           "location": "Remoto, Fortaleza-CE",
-          "description": "Desenvolvi serviços centrais de uma plataforma omnichannel com suporte a 15+ empresas simultâneas e alto volume de atendimentos, contribuindo para o lançamento do MVP em produção. \n- Estruturei Modelagem de Dados, System Design e Arquitetura para diversos clientes. \n- Implementei comunicação em tempo real via WebSocket, reduzindo a latência de entrega de mensagens em ~50% em relação à solução anterior baseada em polling. \n- Melhorei o desempenho geral da aplicação em ~40% com o uso de cache Redis e de processamento assíncrono via filas do RabbitMQ.\n - Padronizei pipelines de automação em Python e Node.JS que reduziram tarefas manuais repetitivas em ~55% e minimizaram erros operacionais nos relatórios internos.",
-          "stack": ["Rest", "Node.js", "TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
+          "description": "Na Sollydus, empresa focada em soluções de tecnologia e comunicação omnichannel, atuei no desenvolvimento de plataformas escaláveis, arquitetura de sistemas e otimização de performance.  \n- Estruturei Modelagem de Dados, System Design e Arquitetura para diversos clientes. \n- Implementei comunicação em tempo real via WebSocket, reduzindo a latência de entrega de mensagens em ~50% em relação à solução anterior baseada em polling. \n- Melhorei o desempenho geral da aplicação em ~40% com o uso de cache Redis e de processamento assíncrono via filas do RabbitMQ.\n - Padronizei pipelines de automação em Python e Node.JS que reduziram tarefas manuais repetitivas em ~55% e minimizaram erros operacionais nos relatórios internos.",
+          "stack": ["Rest", "Node.js", "React.Js","TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
         }
       ]
     },
