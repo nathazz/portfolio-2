@@ -32,7 +32,7 @@ const Contacts: React.FC<IstyleProps> = ({ darkMode }) => {
               icon: Linkedin,
               label: 'LinkedIn',
               value: '/nathasg',
-              href: 'https://www.linkedin.com/in/nathasg',
+              href: `${t('contact.linkedin')}`,
             },
             {
               icon: Github,

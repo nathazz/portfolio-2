@@ -1,11 +1,10 @@
-
 {
-   "navbar": {
-   "home": "Home",
-   "about": "Sobre",
-   "xp": "Experiência",
-   "project": "Projetos",
-   "contacts": "Contato"
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre",
+    "xp": "Experiência",
+    "project": "Projetos",
+    "contacts": "Contato"
   },
   "title": {
     "first": "Desenvolvedor",
@@ -14,60 +13,92 @@
   "email_messages": {
     "invalid": "Email inválido",
     "success": "Mensagem enviada com sucesso!",
-    "failed":"Ocorreu algum erro ao tentar enviar o Email. Tente novamente"
+    "failed": "Ocorreu algum erro ao tentar enviar o Email. Tente novamente"
   },
-    "states": {
+  "states": {
     "loading": "carregando..."
   },
   "terminal": {
-     "welcome": "bemVindo",
+    "welcome": "bemVindo",
     "first": "Opa",
     "second": "tudo tranquilo?"
   },
-    "subtitle": "Desenvolvendo soluções inteligentes e escaláveis que transformam desafios complexos em sistemas eficientes e de alta performance.",
-    "about-me": {
-      "techs": "Tecnologias",
-      "hero-phrase": "“Não é só código. É propósito.”",
-      "title": "Sobre mim",
-      "text": "Olá! Eu sou o Nathan, desenvolvedor Full Stack apaixonado por tecnologia e por criar soluções que façam a diferença. Minha jornada começou em 2022, quando tive meu primeiro contato com programação durante um curso técnico em Informática. Desde então, venho estudando e me dedicando ao desenvolvimento, somando cerca de três anos de aprendizado e dois anos de experiência prática em projetos reais. Gosto de entender como as coisas funcionam por trás do código e transformar ideias em algo funcional e bem estruturado. Estou sempre em busca de evoluir, aprendendo novas tecnologias, aprimorando minhas habilidades e explorando diferentes formas de resolver problemas de forma simples e eficiente."
-    },
-    "links-home": {
-      "see-projects": "Ver Projetos",
-      "download-cv": "Meu Currículo"
-    },
-    "others": "outros",
-    "experience": {
-      "title": "Experiência Profissional",
-      "description": "Um breve resumo da minha trajetória profissional e dos cargos que ocupei.",
-      "show-more": "Mostrar mais",
-      "show-less": "Mostrar menos",
-      "jobs": [
-             {
-          "role": "Desenvolvedor Full Stack Freelance (Automação)",
-          "period": "Nov 2025 – Mar 2026",
-          "company": "Nexa Roofing",
-          "location": "Remoto, Estados Unidos",
-          "description": "Na Nexa Roofing, empresa especializada em soluções de roofing e serviços para o setor de construção , atuei na automação de processos internos. Trabalhei na otimização de fluxos relacionados à gestão de leads, processos de entrevistas, relatórios e consistência de dados, além da reestruturação de bancos de dados complexos e criação de pipelines automatizados para reduzir erros e esforço manual.",
-          "stack": ["N8N", "Javascript", "Glide", "OpenAI", "Automation Engineering", "WebHook", "Airtable"]
-        },
-        {
-          "role": "Desenvolvedor Full Stack",
-          "period": "Jul 2024 – Jun 2025",
-          "company": "ScoreMilk",
-          "location": "Remoto, Estados Unidos",
-          "description": "Contribuí para o desenvolvimento e aprimoramento de uma plataforma de jogos competitivos que integra tecnologias de blockchain e Web3.\n\nContribuições para o front-end:\n\n- Reduzi renderizações desnecessárias na sidebar e nas páginas de lobby/jogos, melhorando a performance por meio de otimizações de componentes e estado.\n- Implementei lazy loading e tratamento de erros, reduzindo falhas de carregamento durante problemas em requisições.\n- Otimizei o carregamento de imagens, reduzindo o tempo de carregamento.\n- Modelei e desenvolvi um sistema de Quests, implementando fluxos de missões, recompensas e progressão do usuário.\n- Melhorei a eficiência de requisições e cache com React Query, reduzindo chamadas redundantes à API.\n- Integrei carteiras de criptomoedas (Telegram Wallet, Tonkeeper) e gerenciei fluxos de DApps.\n- Aprimorei a experiência do usuário com sistemas de feedback in-app.\n- Implementei idempotência em botões de ações nos lobbies, evitando requisições duplicadas e estados inconsistentes.\n\nContribuições para o Back-end:\n\n- Refatorei o sistema de saldo dos usuários, reduzindo a latência e melhorando a consistência das transações.\n- Implementei filtros e lógica de classificação (vencedor, tipo de cripto, jogos gratuitos), melhorando a usabilidade dos dados.\n- Desenvolvi microsserviços, incluindo sistema de pagamentos via blockchain TON e módulo de autenticação, aumentando a escalabilidade.\n- Participei do desenvolvimento de bot e miniaplicativo integrados ao Telegram, ampliando o alcance e as funcionalidades da plataforma.",
-          "stack": ["React.Js", "Rest", "Blockchain/Web3", "Ethers.js", "MetaMask", "Node.js", "TypeScript", "Golang", "PostgreSQL", "AWS", "Redis"]
-        },
-       {
-          "role": "Desenvolvedor De Software",
-          "period": "Abr 2023 – Mar 2024",
-          "company": "Sollydus",
-          "location": "Remoto, Fortaleza-CE",
-          "description": "Na Sollydus, empresa focada em soluções de tecnologia e comunicação omnichannel, atuei no desenvolvimento de plataformas escaláveis, arquitetura de sistemas e otimização de performance. \n- Desenvolvi serviços centrais e interfaces React de uma plataforma omnichannel com suporte a 15+ empresas simultâneas, entregando o MVP em produção. \n- Estruturei Modelagem de Dados, System Design e Arquitetura para diversos clientes. \n- Implementei comunicação em tempo real via WebSocket, reduzindo a latência de entrega de mensagens em ~50% em relação à solução anterior baseada em polling. \n- Melhorei o desempenho geral da aplicação em ~40% com o uso de cache Redis e de processamento assíncrono via filas do RabbitMQ.\n - Padronizei pipelines de automação em Python e Node.JS que reduziram tarefas manuais repetitivas em ~55% e minimizaram erros operacionais nos relatórios internos.",
-          "stack": ["Rest", "Node.js", "React.Js","TypeScript", "RabbitMQ", "PostgreSQL", "System Design", "AWS", "Python", "Redis", "Linux"]
-        }
-      ]
-    },
+  "subtitle": "Desenvolvendo soluções inteligentes e escaláveis que transformam desafios complexos em sistemas eficientes e de alta performance.",
+  "about-me": {
+    "techs": "Tecnologias",
+    "hero-phrase": "“Não é só código. É propósito.”",
+    "title": "Sobre mim",
+    "text": "Olá! Eu sou o Nathan, desenvolvedor Full Stack apaixonado por tecnologia e por criar soluções que façam a diferença. Minha jornada começou em 2022, quando tive meu primeiro contato com programação durante um curso técnico em Informática. Desde então, venho estudando e me dedicando ao desenvolvimento, somando cerca de três anos de aprendizado e dois anos de experiência prática em projetos reais. Gosto de entender como as coisas funcionam por trás do código e transformar ideias em algo funcional e bem estruturado. Estou sempre em busca de evoluir, aprendendo novas tecnologias, aprimorando minhas habilidades e explorando diferentes formas de resolver problemas de forma simples e eficiente."
+  },
+  "links-home": {
+    "see-projects": "Ver Projetos",
+    "download-cv": "Meu Currículo"
+  },
+  "others": "outros",
+  "experience": {
+    "title": "Experiência Profissional",
+    "description": "Um breve resumo da minha trajetória profissional e dos cargos que ocupei.",
+    "show-more": "Mostrar mais",
+    "show-less": "Mostrar menos",
+    "jobs": [
+      {
+        "role": "Desenvolvedor Full Stack Freelance (Automação)",
+        "period": "Nov 2025 – Mar 2026",
+        "company": "Nexa Roofing",
+        "location": "Remoto, Estados Unidos",
+        "description": "Na Nexa Roofing, empresa especializada em soluções de roofing e serviços para o setor de construção , atuei na automação de processos internos. Trabalhei na otimização de fluxos relacionados à gestão de leads, processos de entrevistas, relatórios e consistência de dados, além da reestruturação de bancos de dados complexos e criação de pipelines automatizados para reduzir erros e esforço manual.",
+        "stack": [
+          "N8N",
+          "Javascript",
+          "Glide",
+          "OpenAI",
+          "Automation Engineering",
+          "WebHook",
+          "Airtable"
+        ]
+      },
+      {
+        "role": "Desenvolvedor Full Stack",
+        "period": "Jul 2024 – Jun 2025",
+        "company": "ScoreMilk",
+        "location": "Remoto, Estados Unidos",
+        "description": "Contribuí para o desenvolvimento e aprimoramento de uma plataforma de jogos competitivos que integra tecnologias de blockchain e Web3.\n\nContribuições para o front-end:\n\n- Reduzi renderizações desnecessárias na sidebar e nas páginas de lobby/jogos, melhorando a performance por meio de otimizações de componentes e estado.\n- Implementei lazy loading e tratamento de erros, reduzindo falhas de carregamento durante problemas em requisições.\n- Otimizei o carregamento de imagens, reduzindo o tempo de carregamento.\n- Modelei e desenvolvi um sistema de Quests, implementando fluxos de missões, recompensas e progressão do usuário.\n- Melhorei a eficiência de requisições e cache com React Query, reduzindo chamadas redundantes à API.\n- Integrei carteiras de criptomoedas (Telegram Wallet, Tonkeeper) e gerenciei fluxos de DApps.\n- Aprimorei a experiência do usuário com sistemas de feedback in-app.\n- Implementei idempotência em botões de ações nos lobbies, evitando requisições duplicadas e estados inconsistentes.\n\nContribuições para o Back-end:\n\n- Refatorei o sistema de saldo dos usuários, reduzindo a latência e melhorando a consistência das transações.\n- Implementei filtros e lógica de classificação (vencedor, tipo de cripto, jogos gratuitos), melhorando a usabilidade dos dados.\n- Desenvolvi microsserviços, incluindo sistema de pagamentos via blockchain TON e módulo de autenticação, aumentando a escalabilidade.\n- Participei do desenvolvimento de bot e miniaplicativo integrados ao Telegram, ampliando o alcance e as funcionalidades da plataforma.",
+        "stack": [
+          "React.Js",
+          "Rest",
+          "Blockchain/Web3",
+          "Ethers.js",
+          "MetaMask",
+          "Node.js",
+          "TypeScript",
+          "Golang",
+          "PostgreSQL",
+          "AWS",
+          "Redis"
+        ]
+      },
+      {
+        "role": "Desenvolvedor De Software",
+        "period": "Abr 2023 – Mar 2024",
+        "company": "Sollydus",
+        "location": "Remoto, Fortaleza-CE",
+        "description": "Na Sollydus, empresa focada em soluções de tecnologia e comunicação omnichannel, atuei no desenvolvimento de plataformas escaláveis, arquitetura de sistemas e otimização de performance. \n- Desenvolvi serviços centrais e interfaces React de uma plataforma omnichannel com suporte a 15+ empresas simultâneas, entregando o MVP em produção. \n- Estruturei Modelagem de Dados, System Design e Arquitetura para diversos clientes. \n- Implementei comunicação em tempo real via WebSocket, reduzindo a latência de entrega de mensagens em ~50% em relação à solução anterior baseada em polling. \n- Melhorei o desempenho geral da aplicação em ~40% com o uso de cache Redis e de processamento assíncrono via filas do RabbitMQ.\n - Padronizei pipelines de automação em Python e Node.JS que reduziram tarefas manuais repetitivas em ~55% e minimizaram erros operacionais nos relatórios internos.",
+        "stack": [
+          "Rest",
+          "Node.js",
+          "React.Js",
+          "TypeScript",
+          "RabbitMQ",
+          "PostgreSQL",
+          "System Design",
+          "AWS",
+          "Python",
+          "Redis",
+          "Linux"
+        ]
+      }
+    ]
+  },
   "projects": {
     "title": "Projetos",
     "items": [
@@ -75,7 +106,7 @@
         "title": "ETF Web Scraper & REST API",
         "description": "Um web scraper e API REST para extrair dados em tempo real de ETFs (Exchange-Traded Funds) do site TrackingDifferences.com.",
         "match": "etf-scraper-api",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596832/logoScraper_qgqqil.png",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505838/logoScraper_2_kqztsj.png",
         "git": "https://github.com/nathazz/etf-scraper-api",
         "link": "https://etf-scraper-pudc.onrender.com/"
       },
@@ -83,7 +114,7 @@
         "title": "EtherWatch Backend",
         "description": "Backend para o etherWatch, fornecendo dados em tempo real da rede Ethereum via REST e WebSocket. Possui streaming de transações pendentes, autenticação via MetaMask, validação com Zod e Docker.",
         "match": "etherwatch-backend",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596823/etherWatch_t4lsyd.png",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505581/etherWatch_heqktq.png",
         "git": "https://github.com/nathazz/EtherWatch-backend",
         "link": ""
       },
@@ -91,7 +122,7 @@
         "title": "EtherWatch Frontend",
         "description": "Frontend para monitoramento da rede Ethereum, fornecendo preços de gás em tempo real, dados de mercado, informações da Ethereum e transações pendentes ao vivo via WebSockets. Suporta integração com MetaMask para transações e verificação de saldo.",
         "match": "etherwatch-front",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596823/etherWatch_t4lsyd.png",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505581/etherWatch_heqktq.png",
         "git": "https://github.com/nathazz/EtherWatch-front",
         "link": "https://www.loom.com/share/ab79c4fd527248af8949741eea1a89a4?sid=9bd4df55-440e-4df4-a318-1d57dc6014ed"
       },
@@ -99,31 +130,32 @@
         "title": "Notas PWA",
         "description": "O PWA Notes é um aplicativo web progressivo para compartilhar notas diretamente entre dispositivos usando WebRTC.",
         "match": "pwa-notes",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/q_auto/f_auto/v1775596471/manifest-icon-512.maskable_npzgfp.png",
+        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505581/manifest-icon-512.maskable_xnaogm.png",
         "git": "https://github.com/nathazz/pwa-notes",
         "link": "https://pwa-notes-7fca6.web.app/"
       }
     ],
-     "swipe": "deslize",
+    "swipe": "deslize",
     "footer": "Ver todos os projetos"
   },
-    "links-project": {
+  "links-project": {
     "code": "Código",
     "live": "Live",
     "apk": "Apk",
     "see-projects": "Ver Projetos",
     "download-cv": "Baixar CV"
   },
-     "contact": {
-     "title": "Vamos Conversar",
-     "text": "Estou sempre aberto para novas oportunidades!",
-     "name": "Seu Nome",
-     "email": "Seu Email",
-     "msg": "Mensagem",
-     "send": "Enviar Mensagem",
-     "sending-msg": "Enviando Mensagem..."
-    },
-    "footer":{
-      "by": "Desenvolvido por Nathan"
-    }
+  "contact": {
+    "linkedin": "https://www.linkedin.com/in/nathasg/?locale=pt_BR",
+    "title": "Vamos Conversar",
+    "text": "Estou sempre aberto para novas oportunidades!",
+    "name": "Seu Nome",
+    "email": "Seu Email",
+    "msg": "Mensagem",
+    "send": "Enviar Mensagem",
+    "sending-msg": "Enviando Mensagem..."
+  },
+  "footer": {
+    "by": "Desenvolvido por Nathan"
+  }
 }
