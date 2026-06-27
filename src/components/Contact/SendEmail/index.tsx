@@ -76,7 +76,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
       <div className="mb-8">
         <h2 className="mb-5 flex items-center gap-3 text-3xl font-extrabold">
           {t('contact.emailTitle')}
-          <Handshake className={`h-15 w-15 flex-shrink-0 text-blue-400`} />
+          <Handshake className={`h-12 w-12 flex-shrink-0 text-blue-400`} />
         </h2>
 
         <div className={`mb-6 h-px ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`} />
