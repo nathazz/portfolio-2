@@ -28,12 +28,26 @@
     "download-cv": "My Resume"
   },
   "subtitle": "Developing smart and scalable solutions that turn complex challenges into efficient, high-performance systems.",
+
   "about-me": {
-    "techs": "Technologies",
-    "hero-phrase": "“Code with purpose, not just features.”",
-    "title": "About me",
-    "text": "Hi! I’m Nathan, a Full Stack developer passionate about technology and creating solutions that make a difference. My journey began in 2022, when I had my first contact with programming during a technical computing course. Since then, I’ve been continuously learning and growing as a developer, with around three years of study and two years of real-world experience. I enjoy understanding how things work behind the code and turning ideas into something functional and well structured. I’m always looking to improve, learning new technologies, refining my skills, and exploring different ways to solve problems simply and effectively."
+    "title": "About",
+    "pull-quote": "A little bit of my journey and who I am.",
+    "text": "I started programming in 2022 during my associate's degree in Information Technology. What began as coursework quickly turned into curiosity — I started building personal projects, exploring different technologies, and learning far beyond the classroom.\n\nToday, I work as a full-stack software engineer with a strong focus on backend development. I've contributed to APIs, distributed systems, integrations, and modern web applications, collaborating with startups and international teams to build products used by thousands of people.\n\nI enjoy solving real-world problems, writing software that's easy to maintain, and understanding how technical decisions shape the overall product. I'm also passionate about automation and AI, constantly looking for ways to remove repetitive work so teams can focus on creating value.\n\nTechnology changes every day, and that's one of the reasons I enjoy this field. I'm always learning new languages, architectures, and tools, without limiting myself to a single stack.",
+    "location": "Porto Alegre, Brazil — GMT-3, overlaps cleanly with US mornings, and other countries in the northern or southern hemispheres",
+    "availability": "*Open to teams in any country that works in English or Portuguese",
+    "techs": "Skills",
+    "categories": {
+      "all": "All",
+      "languages": "Languages",
+      "frameworks": "Frameworks/Ecosystem",
+      "infra": "Infrastructure",
+      "databases": "Databases",
+      "testing": "Testing",
+      "ai": "AI tools",
+      "other": "Other"
+    }
   },
+
   "others": "others",
   "experience": {
     "title": "Professional Experience",
@@ -147,15 +161,49 @@
   },
   "contact": {
     "linkedin": "https://www.linkedin.com/in/nathasg",
-    "title": "Let's talk",
-    "text": "I'm always open to new opportunities and interesting projects. Get in touch!",
-    "name": "Your Name",
-    "email": "Your Email",
-    "msg": "Message",
+    "title": "Show me your ideas!",
+    "emailTitle": "Let's talk",
+    "emailText": "I'm available to discuss projects, ideas, opportunities, or simply have a conversation.",
+    "emailSubText": "I'm excited to hear your ideas and work together to create amazing solutions.",
+    "name": "Your Name*",
+    "email": "Your Email*",
+    "msg": "Message*",
     "send": "Send Message",
-    "sending-msg": "Sending message..."
+    "sending-msg": "Sending message...",
+    "my-email": "My Email",
+    "copy-email": "Copy email",
+    "or": "or"
+  },
+  "faq": {
+    "phrase": "“Code with purpose, not just features.”",
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "q": "Do you work well in teams or do you prefer working independently?",
+      "a": "I have experience in both environments. I enjoy collaborating with teams, sharing ideas, and participating in technical discussions, while also being comfortable working independently when a project requires autonomy."
+    },
+    "q2": {
+      "q": "Where can I talk to you?",
+      "a": "You can reach me via email at nathas0208@gmail.com - For others' links, you can check the footer"
+    },
+    "q3": {
+      "q": "Do you only work with web development?",
+      "a": "My primary focus is web development, but I also have experience building mobile applications, desktop software, automations, and integrations with external services."
+    },
+    "q4": {
+      "q": "What do you deliver at the end of a project?",
+      "a": "I deliver documented code, monitoring and observability setup, deployment configuration, and, when needed, post-launch support for adjustments and improvements."
+    },
+    "q5": {
+      "q": "Do you work under contract?",
+      "a": "Yes. Every project is formalized with a clear contract and scope definition to ensure transparency and security for both parties. I have experience working under different engagement models, including full-time employment, contractor agreements, and NDAs."
+    },
+    "q6": {
+      "q": "Which languages do you speak?",
+      "a": "I am a native Portuguese speaker, have advanced English proficiency for professional communication, reading, and writing, and possess working knowledge of Spanish, primarily for reading and writing."
+    }
   },
   "footer": {
-    "by": "Developed by Nathan"
+    "by": "Developed by Nathan",
+    "tech": "Built with React, I18N, TypeScript & Tailwind"
   }
 }

@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "home": "Home",
+    "home": "Início",
     "about": "Sobre",
     "xp": "Experiência",
     "project": "Projetos",
@@ -24,12 +24,26 @@
     "second": "tudo tranquilo?"
   },
   "subtitle": "Desenvolvendo soluções inteligentes e escaláveis que transformam desafios complexos em sistemas eficientes e de alta performance.",
+
   "about-me": {
-    "techs": "Tecnologias",
-    "hero-phrase": "“Não é só código. É propósito.”",
-    "title": "Sobre mim",
-    "text": "Olá! Eu sou o Nathan, desenvolvedor Full Stack apaixonado por tecnologia e por criar soluções que façam a diferença. Minha jornada começou em 2022, quando tive meu primeiro contato com programação durante um curso técnico em Informática. Desde então, venho estudando e me dedicando ao desenvolvimento, somando cerca de três anos de aprendizado e dois anos de experiência prática em projetos reais. Gosto de entender como as coisas funcionam por trás do código e transformar ideias em algo funcional e bem estruturado. Estou sempre em busca de evoluir, aprendendo novas tecnologias, aprimorando minhas habilidades e explorando diferentes formas de resolver problemas de forma simples e eficiente."
+    "title": "Sobre",
+    "pull-quote": "Um pouco da minha trajetória e sobre mim.",
+    "text": "Comecei a programar em 2022, durante o meu tecnólogo em informática e sistemas. O que começou com projetos acadêmicos rapidamente virou curiosidade: passei a estudar por conta própria, construir aplicações e explorar diferentes áreas do desenvolvimento de software.\n\nDesde então, atuo profissionalmente como desenvolvedor full stack, com foco em back-end, participando da construção de APIs, integrações, sistemas distribuídos e interfaces modernas. Ao longo da minha trajetória, trabalhei com startups e empresas internacionais, desenvolvendo produtos utilizados por milhares de usuários e colaborando diretamente com times de diferentes áreas.\n\nGosto de resolver problemas reais, escrever código simples de manter e entender como cada decisão técnica impacta o produto. Também tenho interesse por automação, inteligência artificial e ferramentas que eliminam trabalho repetitivo, permitindo que as equipes foquem no que realmente gera valor.\n\nAcredito que a tecnologia é um processo contínuo de aprendizado. Por isso, estou sempre estudando novas linguagens, arquiteturas e ferramentas, sem me prender a uma única stack.",
+    "location": "Porto Alegre, Brasil — GMT-3, boa sobreposição com o horário da manhã nos EUA e outros países do hemisfério norte ou do hemisfério sul",
+    "availability": "* Aberto a times de qualquer país que trabalhe em inglês ou português",
+    "techs": "Skills",
+    "categories": {
+      "all": "Todos",
+      "languages": "Linguagens",
+      "frameworks": "Frameworks/Ecossistema",
+      "infra": "Infraestrutura",
+      "databases": "Bancos de dados",
+      "testing": "Testes",
+      "ai": "Ferramentas de IA",
+      "other": "Outros"
+    }
   },
+
   "links-home": {
     "see-projects": "Ver Projetos",
     "download-cv": "Meu Currículo"
@@ -147,15 +161,50 @@
   },
   "contact": {
     "linkedin": "https://www.linkedin.com/in/nathasg/?locale=pt_BR",
-    "title": "Vamos Conversar",
-    "text": "Estou sempre aberto para novas oportunidades!",
-    "name": "Seu Nome",
-    "email": "Seu Email",
-    "msg": "Mensagem",
+    "title": "Me mostre suas ideias!",
+    "name": "Seu Nome*",
+    "emailTitle": "Fale comigo",
+    "emailText": "Estou disponível para conversar sobre projetos, ideias, oportunidades ou apenas uma conversa.",
+    "emailSubText": "Estou ansioso para ouvir suas ideias e trabalhar juntos para criar soluções incríveis.",
+    "email": "Seu Email*",
+    "msg": "Mensagem*",
     "send": "Enviar Mensagem",
-    "sending-msg": "Enviando Mensagem..."
+    "sending-msg": "Enviando Mensagem...",
+    "my-email": "Meu E-mail",
+    "copy-email": "Copiar e-mail",
+    "or": "ou"
+  },
+  "faq": {
+    "phrase": "“Não é só código. É propósito.”",
+    "title": "Perguntas Frequentes",
+
+    "q1": {
+      "q": "Você trabalha bem em equipe ou prefere atuar individualmente?",
+      "a": "Tenho experiência em ambos os formatos. Gosto de colaborar em equipe, compartilhar ideias e participar de discussões técnicas, mas também sou totalmente confortável trabalhando de forma independente quando o projeto exige autonomia."
+    },
+    "q2": {
+      "q": "Por onde consigo entrar em contato?",
+      "a": "Você pode entrar em contato comigo via e-mail em nathas0208@gmail.com. Para checar outros links, você pode verificar o rodapé."
+    },
+    "q3": {
+      "q": "Você trabalha apenas com desenvolvimento web?",
+      "a": "Meu foco principal é o desenvolvimento web, mas também possuo experiência com aplicativos móveis, aplicações desktop, automações e integrações com serviços externos."
+    },
+    "q4": {
+      "q": "O que é entregue ao final de um projeto?",
+      "a": "Entrego código documentado, observabilidade configurada, ambiente de deploy preparado e, quando necessário, suporte para ajustes e acompanhamento após a entrega."
+    },
+    "q5": {
+      "q": "Você trabalha sob contrato?",
+      "a": "Sim. Todo trabalho é formalizado com contrato e escopo bem definidos para garantir transparência e segurança para ambas as partes. Tenho experiência com diferentes modelos de contratação, incluindo CLT, PJ e acordos de confidencialidade (NDA)."
+    },
+    "q6": {
+      "q": "Quais idiomas você domina?",
+      "a": "Sou fluente em português (nativo), possuo inglês avançado para comunicação profissional, leitura e escrita, além de conhecimentos de espanhol voltados principalmente para leitura e escrita."
+    }
   },
   "footer": {
-    "by": "Desenvolvido por Nathan"
+    "by": "Desenvolvido por Nathan",
+    "tech": "Criado com: React, I18N, TypeScript & Tailwind"
   }
 }

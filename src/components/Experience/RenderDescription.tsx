@@ -5,6 +5,7 @@ export const renderDescription = (description: string) => {
 
   const flushList = (key: string) => {
     if (!listItems.length) return;
+
     blocks.push(
       <ul key={key} className="ml-5 list-disc space-y-1 text-sm leading-6 text-inherit">
         {listItems.map((item, idx) => (
@@ -12,11 +13,13 @@ export const renderDescription = (description: string) => {
         ))}
       </ul>,
     );
+
     listItems = [];
   };
 
   lines.forEach((rawLine, idx) => {
     const line = rawLine.trim();
+
     if (!line) {
       flushList(`list-${idx}`);
       return;
@@ -28,6 +31,7 @@ export const renderDescription = (description: string) => {
     }
 
     flushList(`list-${idx}`);
+
     blocks.push(
       <p key={`p-${idx}`} className="mb-2 text-sm leading-7 text-inherit">
         {line}

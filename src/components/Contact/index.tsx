@@ -1,68 +1,28 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-import type { IstyleProps } from '../../types/types';
-import SendEmail from './sendEmail';
 import { useTranslation } from 'react-i18next';
+import type { IstyleProps } from '../../types/types';
+import Faq from './FAQ';
+import SendEmail from './SendEmail';
+import PhraseCard from './PhraseCard';
 
 const Contacts: React.FC<IstyleProps> = ({ darkMode }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="mb-16 text-center">
         <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-          <span className={`${darkMode ? 'text-white' : 'text-gray-900'}`}>
-            {t('contact.title')}
-          </span>
+          <span className={darkMode ? 'text-white' : 'text-gray-900'}>{t('contact.title')}</span>
         </h2>
-        <p className={`mx-auto max-w-3xl text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-          {t('contact.text')}
-        </p>
       </div>
-
-      <div className="mx-auto max-w-2xl">
-        <div className="mb-12 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              icon: Mail,
-              label: 'Email',
-              value: 'nathas0208@gmail.com',
-              href: 'mailto:nathas0208@gmail.com',
-            },
-            {
-              icon: Linkedin,
-              label: 'LinkedIn',
-              value: '/nathasg',
-              href: `${t('contact.linkedin')}`,
-            },
-            {
-              icon: Github,
-              label: 'GitHub',
-              value: '/nathazz',
-              href: 'https://github.com/nathazz',
-            },
-          ].map((contact, index) => (
-            <a
-              key={index}
-              href={contact.href}
-              rel="noopener noreferrer"
-              target="_blank"
-              className={`group flex flex-col items-center rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-                darkMode
-                  ? 'border border-gray-700 bg-gray-800 hover:border-gray-600'
-                  : 'border border-gray-200 bg-white hover:border-gray-300'
-              }`}
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 transition-transform group-hover:scale-110">
-                <contact.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="mb-1 font-semibold">{contact.label}</h3>
-              <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                {contact.value}
-              </p>
-            </a>
-          ))}
+      <div className="mx-auto grid max-w-7xl gap-15 lg:grid-cols-[1.1fr_.9fr]">
+        <div className="order-2 lg:order-1">
+          <PhraseCard darkMode={darkMode} />
+          <Faq darkMode={darkMode} />
         </div>
-        <SendEmail darkMode={darkMode} />
+
+        <div className="order-1 lg:order-2">
+          <SendEmail darkMode={darkMode} />
+        </div>
       </div>
     </div>
   );

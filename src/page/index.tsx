@@ -3,13 +3,13 @@ import NavBar from '../components/NavBar';
 import Home from '../components/Home';
 import About from '../components/About';
 import Projects from '../components/Projects';
-import Contacts from '../components/Contact';
 import Experience from '../components/Experience';
-import { useTranslation } from 'react-i18next';
+import Contacts from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const { t } = useTranslation();
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -42,7 +42,10 @@ const Portfolio = () => {
         <About darkMode={darkMode} />
       </section>
 
-      <section id="experience" className={`py-20 ${darkMode ? 'bg-gray-800/45' : 'bg-white'}`}>
+      <section
+        id="experience"
+        className={`py-20 ${darkMode ? 'bg-[color-mix(in_oklab,_oklch(0.3_0.04_256.8)_50%,_transparent)]' : 'bg-gray-50'}`}
+      >
         <Experience darkMode={darkMode} />
       </section>
 
@@ -50,21 +53,11 @@ const Portfolio = () => {
         <Projects darkMode={darkMode} />
       </section>
 
-      <section id="contact" className={`py-20 ${darkMode ? 'bg-gray-800/50' : 'bg-gray-50'}`}>
+      <section id="contact" className={`py-20 ${darkMode ? 'bg-[#192335]' : 'bg-gray-50'}`}>
         <Contacts darkMode={darkMode} />
       </section>
 
-      <footer
-        className={`border-t py-8 ${darkMode ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white'}`}
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-              © {t('footer.by')} - {new Date().getUTCFullYear()} .
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer darkMode={darkMode} />
     </div>
   );
 };
