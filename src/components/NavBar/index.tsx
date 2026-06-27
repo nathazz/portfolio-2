@@ -79,10 +79,11 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
   }, []);
 
   const handleNavigate = (id: string) => {
+    setActiveSection(id);
+
     scrollToSection?.(id);
     setIsMobileOpen(false);
   };
-
   const navBackground =
     activeSection === 'home'
       ? 'bg-transparent border-transparent'
