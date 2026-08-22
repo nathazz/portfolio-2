@@ -1,10 +1,20 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown, Code2, Globe, ShieldCheck, FileText, Languages, Contact } from 'lucide-react';
+
 import type { IstyleProps } from '../../../types/types';
+import {
+  CodeFolderIcon,
+  ChatUserIcon,
+  InternetIcon,
+  DocumentAttachmentIcon,
+  LanguageSquareIcon,
+  SecurityIcon,
+  ArrowDown01Icon,
+} from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 
 interface FaqItem {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: typeof CodeFolderIcon;
   question: string;
   answer: string;
 }
@@ -14,12 +24,12 @@ const Faq: React.FC<IstyleProps> = ({ darkMode }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const items: FaqItem[] = [
-    { icon: Code2, question: t('faq.q1.q'), answer: t('faq.q1.a') },
-    { icon: Contact, question: t('faq.q2.q'), answer: t('faq.q2.a') },
-    { icon: Globe, question: t('faq.q3.q'), answer: t('faq.q3.a') },
-    { icon: ShieldCheck, question: t('faq.q4.q'), answer: t('faq.q4.a') },
-    { icon: FileText, question: t('faq.q5.q'), answer: t('faq.q5.a') },
-    { icon: Languages, question: t('faq.q6.q'), answer: t('faq.q6.a') },
+    { icon: CodeFolderIcon, question: t('faq.q1.q'), answer: t('faq.q1.a') },
+    { icon: ChatUserIcon, question: t('faq.q2.q'), answer: t('faq.q2.a') },
+    { icon: InternetIcon, question: t('faq.q3.q'), answer: t('faq.q3.a') },
+    { icon: SecurityIcon, question: t('faq.q4.q'), answer: t('faq.q4.a') },
+    { icon: DocumentAttachmentIcon, question: t('faq.q5.q'), answer: t('faq.q5.a') },
+    { icon: LanguageSquareIcon, question: t('faq.q6.q'), answer: t('faq.q6.a') },
   ];
 
   const toggle = (index: number) => {
@@ -33,6 +43,7 @@ const Faq: React.FC<IstyleProps> = ({ darkMode }) => {
           const isOpen = openIndex === index;
           const panelId = `faq-panel-${index}`;
           const buttonId = `faq-button-${index}`;
+
           return (
             <div
               key={index}
@@ -50,14 +61,17 @@ const Faq: React.FC<IstyleProps> = ({ darkMode }) => {
                 }`}
               >
                 <span className="flex items-center gap-3">
-                  <item.icon
+                  <HugeiconsIcon
+                    icon={item.icon}
                     className={`h-5 w-5 flex-shrink-0 ${darkMode ? 'text-blue-400' : 'text-blue-500'}`}
                   />
                   <span className={`font-medium ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
                     {item.question}
                   </span>
                 </span>
-                <ChevronDown
+
+                <HugeiconsIcon
+                  icon={ArrowDown01Icon}
                   className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 ${
                     isOpen ? 'rotate-180' : ''
                   } ${darkMode ? 'text-blue-400' : 'text-blue-500'}`}

@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import type { IstyleProps } from '../../types/types';
-import { Languages } from 'lucide-react';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ChatTranslateIcon } from '@hugeicons/core-free-icons';
 
 const LanguageSelector: React.FC<IstyleProps> = ({ darkMode }) => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const handleChange = (value: string) => {
     localStorage.setItem('language', value);
@@ -12,10 +13,9 @@ const LanguageSelector: React.FC<IstyleProps> = ({ darkMode }) => {
 
   return (
     <div className="relative inline-block">
-      <Languages
-        className={`pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 ${
-          darkMode ? 'text-gray-400' : 'text-gray-500'
-        }`}
+      <HugeiconsIcon
+        className={`pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2`}
+        icon={ChatTranslateIcon}
       />
 
       <select
@@ -27,8 +27,9 @@ const LanguageSelector: React.FC<IstyleProps> = ({ darkMode }) => {
             : 'border-gray-300 bg-white text-gray-700'
         }`}
       >
-        <option value="pt">PT-BR</option>
-        <option value="en">EN</option>
+        <option value="pt">{t('options-translate.ptbr')}</option>
+        <option value="en">{t('options-translate.en')}</option>
+        <option value="es">{t('options-translate.es')}</option>
       </select>
     </div>
   );

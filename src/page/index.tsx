@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Experience from '../components/Experience';
 import Contacts from '../components/Contact';
 import Footer from '../components/Footer';
+import SkillsSection from '../components/About/Skills';
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -20,7 +21,17 @@ const Portfolio = () => {
 
   return (
     <div
-      className={`min-h-screen transition-all duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}
+      className={`min-h-screen transition-colors duration-300 ${
+        darkMode ? 'text-white' : 'bg-white text-gray-900'
+      }`}
+      style={
+        darkMode
+          ? {
+              background:
+                'linear-gradient(to bottom, #1e2536 0%, #171d2c 25%, #12161f 50%, #10141d 75%, #14192a 100%)',
+            }
+          : undefined
+      }
     >
       <NavBar
         darkMode={darkMode}
@@ -37,23 +48,36 @@ const Portfolio = () => {
 
       <section
         id="about"
-        className={`py-20 ${darkMode ? 'bg-[color-mix(in_oklab,_oklch(0.3_0.04_256.8)_50%,_transparent)]' : 'bg-gray-50'}`}
+        className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-white'}`}
       >
         <About darkMode={darkMode} />
       </section>
 
       <section
+        id="skills"
+        className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
+      >
+        <SkillsSection darkMode={darkMode} />
+      </section>
+
+      <section
         id="experience"
-        className={`py-20 ${darkMode ? 'bg-[color-mix(in_oklab,_oklch(0.3_0.04_256.8)_50%,_transparent)]' : 'bg-gray-50'}`}
+        className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-white'}`}
       >
         <Experience darkMode={darkMode} />
       </section>
 
-      <section id="projects" className="py-20">
+      <section
+        id="projects"
+        className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
+      >
         <Projects darkMode={darkMode} />
       </section>
 
-      <section id="contact" className={`py-20 ${darkMode ? 'bg-[#192335]' : 'bg-gray-50'}`}>
+      <section
+        id="contact"
+        className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
+      >
         <Contacts darkMode={darkMode} />
       </section>
 

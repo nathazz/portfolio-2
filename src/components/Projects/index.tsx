@@ -4,9 +4,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { Github, ExternalLink } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
 import { useTranslation } from 'react-i18next';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { GithubIcon, LinkForwardFreeIcons } from '@hugeicons/core-free-icons';
 
 const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
   const { t } = useTranslation();
@@ -89,7 +90,7 @@ const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
-                    <Github className="h-4 w-4" />
+                    <HugeiconsIcon className="h-4 w-4" icon={GithubIcon} />
                     {t('links-project.code')}
                   </a>
 
@@ -104,7 +105,8 @@ const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
                           : 'bg-gray-900 text-white hover:bg-gray-800'
                       }`}
                     >
-                      <ExternalLink className="h-4 w-4" />
+                      <HugeiconsIcon className="h-4 w-4" icon={LinkForwardFreeIcons} />
+
                       {t('links-project.live')}
                     </a>
                   )}

@@ -1,28 +1,29 @@
-import { Mail, Linkedin, Github, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import type { IstyleProps } from '../../types/types';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Mail02Icon, Linkedin01Icon, GithubIcon, WhatsappIcon } from '@hugeicons/core-free-icons';
 
 const Footer: React.FC<IstyleProps> = ({ darkMode }) => {
   const { t } = useTranslation();
 
   const links = [
     {
-      icon: Phone,
+      icon: WhatsappIcon,
       href: 'https://wa.me/+5551993919197',
-      label: 'Phone (WhatsApp)',
+      label: 'WhatsApp',
     },
     {
-      icon: Mail,
+      icon: Mail02Icon,
       href: 'mailto:nathas0208@gmail.com',
       label: 'Email',
     },
     {
-      icon: Linkedin,
+      icon: Linkedin01Icon,
       href: t('contact.linkedin'),
       label: 'LinkedIn',
     },
     {
-      icon: Github,
+      icon: GithubIcon,
       href: 'https://github.com/nathazz',
       label: 'GitHub',
     },
@@ -58,7 +59,7 @@ const Footer: React.FC<IstyleProps> = ({ darkMode }) => {
                     : 'border-gray-200 text-gray-700 hover:border-blue-500 hover:text-blue-600'
                 }`}
               >
-                <link.icon className="h-4 w-4" />
+                <HugeiconsIcon className="h-5 w-5" icon={link.icon} />
                 {link.label}
               </a>
             ))}

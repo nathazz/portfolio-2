@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
-import { Handshake, Send } from 'lucide-react';
 import type { IstyleProps } from '../../../types/types';
 import { EMAIL } from '../../../utils/constants';
+import { Agreement02Icon, MailSend01Icon } from '@hugeicons/core-free-icons';
+import { HugeiconsIcon } from '@hugeicons/react';
 
 const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -76,7 +77,11 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
       <div className="mb-8">
         <h2 className="mb-5 flex items-center gap-3 text-3xl font-extrabold">
           {t('contact.emailTitle')}
-          <Handshake className={`h-12 w-12 flex-shrink-0 text-blue-400`} />
+
+          <HugeiconsIcon
+            className={`h-12 w-12 flex-shrink-0 text-blue-400`}
+            icon={Agreement02Icon}
+          />
         </h2>
 
         <div className={`mb-6 h-px ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`} />
@@ -127,7 +132,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
               t('contact.sending-msg')
             ) : (
               <>
-                <Send className="h-4 w-4" />
+                <HugeiconsIcon className="h-5 w-5" icon={MailSend01Icon} />
                 {t('contact.send')}
               </>
             )}

@@ -1,4 +1,9 @@
 {
+  "options-translate": {
+    "ptbr": "Portuguese",
+    "en": "English",
+    "es": "Spanish"
+  },
   "navbar": {
     "home": "Home",
     "about": "About",
@@ -31,7 +36,7 @@
 
   "about-me": {
     "title": "About",
-    "pull-quote": "A little bit of my journey and who I am.",
+    "pull-quote": "A little bit of my journey",
     "text": "I started programming in 2022 during my associate's degree in Information Technology. What began as coursework quickly turned into curiosity — I started building personal projects, exploring different technologies, and learning far beyond the classroom.\n\nToday, I work as a full-stack software engineer with a strong focus on backend development. I've contributed to APIs, distributed systems, integrations, and modern web applications, collaborating with startups and international teams to build products used by thousands of people.\n\nI enjoy solving real-world problems, writing software that's easy to maintain, and understanding how technical decisions shape the overall product. I'm also passionate about automation and AI, constantly looking for ways to remove repetitive work so teams can focus on creating value.\n\nTechnology changes every day, and that's one of the reasons I enjoy this field. I'm always learning new languages, architectures, and tools, without limiting myself to a single stack.",
     "location": "Porto Alegre, Brazil — GMT-3, overlaps cleanly with US mornings, and other countries in the northern or southern hemispheres",
     "availability": "*Open to teams in any country that works in English or Portuguese",

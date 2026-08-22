@@ -1,4 +1,9 @@
 {
+   "options-translate": {
+    "ptbr": "Português",
+    "en": "Inglês",
+    "es": "Espanhol"
+  },
   "navbar": {
     "home": "Início",
     "about": "Sobre",
@@ -27,7 +32,7 @@
 
   "about-me": {
     "title": "Sobre",
-    "pull-quote": "Um pouco da minha trajetória e sobre mim.",
+    "pull-quote": "Um pouco da minha trajetória",
     "text": "Comecei a programar em 2022, durante o meu tecnólogo em informática e sistemas. O que começou com projetos acadêmicos rapidamente virou curiosidade: passei a estudar por conta própria, construir aplicações e explorar diferentes áreas do desenvolvimento de software.\n\nDesde então, atuo profissionalmente como desenvolvedor full stack, com foco em back-end, participando da construção de APIs, integrações, sistemas distribuídos e interfaces modernas. Ao longo da minha trajetória, trabalhei com startups e empresas internacionais, desenvolvendo produtos utilizados por milhares de usuários e colaborando diretamente com times de diferentes áreas.\n\nGosto de resolver problemas reais, escrever código simples de manter e entender como cada decisão técnica impacta o produto. Também tenho interesse por automação, inteligência artificial e ferramentas que eliminam trabalho repetitivo, permitindo que as equipes foquem no que realmente gera valor.\n\nAcredito que a tecnologia é um processo contínuo de aprendizado. Por isso, estou sempre estudando novas linguagens, arquiteturas e ferramentas, sem me prender a uma única stack.",
     "location": "Porto Alegre, Brasil — GMT-3, boa sobreposição com o horário da manhã nos EUA e outros países do hemisfério norte ou do hemisfério sul",
     "availability": "* Aberto a times de qualquer país que trabalhe em inglês ou português",

@@ -1,10 +1,11 @@
-import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { IstyleProps } from '../../types/types';
 import LanguageSelector from '../../i18n/options';
 import { SECTIONS } from '../../utils/constants';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Menu01Icon, Ramadhan01Icon, Sun01Icon, XIcon } from '@hugeicons/core-free-icons';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -125,7 +126,11 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
                 darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'
               }`}
             >
-              {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {darkMode ? (
+                <HugeiconsIcon className="h-5 w-5" icon={Sun01Icon} />
+              ) : (
+                <HugeiconsIcon className="h-5 w-5" icon={Ramadhan01Icon} />
+              )}
             </button>
 
             <LanguageSelector darkMode={darkMode} />
@@ -136,7 +141,11 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
                 darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'
               }`}
             >
-              {isMobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileOpen ? (
+                <HugeiconsIcon className="h-5 w-5" icon={XIcon} />
+              ) : (
+                <HugeiconsIcon className="h-5 w-5" icon={Menu01Icon} />
+              )}
             </button>
           </div>
         </div>

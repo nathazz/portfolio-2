@@ -1,7 +1,8 @@
-import { ArrowRight, Download, Terminal } from 'lucide-react';
 import type { IstyleProps } from '../../types/types';
 import { useTranslation } from 'react-i18next';
 import Avatar from './Avatar';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowRight02Icon, Download02Icon } from '@hugeicons/core-free-icons';
 
 const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
   const { t } = useTranslation();
@@ -25,23 +26,21 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
         <div className="mx-auto w-full max-w-4xl">
           <div className="flex flex-col items-center space-y-10 text-center">
             <div className="relative order-1">
+              <div
+                className={`absolute inset-0 -z-10 rounded-full blur-2xl ${
+                  darkMode ? 'bg-blue-500/20' : 'bg-blue-400/25'
+                }`}
+              />
+
               <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64">
-                <div className="animate-spin-slow absolute inset-0 rounded-full bg-blue-400"></div>
                 <div
-                  className={`absolute inset-1 rounded-full ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
-                ></div>
-                <div className="absolute inset-2 overflow-hidden rounded-full">
+                  className={`h-full w-full overflow-hidden rounded-full border-2 shadow-xl ${
+                    darkMode ? 'border-gray-800 shadow-black/40' : 'border-white shadow-gray-300/50'
+                  }`}
+                >
                   <Avatar />
                 </div>
               </div>
-
-              <div
-                className={`absolute -top-2 -right-2 h-4 w-4 rounded-full ${darkMode ? 'bg-blue-400' : 'bg-blue-500'} animate-ping`}
-              ></div>
-              <div
-                className={`absolute -bottom-2 -left-2 h-3 w-3 rounded-full ${darkMode ? 'bg-cyan-400' : 'bg-cyan-500'} animate-ping`}
-                style={{ animationDelay: '1s' }}
-              ></div>
             </div>
 
             <div className="order-2 space-y-8">
@@ -60,26 +59,6 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
                 </p>
               </div>
 
-              <div
-                className={`inline-flex items-center gap-3 rounded-full border px-6 py-3 ${darkMode ? 'border-gray-800 bg-gray-900/50 backdrop-blur-sm' : 'border-gray-200 bg-white/50 backdrop-blur-sm'}`}
-              >
-                <Terminal className={`h-4 w-4 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
-                <code
-                  className={`font-mono text-sm ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
-                >
-                  <span className={darkMode ? 'text-purple-400' : 'text-purple-600'}>const</span>{' '}
-                  {t('terminal.welcome')}: string[] = [
-                  <span className={darkMode ? 'text-green-400' : 'text-green-600'}>
-                    '{t('terminal.first')}'
-                  </span>
-                  ,
-                  <span className={darkMode ? 'text-green-400' : 'text-green-600'}>
-                    '{t('terminal.second')}'
-                  </span>
-                  ];
-                </code>
-              </div>
-
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <button
                   onClick={() => scrollToSection?.('projects')}
@@ -91,7 +70,10 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     {t('links-home.see-projects')}
-                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    <HugeiconsIcon
+                      className="h-5 w-5 transition-transform group-hover:translate-x-1"
+                      icon={ArrowRight02Icon}
+                    />
                   </span>
                 </button>
 
@@ -106,7 +88,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
                   }`}
                 >
                   <span className="flex items-center gap-2">
-                    <Download className="h-5 w-5" />
+                    <HugeiconsIcon className="h-5 w-5" icon={Download02Icon} />
                     {t('links-home.download-cv')}
                   </span>
                 </a>
