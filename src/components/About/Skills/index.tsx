@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Category, IstyleProps } from '../../../types/types';
-import { ALL_SKILLS, CATEGORIES } from '../../../utils/constants';
+import { CATEGORIES } from '../../../utils/constants';
+import { ALL_SKILLS, SKILL_ICONS } from '../../../utils/skills';
 
 const SkillsSection: React.FC<IstyleProps> = ({ darkMode }) => {
   const { t } = useTranslation();
@@ -52,11 +53,12 @@ const SkillsSection: React.FC<IstyleProps> = ({ darkMode }) => {
       <div className="flex flex-wrap justify-center gap-2">
         {ALL_SKILLS.map((skill) => {
           const match = activeCategory === 'all' || skill.category === activeCategory;
+          const Icon = SKILL_ICONS[skill.name];
 
           return (
             <span
               key={skill.name}
-              className={`rounded-md border px-3.5 py-1.5 text-sm font-medium transition-all duration-150 ${
+              className={`flex items-center gap-2 rounded-md border px-3.5 py-1.5 text-sm font-medium transition-all duration-150 ${
                 match
                   ? darkMode
                     ? 'border-gray-700 bg-gray-800 text-gray-200 opacity-100'
@@ -65,6 +67,7 @@ const SkillsSection: React.FC<IstyleProps> = ({ darkMode }) => {
               }`}
               style={!match ? { position: 'absolute', pointerEvents: 'none' } : undefined}
             >
+              {Icon && <Icon className="h-4 w-4 shrink-0" />}
               {skill.name}
             </span>
           );
