@@ -1,14 +1,15 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import NavBar from '../components/NavBar';
 import Home from '../components/Home';
 import About from '../components/About';
-import Projects from '../components/Projects';
 import Experience from '../components/Experience';
 import Contacts from '../components/Contact';
 import Footer from '../components/Footer';
-import SkillsSection from '../components/About/Skills';
 
 const Portfolio = () => {
+  const SkillsSection = lazy(() => import('../components/About/Skills'));
+  const Projects = lazy(() => import('../components/Projects'));
+
   const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
@@ -57,7 +58,19 @@ const Portfolio = () => {
         id="skills"
         className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
       >
-        <SkillsSection darkMode={darkMode} />
+        <Suspense
+          fallback={
+            <div
+              className={`flex min-h-[300px] items-center justify-center text-sm ${
+                darkMode ? 'text-gray-400' : 'text-gray-600'
+              }`}
+            >
+              Loading skills...
+            </div>
+          }
+        >
+          <SkillsSection darkMode={darkMode} />
+        </Suspense>
       </section>
 
       <section
@@ -71,7 +84,19 @@ const Portfolio = () => {
         id="projects"
         className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
       >
-        <Projects darkMode={darkMode} />
+        <Suspense
+          fallback={
+            <div
+              className={`flex min-h-[300px] items-center justify-center text-sm ${
+                darkMode ? 'text-gray-400' : 'text-gray-600'
+              }`}
+            >
+              Loading projects...
+            </div>
+          }
+        >
+          <Projects darkMode={darkMode} />
+        </Suspense>
       </section>
 
       <section
