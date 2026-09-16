@@ -89,7 +89,7 @@ const Experience: React.FC<IstyleProps> = ({ darkMode }) => {
               {activeJob.stack.map((tech, i) => (
                 <span
                   key={i}
-                  className={`rounded-md px-2.5 py-1 text-xs font-medium ${
+                  className={`rounded-sm px-2.5 py-1 text-xs font-medium ${
                     darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'
                   }`}
                 >

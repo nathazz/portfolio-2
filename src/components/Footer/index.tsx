@@ -53,7 +53,7 @@ const Footer: React.FC<IstyleProps> = ({ darkMode }) => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                className={`flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium transition-colors ${
                   darkMode
                     ? 'border-slate-800 text-slate-300 hover:border-blue-500 hover:text-blue-400'
                     : 'border-gray-200 text-gray-700 hover:border-blue-500 hover:text-blue-600'

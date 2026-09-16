@@ -5,8 +5,10 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Contacts from '../components/Contact';
 import Footer from '../components/Footer';
+import { useTranslation } from 'react-i18next';
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   const SkillsSection = lazy(() => import('../components/About/Skills'));
   const Projects = lazy(() => import('../components/Projects'));
 
@@ -42,6 +44,7 @@ const Portfolio = () => {
 
       <section
         id="home"
+        aria-label={t('navbar.home')}
         className="relative flex min-h-screen items-center justify-center overflow-hidden"
       >
         <Home darkMode={darkMode} scrollToSection={scrollToSection} />
@@ -49,6 +52,7 @@ const Portfolio = () => {
 
       <section
         id="about"
+        aria-label={t('navbar.about')}
         className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-white'}`}
       >
         <About darkMode={darkMode} />
@@ -75,6 +79,7 @@ const Portfolio = () => {
 
       <section
         id="experience"
+        aria-label={t('navbar.xp')}
         className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-white'}`}
       >
         <Experience darkMode={darkMode} />
@@ -82,6 +87,7 @@ const Portfolio = () => {
 
       <section
         id="projects"
+        aria-label={t('navbar.project')}
         className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
       >
         <Suspense
@@ -101,6 +107,7 @@ const Portfolio = () => {
 
       <section
         id="contact"
+        aria-label={t('navbar.contacts')}
         className={`border-t py-24 ${darkMode ? 'border-white/5' : 'border-gray-100 bg-gray-50'}`}
       >
         <Contacts darkMode={darkMode} />

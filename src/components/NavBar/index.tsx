@@ -33,7 +33,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, activeSection, darkMode
             <button
               key={id}
               onClick={() => onNavigate(id)}
-              className={`block w-full rounded-lg px-4 py-3 text-left transition-all duration-200 ${
+              className={`block w-full rounded-md px-4 py-3 text-left transition-all duration-200 ${
                 activeSection === id
                   ? 'bg-blue-400 text-white'
                   : darkMode
@@ -122,7 +122,7 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
           <div className="flex items-center space-x-2">
             <button
               onClick={toggleDarkMode}
-              className={`cursor-pointer rounded-lg p-2 transition hover:scale-110 ${
+              className={`cursor-pointer rounded-md p-2 transition hover:scale-110 ${
                 darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'
               }`}
             >
@@ -137,7 +137,7 @@ const NavBar: React.FC<IstyleProps> = ({ darkMode, toggleDarkMode, scrollToSecti
 
             <button
               onClick={() => setIsMobileOpen((prev) => !prev)}
-              className={`rounded-lg p-2 transition hover:scale-110 md:hidden ${
+              className={`rounded-md p-2 transition hover:scale-110 md:hidden ${
                 darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'
               }`}
             >

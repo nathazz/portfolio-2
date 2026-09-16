@@ -4,7 +4,7 @@ const PhraseCard = ({ darkMode }: { darkMode: boolean }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative mb-14 h-[190px] overflow-hidden rounded-3xl">
+    <div className="relative mb-14 h-[190px] overflow-hidden rounded-xl">
       <div
         className={`absolute inset-0 ${
           darkMode
@@ -32,23 +32,6 @@ const PhraseCard = ({ darkMode }: { darkMode: boolean }) => {
         <p className="text-center text-2xl leading-snug font-bold text-white drop-shadow-lg sm:text-3xl lg:text-3xl">
           {t('faq.phrase')}
         </p>
-      </div>
-
-      <div
-        className={`absolute right-6 bottom-6 flex h-11 w-11 animate-bounce items-center justify-center rounded-full shadow-lg ${
-          darkMode ? 'bg-gray-700 text-white' : 'bg-gray-900 text-white'
-        }`}
-      >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path d="M12 5v14M5 12l7 7 7-7" />
-        </svg>
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
         </p>
 
         <div
-          className={`mt-4 flex items-center gap-3 rounded-xl border p-3.5 ${
+          className={`mt-4 flex items-center gap-3 rounded-sm border p-3.5 ${
             darkMode ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-gray-50'
           }`}
         >

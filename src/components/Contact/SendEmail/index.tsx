@@ -52,7 +52,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
     }
   };
 
-  const inputClass = `w-full rounded-2xl border px-5 py-4 transition-colors duration-200 ${
+  const inputClass = `w-full rounded-sm border px-5 py-4 transition-colors duration-200 ${
     darkMode
       ? `
         border-slate-700
@@ -126,7 +126,7 @@ const SendEmail: React.FC<IstyleProps> = ({ darkMode }) => {
           <button
             type="submit"
             disabled={loading}
-            className={`mt-6 flex h-14 w-full cursor-pointer items-center justify-center gap-2 rounded-2xl bg-blue-400 font-medium text-white transition-colors duration-200 hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-70`}
+            className={`mt-6 flex h-14 w-full cursor-pointer items-center justify-center gap-2 rounded-sm bg-blue-400 font-medium text-white transition-colors duration-200 hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-70`}
           >
             {loading ? (
               t('contact.sending-msg')

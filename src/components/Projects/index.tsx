@@ -48,7 +48,7 @@ const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
         {projects.map((project, index) => (
           <SwiperSlide key={index} className="flex h-auto">
             <div
-              className={`group flex h-full flex-col overflow-hidden rounded-2xl border transition-all duration-300 hover:shadow-lg ${
+              className={`group flex h-full flex-col overflow-hidden rounded-sm border transition-all duration-300 hover:shadow-lg ${
                 darkMode ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white'
               }`}
             >
@@ -60,6 +60,7 @@ const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
                 <img
                   src={project.image || '/images/projects/default.png'}
                   alt={project.title}
+                  aria-label={project.title}
                   className="max-h-full max-w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
@@ -84,7 +85,7 @@ const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
                     href={project.git}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm transition ${
+                    className={`flex items-center gap-2 rounded-sm px-4 py-2 text-sm transition ${
                       darkMode
                         ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -99,7 +100,7 @@ const Projects: React.FC<IstyleProps> = ({ darkMode }) => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm transition ${
+                      className={`flex items-center gap-2 rounded-sm px-4 py-2 text-sm transition ${
                         darkMode
                           ? 'bg-white text-gray-900 hover:bg-gray-200'
                           : 'bg-gray-900 text-white hover:bg-gray-800'

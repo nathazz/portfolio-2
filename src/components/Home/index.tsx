@@ -62,7 +62,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <button
                   onClick={() => scrollToSection?.('projects')}
-                  className={`group relative cursor-pointer overflow-hidden rounded-full px-8 py-4 font-semibold transition-all duration-300 ${
+                  className={`group relative cursor-pointer overflow-hidden rounded-xl px-8 py-4 font-semibold transition-all duration-300 ${
                     darkMode
                       ? 'bg-white text-gray-900 hover:bg-gray-100'
                       : 'bg-gray-900 text-white hover:bg-gray-800'
@@ -81,7 +81,7 @@ const Home: React.FC<IstyleProps> = ({ darkMode, scrollToSection }) => {
                   href="https://drive.google.com/drive/folders/1iyZk7tzUxNuwv0AXRFAcBowORuKGVl9q?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group rounded-full border-2 px-8 py-4 font-semibold transition-all duration-300 ${
+                  className={`group rounded-xl border-2 px-8 py-4 font-semibold transition-all duration-300 ${
                     darkMode
                       ? 'border-gray-700 text-gray-300 hover:border-gray-600 hover:bg-gray-800/50'
                       : 'border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50'

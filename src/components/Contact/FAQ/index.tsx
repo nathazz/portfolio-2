@@ -37,7 +37,7 @@ const Faq: React.FC<IstyleProps> = ({ darkMode }) => {
   };
 
   return (
-    <div className={`overflow-hidden rounded-2xl border border-white/10 bg-transparent`}>
+    <div className={`overflow-hidden rounded-sm border border-white/10 bg-transparent`}>
       <div role="list">
         {items.map((item, index) => {
           const isOpen = openIndex === index;
