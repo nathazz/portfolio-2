@@ -4,7 +4,7 @@
  *   npm run cursors
  *
  * Each cursor is a small bitmap drawn below: '#' is black, 'o' is white and
- * '.' is transparent. Every bitmap pixel becomes a 2x2 block on screen.
+ * '.' is transparent. Every bitmap pixel is one screen pixel (two on dense screens).
  */
 import { createCanvas } from '@napi-rs/canvas';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -12,7 +12,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), '../src/assets/cursors');
-const BLOCK = 2; // screen pixels per bitmap pixel at 1x
+const BLOCK = 1; // screen pixels per bitmap pixel at 1x
 
 const CURSORS = {
   // Classic Mac-style arrow: black with a white outline. Hot spot: the tip, top left.
