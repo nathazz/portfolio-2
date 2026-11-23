@@ -4,7 +4,6 @@ import en from './locales/en.json';
 import es from './locales/es.json';
 import pt from './locales/pt.json';
 
-/** Each language under its own name, so it is readable whatever the UI language is. */
 export const LANGUAGES = [
   { code: 'pt', name: 'Português' },
   { code: 'en', name: 'English' },
@@ -20,7 +19,6 @@ function isSupported(code: string | null | undefined): code is LanguageCode {
   return LANGUAGES.some((language) => language.code === code);
 }
 
-/** A saved choice wins, then the browser language, then English. */
 function detectLanguage(): LanguageCode {
   const stored = localStorage.getItem(STORAGE_KEY);
   if (isSupported(stored)) return stored;

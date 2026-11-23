@@ -1,27 +1,12 @@
-/**
- * Renders the site wallpapers: a small ray-traced scene in the spirit of
- * Y2K desktop renders. Glass orbs rest on a grassy hill under a cloudy sky;
- * the picture is drawn at low resolution, reduced to a few levels per colour
- * channel with an ordered dither, then scaled up in whole pixels.
- *
- *   npm run wallpaper
- *
- * Everything is generated here from math and hash-based noise, so the output
- * is reproducible and contains no third-party artwork.
- */
 import { createCanvas } from '@napi-rs/canvas';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const OUT_DIR = join(dirname(fileURLToPath(import.meta.url)), '../src/assets/wallpaper');
-const SAMPLES = 3; // rays per pixel along each axis, averaged before dithering
+const SAMPLES = 3;
 const EYE_HEIGHT = 1.7;
 
-/**
- * width/height are the rendered pixels; `scale` is how many screen pixels each
- * becomes in the saved file. Orbs are [x, distance, radius] in world units.
- */
 const FORMATS = {
   landscape: {
     width: 480,
@@ -52,7 +37,7 @@ const FORMATS = {
 const PALETTES = {
   day: {
     levels: 7,
-    // Sky stops from the horizon (0) to straight up (1).
+
     sky: [
       [0, [255, 226, 246]],
       [0.18, [196, 190, 255]],
@@ -96,7 +81,6 @@ const PALETTES = {
     cloudLit: [255, 150, 160],
     cloudShade: [52, 30, 104],
     cloudCover: [0.5, 0.66],
-    // The sun has set ahead and to the right; a dim cool light comes from behind.
     sun: [-0.5, 0.65, -0.35],
     sunColor: [190, 200, 255],
     horizonGlow: { toward: [0.55, 0.83], color: [255, 190, 110] },
@@ -120,8 +104,6 @@ const PALETTES = {
     emissive: 1,
   },
 };
-
-// ---------- helpers ----------
 
 const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
 const mix = (a, b, t) => [
@@ -149,14 +131,12 @@ function gradient(stops, t) {
   return stops[stops.length - 1][1];
 }
 
-/** A pseudo-random number in [0, 1) for an integer grid cell. */
 function hash(ix, iy) {
   let n = Math.imul(ix, 374761393) + Math.imul(iy, 668265263);
   n = Math.imul(n ^ (n >>> 13), 1274126177);
   return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
 }
 
-/** Smooth noise in [0, 1]: random values on a grid, blended between cells. */
 function noise(x, y) {
   const ix = Math.floor(x);
   const iy = Math.floor(y);
@@ -169,7 +149,6 @@ function noise(x, y) {
   return top + (bottom - top) * uy;
 }
 
-/** Several octaves of noise layered together, for cloud and grass patterns. */
 function fbm(x, y, octaves = 5) {
   let total = 0;
   let amplitude = 0.5;
@@ -184,9 +163,6 @@ function fbm(x, y, octaves = 5) {
   return total / norm;
 }
 
-// ---------- scene ----------
-
-/** Height of the ground: a hill rising to the right, a far one on the left, and gentle swells. */
 function ground(x, z) {
   const nearHill = (4.6 + 4.2 * Math.tanh((x - 4) / 20)) * Math.exp(-(((z - 40) / 20) ** 2));
   const farHill = 15 * Math.exp(-(((x + 70) / 60) ** 2) - ((z - 150) / 40) ** 2);
@@ -203,7 +179,6 @@ const RAINBOW = [
   [1, [255, 130, 130]],
 ];
 
-/** Noise bent by more noise, which clumps it into cumulus-like lumps. */
 function cloudDensity(u, v) {
   return fbm(u + 0.9 * fbm(u + 5.2, v + 1.3, 3), v + 0.9 * fbm(u - 3.7, v + 9.1, 3));
 }
@@ -231,7 +206,6 @@ function sky(palette, direction) {
   }
 
   if (palette.rainbow) {
-    // A faint arc around a fixed point low on the right.
     const angle = Math.acos(clamp(dot(direction, RAINBOW_CENTER), -1, 1));
     const band = (angle - 0.62) / 0.075;
     if (band > 0 && band < 1) {
@@ -240,7 +214,6 @@ function sky(palette, direction) {
     }
   }
 
-  // Clouds: a noise field on a flat layer overhead, so it streaks toward the horizon.
   if (direction[1] > 0.02) {
     const u = (direction[0] / direction[1]) * 0.5 + 3.1;
     const v = (direction[2] / direction[1]) * 0.36 + 7.4;
@@ -249,7 +222,6 @@ function sky(palette, direction) {
       smoothstep(palette.cloudCover[0], palette.cloudCover[1], density) *
       smoothstep(0.03, 0.16, direction[1]);
     if (cover > 0) {
-      // Thinner toward the light means a brighter face.
       const towardLight = cloudDensity(u + palette.sun[0] * 0.12, v + palette.sun[2] * 0.12);
       const lit = clamp(0.5 + (density - towardLight) * 9 + (density - palette.cloudCover[1]) * 2);
       color = mix(color, mix(palette.cloudShade, palette.cloudLit, lit), cover * 0.95);
@@ -259,7 +231,6 @@ function sky(palette, direction) {
   return color;
 }
 
-/** Nearest hit on any orb along a ray, or null. */
 function hitOrbs(orbs, origin, direction, maxT) {
   let best = null;
   for (const orb of orbs) {
@@ -273,7 +244,6 @@ function hitOrbs(orbs, origin, direction, maxT) {
   return best;
 }
 
-/** Marches along a ray until it dips under the ground, then refines the hit. */
 function hitGround(origin, direction) {
   const isBelow = (t) =>
     origin[1] + direction[1] * t <
@@ -308,7 +278,6 @@ function shadeGround(palette, orbs, origin, direction, t) {
   ]);
   let light = Math.max(dot(normal, palette.sun), 0);
 
-  // Orb shadows, each with the bright spot a glass ball focuses in its middle.
   for (const orb of orbs) {
     const toCenter = [orb.center[0] - x, orb.center[1] - y, orb.center[2] - z];
     const along = dot(toCenter, palette.sun);
@@ -319,7 +288,6 @@ function shadeGround(palette, orbs, origin, direction, t) {
     }
   }
 
-  // Broad colour patches plus fine streaks that read as blades up close.
   const patch = fbm(x * 0.1, z * 0.1, 3);
   const blades = noise(x * 6, z * 6) * 0.5 + noise(x * 17 + 7, z * 17) * 0.5;
   const near = Math.exp(-t / 26);
@@ -335,11 +303,9 @@ function shadeGround(palette, orbs, origin, direction, t) {
       ? mix(palette.grassDark, palette.grassMid, tone * 2)
       : mix(palette.grassMid, palette.grassLight, (tone - 0.5) * 2);
 
-  // Grass seen edge-on along a crest catches the light.
   const grazing = 1 - Math.max(-dot(normal, direction), 0);
   color = mix(color, palette.grassSheen, 0.4 * grazing ** 4 * clamp(light + 0.3));
 
-  // A scattering of small flowers close to the viewer.
   const cellX = Math.floor(x * 2.2);
   const cellZ = Math.floor(z * 2.2);
   const pick = hash(cellX + 5, cellZ + 9);
@@ -349,7 +315,6 @@ function shadeGround(palette, orbs, origin, direction, t) {
     if (Math.hypot(fx, fz) < 0.16) color = palette.flowers[pick < 0.03 ? 0 : 1];
   }
 
-  // At dusk the orbs glow and light the grass around them.
   if (palette.emissive) {
     for (const orb of orbs) {
       const distance = Math.hypot(orb.center[0] - x, orb.center[1] - y, orb.center[2] - z);
@@ -361,7 +326,6 @@ function shadeGround(palette, orbs, origin, direction, t) {
   return mix(color, palette.haze, 1 - Math.exp(-t / 120));
 }
 
-/** A glass orb: deep colour on top, light pooling low on the far side, sky mirrored at the rim. */
 function shadeOrb(palette, orb, origin, direction, t) {
   const point = add(origin, direction, t);
   const normal = scale(
@@ -404,7 +368,6 @@ function trace(palette, orbs, origin, direction) {
     ? shadeGround(palette, orbs, origin, direction, groundT)
     : sky(palette, direction);
 
-  // Soft halo around glowing orbs.
   if (palette.emissive) {
     for (const orb of orbs) {
       const oc = [orb.center[0] - origin[0], orb.center[1] - origin[1], orb.center[2] - origin[2]];
@@ -417,9 +380,6 @@ function trace(palette, orbs, origin, direction) {
   return color;
 }
 
-// ---------- output ----------
-
-// 8x8 Bayer matrix: per-pixel thresholds for ordered dithering.
 const BAYER = (() => {
   let matrix = [[0]];
   for (let size = 1; size < 8; size *= 2) {
@@ -480,7 +440,6 @@ function render(format, palette) {
   }
   context.putImageData(image, 0, 0);
 
-  // Scale up in whole pixels so every rendered pixel stays a crisp square.
   const output = createCanvas(width * format.scale, height * format.scale);
   const outputContext = output.getContext('2d');
   outputContext.imageSmoothingEnabled = false;
@@ -490,11 +449,6 @@ function render(format, palette) {
 
 const PREVIEW_WIDTH = 24;
 
-/**
- * A tiny copy of a wallpaper, shown blurred while the full image loads.
- * At under 1 kB, Vite inlines it straight into the CSS, so it appears on
- * the very first paint instead of a flat colour.
- */
 function preview(image) {
   const shrink = (source, width) => {
     const target = createCanvas(
@@ -507,7 +461,6 @@ function preview(image) {
     return target;
   };
 
-  // Halve repeatedly so the colours average out instead of picking stray dither pixels.
   let source = image;
   while (source.width / 2 > PREVIEW_WIDTH) source = shrink(source, Math.round(source.width / 2));
   return shrink(source, PREVIEW_WIDTH);

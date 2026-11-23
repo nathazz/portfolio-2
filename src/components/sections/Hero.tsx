@@ -9,14 +9,8 @@ import { Window } from '../layout/Window';
 import { Shortcuts } from '../ui/Shortcuts';
 import localPhoto from '/assets/icon/profile.png';
 
-// The GitHub avatar stays in sync with the profile; the bundled photo covers
-// the case where GitHub is unreachable.
 const GITHUB_AVATAR = `https://github.com/${GITHUB_USERNAME}.png?size=480`;
 
-/**
- * The first screen: the desktop with its shortcuts down the side and the
- * welcome window, which introduces Nathan with a photo and the key facts.
- */
 export function Hero() {
   const { t } = useTranslation();
   const [photo, setPhoto] = useState(GITHUB_AVATAR);

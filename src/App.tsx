@@ -9,10 +9,6 @@ import { Experience } from './components/sections/Experience';
 import { Hero } from './components/sections/Hero';
 import { Skills } from './components/sections/Skills';
 
-/**
- * The page is a desktop: wallpaper behind, a menu bar on top, a dock at the
- * bottom, and each section in its own window stacked down the middle.
- */
 export default function App() {
   const { t } = useTranslation();
 

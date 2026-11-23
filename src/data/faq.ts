@@ -9,7 +9,6 @@ import {
 import type { IconSvgElement } from '@hugeicons/react';
 
 interface FaqEntry {
-  /** Key under `faq.items` in the locale files. */
   id: 'q1' | 'q2' | 'q3' | 'q4' | 'q5' | 'q6';
   icon: IconSvgElement;
 }

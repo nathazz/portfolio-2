@@ -1,14 +1,10 @@
 import type { CSSProperties, ReactNode } from 'react';
 
 interface WindowProps {
-  /** Anchor id, also used to label the window for assistive tech. */
   id: string;
   title: string;
-  /** Heading level of the title: 1 for the page's main window, 2 for the rest. */
   level?: 1 | 2;
-  /** Optional line in the status bar along the bottom edge. */
   status?: ReactNode;
-  /** Drops the body padding, for content that runs edge to edge. */
   flush?: boolean;
   className?: string;
   children: ReactNode;
@@ -16,11 +12,6 @@ interface WindowProps {
 
 const LIGHTS = ['#ff5f57', '#febc2e', '#28c840'];
 
-/**
- * A desktop window: title bar with the three gel buttons, a body, and an
- * optional status bar. The buttons are decoration only. The body is a size
- * container, so children can use container-query variants (@2xl:, @3xl:).
- */
 export function Window({
   id,
   title,

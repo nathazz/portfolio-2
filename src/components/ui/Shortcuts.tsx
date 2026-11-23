@@ -3,7 +3,6 @@ import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SHORTCUTS } from '../../data/site';
 
-/** Desktop shortcuts: the links that leave the site (résumé, profiles, direct contact). */
 export function Shortcuts({ className = '' }: { className?: string }) {
   const { t, i18n } = useTranslation();
 

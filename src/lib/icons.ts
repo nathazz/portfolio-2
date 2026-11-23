@@ -1,8 +1,3 @@
-/**
- * Every Hugeicons glyph the site uses, imported one file at a time.
- * Importing from the package root pulls in all ~4,000 icons (about 8 MB),
- * which the dev server would load on every page reload. Add new icons here.
- */
 export { default as Alert02Icon } from '@hugeicons/core-free-icons/Alert02Icon';
 export { default as ArrowDown01Icon } from '@hugeicons/core-free-icons/ArrowDown01Icon';
 export { default as Briefcase01Icon } from '@hugeicons/core-free-icons/Briefcase01Icon';

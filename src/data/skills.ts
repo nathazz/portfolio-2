@@ -2,9 +2,7 @@ import type { SkillIconName } from './skill-icons';
 
 export interface Skill {
   name: string;
-  /** Secondary text shown after the name, e.g. the specific services used. */
   detail?: string;
-  /** Key into the generated SKILL_ICONS map (see scripts/render-skill-icons.mjs). */
   icon: SkillIconName;
 }
 

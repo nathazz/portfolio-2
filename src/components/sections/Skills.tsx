@@ -5,7 +5,6 @@ import { SkillIcon } from '../ui/SkillIcon';
 
 const SKILL_COUNT = SKILL_GROUPS.reduce((total, group) => total + group.skills.length, 0);
 
-/** Every skill visible at once, laid out as a spec sheet: one row per category. */
 export function Skills() {
   const { t } = useTranslation();
 

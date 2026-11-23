@@ -1,11 +1,5 @@
 import { useEffect, useState } from 'react';
 
-/**
- * Returns the id of the section currently crossing a line 40% down the
- * viewport, or null when none is (e.g. at the very top of the page).
- * A line works for sections of any height, unlike a visibility threshold,
- * which a section taller than the viewport can never reach.
- */
 export function useActiveSection<Id extends string>(ids: readonly Id[]): Id | null {
   const [active, setActive] = useState<Id | null>(null);
 

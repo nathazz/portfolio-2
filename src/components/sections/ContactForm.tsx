@@ -7,7 +7,6 @@ import { EMAIL } from '../../data/site';
 
 type Status = 'idle' | 'sending' | 'success' | 'invalid' | 'failed';
 
-/** What to show under the form once a submission settles. */
 const FEEDBACK = {
   success: { key: 'contact.status.success', icon: CheckmarkCircle02Icon, tone: 'text-leaf' },
   invalid: { key: 'contact.status.invalid', icon: Alert02Icon, tone: 'text-danger' },
@@ -26,7 +25,6 @@ export function ContactForm() {
       .trim()
       .toLowerCase();
 
-    // The browser has already checked the address format; this only rejects my own address.
     if (email === EMAIL) {
       setStatus('invalid');
       return;

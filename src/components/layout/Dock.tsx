@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { SECTION_IDS, SECTIONS } from '../../data/site';
 import { useActiveSection } from '../../hooks/useActiveSection';
 
-/** Section navigation as a dock: one glossy icon per window, with a dot under the one in view. */
 export function Dock() {
   const { t } = useTranslation();
   const activeSection = useActiveSection(SECTION_IDS);

@@ -5,7 +5,6 @@ import { formatTimeInZone } from '../../lib/format';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { ThemeToggle } from '../ui/ThemeToggle';
 
-/** The strip along the top of the desktop: brand on the left, settings and the clock on the right. */
 export function MenuBar() {
   const { i18n } = useTranslation();
   const now = useNow();
@@ -21,7 +20,6 @@ export function MenuBar() {
         <div className="ml-auto flex items-center gap-2">
           <LanguageSwitcher />
           <ThemeToggle />
-          {/* Nathan's local time, like a system clock. */}
           <time
             dateTime={now.toISOString()}
             className="text-fluid-sm font-semibold whitespace-nowrap tabular-nums"

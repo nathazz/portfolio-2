@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Window } from './Window';
 
-/** A small note left on the desktop: the sign-off line and the credits. */
 export function Footer() {
   const { t } = useTranslation();
 

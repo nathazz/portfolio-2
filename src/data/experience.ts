@@ -1,17 +1,9 @@
-/** A calendar month, e.g. '2024-07'. */
 export type YearMonth = `${number}-${number}`;
 
-/**
- * Language-independent facts about a job. The translated copy (role,
- * location, summary, highlights) lives in the locale files under
- * `experience.jobs.<id>` and follows the JobCopy shape below.
- */
 export interface Job {
   id: 'minha-crc' | 'nexa-roofing' | 'scoremilk' | 'sollydus';
   company: string;
-  /** null while the start month is not filled in yet. */
   start: YearMonth | null;
-  /** null means the job is ongoing. */
   end: YearMonth | null;
   stack: string[];
 }
@@ -23,12 +15,10 @@ export interface JobCopy {
   groups: { title: string; items: string[] }[];
 }
 
-/** Newest first. */
 export const JOBS: Job[] = [
   {
     id: 'minha-crc',
     company: 'Minha CRC',
-    // TODO: fill in the start month and stack, plus role/location/summary in the locale files.
     start: null,
     end: null,
     stack: [],

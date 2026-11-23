@@ -3,10 +3,6 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import { useTranslation } from 'react-i18next';
 import { FAQ } from '../../data/faq';
 
-/**
- * Native <details> elements sharing a name behave as an accordion (opening
- * one closes the others), with keyboard and screen-reader support built in.
- */
 export function Faq() {
   const { t } = useTranslation();
 

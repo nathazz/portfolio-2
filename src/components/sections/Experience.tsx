@@ -23,7 +23,6 @@ function Period({ start, end }: Pick<Job, 'start' | 'end'>) {
 
 function JobEntry({ job }: { job: Job }) {
   const { t } = useTranslation();
-  // The locale files hold one JobCopy per job id.
   const copy = t(`experience.jobs.${job.id}`, { returnObjects: true }) as JobCopy;
   const isCurrent = job.end === null;
 

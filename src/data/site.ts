@@ -21,7 +21,6 @@ export const HOME_TIME_ZONE = 'America/Sao_Paulo';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/nathasg';
 
-/** Sections of the page, in order. Each one is a window and a dock item. */
 export const SECTIONS = [
   { id: 'home', icon: Home01Icon, color: '#5b6478' },
   { id: 'experience', icon: Briefcase01Icon, color: '#1d7fe0' },
@@ -35,14 +34,12 @@ export const SECTION_IDS = SECTIONS.map((section) => section.id);
 
 interface Shortcut {
   id: string;
-  /** Shown as is; when missing, the label comes from the `hero.resume` translation. */
   label?: string;
   icon: IconSvgElement;
   color: string;
   href: (language: string) => string;
 }
 
-/** Links out of the site, shown as shortcuts on the desktop. */
 export const SHORTCUTS: Shortcut[] = [
   { id: 'resume', icon: File01Icon, color: '#4f7fb8', href: () => RESUME_URL },
   {
