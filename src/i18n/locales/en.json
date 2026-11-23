@@ -1,48 +1,105 @@
 {
-  "options-translate": {
-    "ptbr": "Portuguese",
-    "en": "English",
-    "es": "Spanish"
+  "a11y": {
+    "skipToContent": "Skip to content"
   },
-  "navbar": {
+  "language": {
+    "label": "Language"
+  },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "nav": {
+    "label": "Main",
     "home": "Home",
+    "experience": "Experience",
+    "skills": "Skills",
     "about": "About",
-    "xp": "Experience",
-    "project": "Projects",
-    "contacts": "Contact"
+    "contact": "Contact"
   },
-  "title": {
-    "first": "Software",
-    "second": "Developer"
+  "hero": {
+    "titleLead": "Software",
+    "titleStrong": "Developer",
+    "subtitle": "Developing smart and scalable solutions that turn complex challenges into efficient, high-performance systems.",
+    "viewExperience": "View experience",
+    "resume": "My Resume",
+    "card": {
+      "location": "Location",
+      "place": "Porto Alegre, Brazil",
+      "languages": "Languages",
+      "now": "Now"
+    }
   },
-  "email_messages": {
-    "invalid": "Invalid Email!",
-    "success": "Message sent successfully!",
-    "failed": "Failed to send message. Please try again later."
+  "experience": {
+    "title": "Professional Experience",
+    "description": "A brief overview of my professional journey and the roles I've taken on.",
+    "present": "Present",
+    "jobs": {
+      "minha-crc": {
+        "role": "Software Developer",
+        "location": "",
+        "summary": "",
+        "groups": []
+      },
+      "nexa-roofing": {
+        "role": "Freelance Full Stack Developer (Automation)",
+        "location": "Remote, United States",
+        "summary": "At Nexa Roofing, a company specializing in roofing solutions and construction services, I automated internal workflows, improving lead management, interview processes, reporting, and data consistency. I worked on restructuring complex databases, eliminating redundancies, and creating automated pipelines that reduced errors and manual effort.",
+        "groups": []
+      },
+      "scoremilk": {
+        "role": "Full Stack Developer",
+        "location": "Remote, United States",
+        "summary": "Contributing to the development and improvement of a competitive gaming platform that integrates blockchain and Web3 technologies.",
+        "groups": [
+          {
+            "title": "Front-end contributions",
+            "items": [
+              "Reduced unnecessary re-renders in sidebar and lobby/game pages, improving performance through component and state optimization.",
+              "Implemented lazy loading and error handling, reducing page failures during API request issues.",
+              "Refactored legacy code and removed redundant hooks, decreasing code complexity.",
+              "Optimized image loading, reducing load time.",
+              "Designed and developed a Quests system, implementing user flows for missions, rewards, and progression tracking.",
+              "Improved data fetching and caching efficiency using React Query, reducing redundant API calls.",
+              "Integrated cryptocurrency wallets (Telegram Wallet, Tonkeeper) and managed DApp flows.",
+              "Enhanced user experience with in-app feedback systems.",
+              "Implemented idempotency in lobby action buttons, preventing duplicate requests and inconsistent game states."
+            ]
+          },
+          {
+            "title": "Back-end contributions",
+            "items": [
+              "Refactored the user balance system, reducing update latency and improving transaction consistency.",
+              "Implemented filtering and ranking logic (winner, crypto type, free games), improving data usability.",
+              "Developed microservices, including a TON blockchain payment system and authentication module, increasing scalability.",
+              "Contributed to the development of a Telegram bot and mini-app, expanding platform reach and functionality."
+            ]
+          }
+        ]
+      },
+      "sollydus": {
+        "role": "Software Developer",
+        "location": "Remote, Fortaleza-CE-Brazil",
+        "summary": "At Sollydus, a company focused on technology and omnichannel communication solutions, I worked on scalable platforms, system architecture, and performance optimization.",
+        "groups": [
+          {
+            "title": "",
+            "items": [
+              "Developed core services and React interfaces for an omnichannel platform supporting 15+ companies, simultaneously delivering a production-ready MVP.",
+              "Designed data models and system architecture for multiple clients.",
+              "Implemented real-time communication via WebSockets, reducing message delivery latency compared to the previous polling-based solution.",
+              "Improved overall system performance using Redis caching and asynchronous processing with RabbitMQ.",
+              "Standardized automation pipelines in Python and Node.js, reducing repetitive manual tasks and minimizing operational errors in internal reports."
+            ]
+          }
+        ]
+      }
+    },
+    "status": "{{count}} positions"
   },
-  "states": {
-    "loading": "loading..."
-  },
-  "terminal": {
-    "welcome": "welcome",
-    "first": "Hey",
-    "second": "what's up?!"
-  },
-  "links-home": {
-    "see-projects": "View Projects",
-    "download-cv": "My Resume"
-  },
-  "subtitle": "Developing smart and scalable solutions that turn complex challenges into efficient, high-performance systems.",
-
-  "about-me": {
-    "title": "About",
-    "pull-quote": "A little bit of my journey",
-    "text": "I started programming in 2022 during my associate's degree in Information Technology. What began as coursework quickly turned into curiosity — I started building personal projects, exploring different technologies, and learning far beyond the classroom.\n\nToday, I work as a full-stack software engineer with a strong focus on backend development. I've contributed to APIs, distributed systems, integrations, and modern web applications, collaborating with startups and international teams to build products used by thousands of people.\n\nI enjoy solving real-world problems, writing software that's easy to maintain, and understanding how technical decisions shape the overall product. I'm also passionate about automation and AI, constantly looking for ways to remove repetitive work so teams can focus on creating value.\n\nTechnology changes every day, and that's one of the reasons I enjoy this field. I'm always learning new languages, architectures, and tools, without limiting myself to a single stack.",
-    "location": "Porto Alegre, Brazil — GMT-3, overlaps cleanly with US mornings, and other countries in the northern or southern hemispheres",
-    "availability": "*Open to teams in any country that works in English or Portuguese",
-    "techs": "Skills",
+  "skills": {
+    "title": "Skills",
     "categories": {
-      "all": "All",
       "languages": "Languages",
       "frameworks": "Frameworks/Ecosystem",
       "infra": "Infrastructure",
@@ -50,158 +107,65 @@
       "testing": "Testing",
       "ai": "AI tools",
       "other": "Other"
-    }
+    },
+    "status": "{{count}} skills"
   },
-
-  "others": "others",
-  "experience": {
-    "title": "Professional Experience",
-    "description": "A brief overview of my professional journey and the roles I've taken on.",
-    "show-more": "Show More",
-    "show-less": "Show Less",
-    "jobs": [
-      {
-        "role": "Freelance Full Stack Developer (Automation)",
-        "period": "Nov 2025 – Mar 2026",
-        "company": "Nexa Roofing",
-        "location": "Remote, United States",
-        "description": "At Nexa Roofing, a company specializing in roofing solutions and construction services, I automated internal workflows, improving lead management, interview processes, reporting, and data consistency. improving lead management, interview processes, reporting, and data consistency. I worked on restructuring complex databases, eliminating redundancies, and creating automated pipelines that reduced errors and manual effort.",
-        "stack": [
-          "N8N",
-          "Javascript",
-          "Python",
-          "Glide",
-          "OpenAI",
-          "Automation Engineering",
-          "WebHook",
-          "Airtable"
-        ]
-      },
-      {
-        "role": "Full Stack Developer",
-        "period": "Jul 2024 – Jun 2025",
-        "company": "ScoreMilk",
-        "location": "Remote, United States",
-        "description": "Contributing to the development and improvement of a competitive gaming platform that integrates blockchain and Web3 technologies.\n\nFront-end contributions:\n\n- Reduced unnecessary re-renders in sidebar and lobby/game pages, improving performance through component and state optimization.\n- Implemented lazy loading and error handling, reducing page failures during API request issues.\n- Refactored legacy code and removed redundant hooks, decreasing code complexity.\n- Optimized image loading, reducing load time.\n- Designed and developed a Quests system, implementing user flows for missions, rewards, and progression tracking.\n- Improved data fetching and caching efficiency using React Query, reducing redundant API calls.\n- Integrated cryptocurrency wallets (Telegram Wallet, Tonkeeper) and managed DApp flows.\n- Enhanced user experience with in-app feedback systems.\n- Implemented idempotency in lobby action buttons, preventing duplicate requests and inconsistent game states.\n\nBack-end contributions:\n\n- Refactored the user balance system, reducing update latency and improving transaction consistency.\n- Implemented filtering and ranking logic (winner, crypto type, free games), improving data usability.\n- Developed microservices, including a TON blockchain payment system and authentication module, increasing scalability.\n- Contributed to the development of a Telegram bot and mini-app, expanding platform reach and functionality.",
-        "stack": [
-          "React.Js",
-          "Rest",
-          "Blockchain/Web3",
-          "Ethers.js",
-          "MetaMask",
-          "Node.js",
-          "TypeScript",
-          "Golang",
-          "PostgreSQL",
-          "AWS",
-          "Redis"
-        ]
-      },
-      {
-        "role": "Software Developer",
-        "period": "Apr 2023 – Mar 2024",
-        "company": "Sollydus",
-        "location": "Remote, Fortaleza-CE-Brazil",
-        "description": "At Sollydus, a company focused on technology and omnichannel communication solutions, I worked on scalable platforms, system architecture, and performance optimization.\n\n- Developed core services and React interfaces for an omnichannel platform supporting 15+ companies, simultaneously delivering a production-ready MVP.\n- Designed data models and system architecture for multiple clients.\n- Implemented real-time communication via WebSockets, reducing message delivery latency compared to the previous polling-based solution.\n- Improved overall system performance using Redis caching and asynchronous processing with RabbitMQ.\n- Standardized automation pipelines in Python and Node.js, reducing repetitive manual tasks and minimizing operational errors in internal reports.",
-        "stack": [
-          "Rest",
-          "Node.js",
-          "React.Js",
-          "TypeScript",
-          "RabbitMQ",
-          "PostgreSQL",
-          "System Design",
-          "AWS",
-          "Python",
-          "Redis",
-          "Linux"
-        ]
-      }
-    ]
-  },
-  "projects": {
-    "title": "Projects",
-    "items": [
-      {
-        "title": "ETF Web Scraper & REST API",
-        "description": "A web scraper and REST API for extracting real-time data from ETFs (Exchange-Traded Funds) on TrackingDifferences.com.",
-        "match": "etf-scraper-api",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505838/logoScraper_2_kqztsj.png",
-        "git": "https://github.com/nathazz/etf-scraper-api",
-        "link": "https://etf-scraper-pudc.onrender.com/"
-      },
-      {
-        "title": "EtherWatch Backend",
-        "description": "Backend for EtherWatch, providing real-time data from the Ethereum network via REST and WebSocket. Includes pending transaction streaming, MetaMask authentication, validation with Zod, and Docker support.",
-        "match": "etherwatch-backend",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505581/etherWatch_heqktq.png",
-        "git": "https://github.com/nathazz/EtherWatch-backend",
-        "link": ""
-      },
-      {
-        "title": "EtherWatch Frontend",
-        "description": "Frontend application for monitoring the Ethereum network, providing real-time gas prices, market data, blockchain information, and live pending transactions via WebSockets. Supports MetaMask integration for transactions and balance checks.",
-        "match": "etherwatch-front",
-        "image": "https://res.cloudinary.com/dug7jluj1/image/upload/v1780505581/etherWatch_heqktq.png",
-        "git": "https://github.com/nathazz/EtherWatch-front",
-        "link": "https://www.loom.com/share/ab79c4fd527248af8949741eea1a89a4?sid=9bd4df55-440e-4df4-a318-1d57dc6014ed"
-      }
-    ],
-    "swipe": "swipe",
-    "footer": "See all projects"
-  },
-  "links-project": {
-    "code": "Code",
-    "live": "Live",
-    "apk": "Apk",
-    "see-projects": "See Projects",
-    "download-cv": "Download CV"
+  "about": {
+    "title": "About",
+    "pullQuote": "A little bit of my journey",
+    "text": "I started programming in 2022 during my associate's degree in Information Technology. What began as coursework quickly turned into curiosity — I started building personal projects, exploring different technologies, and learning far beyond the classroom.\n\nToday, I work as a full-stack software engineer with a strong focus on backend development. I've contributed to APIs, distributed systems, integrations, and modern web applications, collaborating with startups and international teams to build products used by thousands of people.\n\nI enjoy solving real-world problems, writing software that's easy to maintain, and understanding how technical decisions shape the overall product. I'm also passionate about automation and AI, constantly looking for ways to remove repetitive work so teams can focus on creating value.\n\nTechnology changes every day, and that's one of the reasons I enjoy this field. I'm always learning new languages, architectures, and tools, without limiting myself to a single stack.",
+    "location": "Porto Alegre, Brazil — GMT-3, overlaps cleanly with US mornings, and other countries in the northern or southern hemispheres",
+    "availability": "Open to teams in any country that works in English or Portuguese"
   },
   "contact": {
-    "linkedin": "https://www.linkedin.com/in/nathasg",
     "title": "Show me your ideas!",
-    "emailTitle": "Let's talk",
-    "emailText": "I'm available to discuss projects, ideas, opportunities, or simply have a conversation.",
-    "emailSubText": "I'm excited to hear your ideas and work together to create amazing solutions.",
+    "formTitle": "Let's talk",
+    "formText": "I'm available to discuss projects, ideas, opportunities, or simply have a conversation.",
+    "formSubText": "I'm excited to hear your ideas and work together to create amazing solutions.",
     "name": "Your Name*",
     "email": "Your Email*",
-    "msg": "Message*",
+    "message": "Message*",
     "send": "Send Message",
-    "sending-msg": "Sending message...",
-    "my-email": "My Email",
-    "copy-email": "Copy email",
-    "or": "or"
+    "sending": "Sending message...",
+    "status": {
+      "invalid": "Invalid Email!",
+      "success": "Message sent successfully!",
+      "failed": "Failed to send message. Please try again later."
+    }
   },
   "faq": {
-    "phrase": "“Code with purpose, not just features.”",
     "title": "Frequently Asked Questions",
-    "q1": {
-      "q": "Do you work well in teams or do you prefer working independently?",
-      "a": "I have experience in both environments. I enjoy collaborating with teams, sharing ideas, and participating in technical discussions, while also being comfortable working independently when a project requires autonomy."
-    },
-    "q2": {
-      "q": "Where can I talk to you?",
-      "a": "You can reach me via email at nathas0208@gmail.com - For others' links, you can check the footer"
-    },
-    "q3": {
-      "q": "Do you only work with web development?",
-      "a": "My primary focus is web development, but I also have experience building mobile applications, desktop software, automations, and integrations with external services."
-    },
-    "q4": {
-      "q": "What do you deliver at the end of a project?",
-      "a": "I deliver documented code, monitoring and observability setup, deployment configuration, and, when needed, post-launch support for adjustments and improvements."
-    },
-    "q5": {
-      "q": "Do you work under contract?",
-      "a": "Yes. Every project is formalized with a clear contract and scope definition to ensure transparency and security for both parties. I have experience working under different engagement models, including full-time employment, contractor agreements, and NDAs."
-    },
-    "q6": {
-      "q": "Which languages do you speak?",
-      "a": "I am a native Portuguese speaker, have advanced English proficiency for professional communication, reading, and writing, and possess working knowledge of Spanish, primarily for reading and writing."
+    "items": {
+      "q1": {
+        "q": "Do you work well in teams or do you prefer working independently?",
+        "a": "I have experience in both environments. I enjoy collaborating with teams, sharing ideas, and participating in technical discussions, while also being comfortable working independently when a project requires autonomy."
+      },
+      "q2": {
+        "q": "Where can I talk to you?",
+        "a": "You can reach me via email at nathas0208@gmail.com - For others' links, you can check the footer"
+      },
+      "q3": {
+        "q": "Do you only work with web development?",
+        "a": "My primary focus is web development, but I also have experience building mobile applications, desktop software, automations, and integrations with external services."
+      },
+      "q4": {
+        "q": "What do you deliver at the end of a project?",
+        "a": "I deliver documented code, monitoring and observability setup, deployment configuration, and, when needed, post-launch support for adjustments and improvements."
+      },
+      "q5": {
+        "q": "Do you work under contract?",
+        "a": "Yes. Every project is formalized with a clear contract and scope definition to ensure transparency and security for both parties. I have experience working under different engagement models, including full-time employment, contractor agreements, and NDAs."
+      },
+      "q6": {
+        "q": "Which languages do you speak?",
+        "a": "I am a native Portuguese speaker, have advanced English proficiency for professional communication, reading, and writing, and possess working knowledge of Spanish, primarily for reading and writing."
+      }
     }
   },
   "footer": {
+    "phrase": "“Code with purpose, not just features.”",
     "by": "Developed by Nathan",
-    "tech": "Built with React, I18N, TypeScript & Tailwind"
+    "tech": "Built with React, I18N, TypeScript & Tailwind",
+    "title": "Read me"
   }
 }

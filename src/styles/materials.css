@@ -1,0 +1,237 @@
+/*
+ * The glossy kit: glass, gel buttons, chips and orbs. One light source,
+ * top-left, for every surface: highlights sit on top edges, shadows fall
+ * straight down.
+ */
+
+/* Frosted glass surface, used by the menu bar and the dock. */
+@utility glass {
+  position: relative;
+  border: 1px solid var(--glass-edge);
+  background: linear-gradient(180deg, var(--glass-top), var(--glass-bottom));
+  box-shadow:
+    inset 0 1px 0 var(--glass-rim),
+    var(--glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  backdrop-filter: blur(16px) saturate(1.6);
+}
+
+/* Etched divider: a dark line with a light line right under it. */
+@utility etched {
+  block-size: 2px;
+  border: 0;
+  background:
+    linear-gradient(var(--rule), var(--rule)) top / 100% 1px no-repeat,
+    linear-gradient(var(--glass-sheen), var(--glass-sheen)) bottom / 100% 1px no-repeat;
+}
+
+/* Component classes sit in the components layer so utilities can still override them. */
+@layer components {
+  /* ---------- Buttons ---------- */
+
+  .btn {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    min-block-size: 2.875rem;
+    padding: 0.6em 1.4em;
+    overflow: hidden;
+    border-radius: 999px;
+    font-size: var(--text-fluid-base);
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition:
+      filter 150ms ease,
+      transform 150ms ease;
+  }
+
+  /* The specular highlight on the upper half. */
+  .btn::before {
+    position: absolute;
+    z-index: -1;
+    inset: 1px 1px auto;
+    block-size: 48%;
+    border-radius: 999px 999px 45% 45% / 999px 999px 30% 30%;
+    background: linear-gradient(180deg, rgb(255 255 255 / 0.62), rgb(255 255 255 / 0.08));
+    content: '';
+    pointer-events: none;
+  }
+
+  .btn:hover {
+    filter: brightness(1.08) saturate(1.05);
+    transform: translateY(-1px);
+  }
+
+  .btn:active {
+    filter: brightness(0.95);
+    transform: translateY(0);
+  }
+
+  .btn:disabled {
+    filter: saturate(0.5) opacity(0.75);
+    transform: none;
+    cursor: progress;
+  }
+
+  .btn--aqua {
+    border: 1px solid #05497f;
+    background: linear-gradient(180deg, #2f9fef 0%, #0f79cd 48%, #0660b0 52%, #0a74c6 100%);
+    box-shadow:
+      inset 0 0 0 1px rgb(255 255 255 / 0.28),
+      inset 0 -8px 12px -6px rgb(120 220 255 / 0.75),
+      0 1px 1px rgb(0 40 80 / 0.35),
+      0 8px 18px -8px rgb(0 90 170 / 0.75);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 45 90 / 0.55);
+  }
+
+  .btn--raised {
+    border: 1px solid var(--raised-edge);
+    background: linear-gradient(180deg, var(--raised-top), var(--raised-bottom));
+    box-shadow:
+      inset 0 1px 0 var(--glass-rim),
+      0 1px 1px rgb(0 40 80 / 0.18),
+      0 8px 18px -10px rgb(0 60 110 / 0.5);
+    color: var(--ink);
+  }
+
+  .btn--raised::before {
+    background: linear-gradient(180deg, var(--glass-sheen), transparent);
+  }
+
+  .btn--icon {
+    inline-size: 2.5rem;
+    min-block-size: 2.5rem;
+    padding: 0;
+  }
+
+  /* ---------- Chips ---------- */
+
+  .chip {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 0.45em;
+    padding: 0.28em 0.8em;
+    border: 1px solid var(--raised-edge);
+    /* A pill on one line, a rounded box if the text wraps. */
+    border-radius: 1.1em;
+    background: linear-gradient(180deg, var(--raised-top), var(--raised-bottom));
+    box-shadow: inset 0 1px 0 var(--glass-rim);
+    color: var(--ink);
+    font-size: var(--text-fluid-sm);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .chip > svg {
+    flex: none;
+    inline-size: 1.05em;
+    block-size: 1.05em;
+    color: var(--accent);
+  }
+
+  a.chip {
+    text-decoration: none;
+    transition: filter 150ms ease;
+  }
+
+  a.chip:hover {
+    filter: brightness(1.07);
+  }
+
+  .chip__detail {
+    color: var(--ink-faint);
+    font-weight: 400;
+  }
+
+  /* ---------- Orbs ---------- */
+
+  /* A small glossy sphere, used as a status light and as timeline nodes. */
+  .orb {
+    --orb: #1d93e8;
+
+    display: inline-block;
+    flex: none;
+    inline-size: var(--orb-size, 1rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 34% 28%, rgb(255 255 255 / 0.95) 0 13%, rgb(255 255 255 / 0) 42%),
+      radial-gradient(
+        circle at 50% 105%,
+        color-mix(in oklab, var(--orb), white 50%) 0%,
+        var(--orb) 55%,
+        color-mix(in oklab, var(--orb), black 35%) 100%
+      );
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--orb), black 35%),
+      0 0 0.6em color-mix(in oklab, var(--orb), transparent 45%);
+  }
+
+  .orb--leaf {
+    --orb: #5cba1c;
+  }
+
+  /* ---------- Segmented control ---------- */
+
+  .segmented {
+    display: inline-flex;
+    padding: 2px;
+    border: 1px solid var(--raised-edge);
+    border-radius: 999px;
+    background: var(--field);
+    box-shadow: inset 0 1px 2px rgb(0 40 80 / 0.18);
+  }
+
+  .segmented > button {
+    min-inline-size: 2.4em;
+    padding: 0.3em 0.6em;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: var(--text-fluid-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  .segmented > button:hover {
+    color: var(--ink);
+  }
+
+  .segmented > button[aria-pressed='true'] {
+    background: linear-gradient(180deg, #46aaf2 0%, #0f79cd 50%, #0666b8 52%, #0a74c6 100%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.55),
+      0 1px 2px rgb(0 50 100 / 0.4);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgb(0 45 90 / 0.5);
+  }
+
+  /* ---------- Form fields ---------- */
+
+  .field {
+    inline-size: 100%;
+    padding: 0.7em 0.95em;
+    border: 1px solid var(--field-edge);
+    border-radius: 0.75rem;
+    background: var(--field);
+    box-shadow: inset 0 2px 3px rgb(0 40 80 / 0.12);
+    color: var(--ink);
+    transition:
+      border-color 150ms ease,
+      box-shadow 150ms ease;
+  }
+
+  .field:focus-visible {
+    border-color: var(--focus);
+    outline: none;
+    box-shadow:
+      inset 0 2px 3px rgb(0 40 80 / 0.1),
+      0 0 0 3px color-mix(in oklab, var(--focus), transparent 65%);
+  }
+}

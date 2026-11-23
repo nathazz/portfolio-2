@@ -1,0 +1,108 @@
+/*
+ * Theme tokens. "light" is the hill wallpaper by day, "dark" is the same
+ * scene at dusk. Only values change between the two; no component knows
+ * which one is active. The wallpaper images themselves are set in layout.css.
+ */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* Shown behind the wallpaper while it loads */
+  --sky-base: #4a5cd0;
+  /* Laid over the whole wallpaper to deepen it slightly. */
+  --wallpaper-tint: rgb(14 16 84 / 0.2);
+
+  /* Labels that sit directly on the wallpaper (desktop shortcuts) */
+  --desk-ink: #fff;
+  --desk-shade: rgb(8 10 70 / 0.85);
+
+  /* Text inside windows */
+  --ink: #101a2e;
+  --ink-soft: #38465e;
+  --ink-faint: #5d6a80;
+  --accent: #0a5fb8;
+  --leaf: #2c7409;
+  --danger: #a8231b;
+  --rule: rgb(20 30 70 / 0.14);
+  --focus: #0a5fb8;
+  --selection: rgb(120 190 255 / 0.6);
+
+  /* Windows: title bar, body and status bar */
+  --window-edge: rgb(18 20 50 / 0.5);
+  --window-shadow: 0 1px 2px rgb(0 0 40 / 0.3), 0 24px 50px -16px rgb(0 0 50 / 0.65);
+  --bar-top: #f7f7f9;
+  --bar-bottom: #d5d6dc;
+  --bar-edge: #9698a3;
+  --bar-ink: #2a2c36;
+  --bar-highlight: rgb(255 255 255 / 0.9);
+  --pane: #fbfcff;
+  --status: #eceef3;
+  --inset: #f1f4fa;
+
+  /* Glass: the menu bar and the dock */
+  --glass-top: rgb(255 255 255 / 0.86);
+  --glass-bottom: rgb(236 242 255 / 0.7);
+  --glass-rim: rgb(255 255 255 / 0.95);
+  --glass-edge: rgb(18 20 60 / 0.3);
+  --glass-sheen: rgb(255 255 255 / 0.6);
+  --glass-shadow: 0 1px 2px rgb(0 0 40 / 0.2), 0 12px 30px -12px rgb(0 0 50 / 0.55);
+
+  /* Raised controls: chips, secondary buttons */
+  --raised-top: #ffffff;
+  --raised-bottom: #dfe7f3;
+  --raised-edge: rgb(20 40 90 / 0.3);
+
+  /* Form fields */
+  --field: #ffffff;
+  --field-edge: rgb(20 40 90 / 0.38);
+
+  /* Timeline */
+  --rail: rgb(10 80 160 / 0.28);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --sky-base: #2a1a6a;
+  --wallpaper-tint: rgb(8 4 40 / 0.1);
+
+  --desk-ink: #fff;
+  --desk-shade: rgb(6 2 34 / 0.9);
+
+  --ink: #f1f0ff;
+  --ink-soft: #c9c6ea;
+  --ink-faint: #a09dcb;
+  --accent: #86d6ff;
+  --leaf: #a5e86a;
+  --danger: #ffb3a7;
+  --rule: rgb(200 195 255 / 0.16);
+  --focus: #86d6ff;
+  --selection: rgb(110 90 230 / 0.6);
+
+  --window-edge: rgb(0 0 10 / 0.7);
+  --window-shadow: 0 1px 2px rgb(0 0 0 / 0.5), 0 24px 50px -16px rgb(0 0 10 / 0.85);
+  --bar-top: #55527a;
+  --bar-bottom: #35325a;
+  --bar-edge: #14122e;
+  --bar-ink: #eeecff;
+  --bar-highlight: rgb(255 255 255 / 0.18);
+  --pane: #1f1c4a;
+  --status: #191640;
+  --inset: #17143c;
+
+  --glass-top: rgb(52 48 120 / 0.82);
+  --glass-bottom: rgb(26 23 80 / 0.72);
+  --glass-rim: rgb(255 255 255 / 0.22);
+  --glass-edge: rgb(0 0 20 / 0.6);
+  --glass-sheen: rgb(255 255 255 / 0.1);
+  --glass-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 30px -12px rgb(0 0 20 / 0.8);
+
+  --raised-top: #5a55a8;
+  --raised-bottom: #342f78;
+  --raised-edge: rgb(180 172 255 / 0.4);
+
+  --field: #120f34;
+  --field-edge: rgb(170 160 255 / 0.36);
+
+  --rail: rgb(180 170 255 / 0.35);
+}
