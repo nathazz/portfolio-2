@@ -1,4 +1,4 @@
-import { Moon02Icon, Sun01Icon } from '@hugeicons/core-free-icons';
+import { Moon02Icon, Sun01Icon } from '../../lib/icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../../hooks/useTheme';

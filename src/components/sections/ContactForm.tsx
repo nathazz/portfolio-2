@@ -1,5 +1,5 @@
 import emailjs from '@emailjs/browser';
-import { Alert02Icon, CheckmarkCircle02Icon, MailSend01Icon } from '@hugeicons/core-free-icons';
+import { Alert02Icon, CheckmarkCircle02Icon, MailSend01Icon } from '../../lib/icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { useState, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';

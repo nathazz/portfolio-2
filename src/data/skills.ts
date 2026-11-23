@@ -1,42 +1,11 @@
-import type { IconType } from 'react-icons';
-import { FaAws } from 'react-icons/fa';
-import {
-  SiClaude,
-  SiCloudflare,
-  SiCypress,
-  SiDocker,
-  SiFigma,
-  SiGin,
-  SiGithubactions,
-  SiGithubcopilot,
-  SiGo,
-  SiGooglecloud,
-  SiJavascript,
-  SiJest,
-  SiLinux,
-  SiMongodb,
-  SiMysql,
-  SiNodedotjs,
-  SiPostgresql,
-  SiPytest,
-  SiPython,
-  SiRabbitmq,
-  SiReact,
-  SiReactquery,
-  SiRedis,
-  SiSwagger,
-  SiTailwindcss,
-  SiTerraform,
-  SiTypescript,
-  SiVitest,
-} from 'react-icons/si';
-import { TbBrandOpenai, TbInfinity, TbSql, TbTestPipe } from 'react-icons/tb';
+import type { SkillIconName } from './skill-icons';
 
 export interface Skill {
   name: string;
   /** Secondary text shown after the name, e.g. the specific services used. */
   detail?: string;
-  icon: IconType;
+  /** Key into the generated SKILL_ICONS map (see scripts/render-skill-icons.mjs). */
+  icon: SkillIconName;
 }
 
 export interface SkillGroup {
@@ -48,21 +17,21 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     id: 'languages',
     skills: [
-      { name: 'TypeScript', icon: SiTypescript },
-      { name: 'JavaScript', icon: SiJavascript },
-      { name: 'Python', icon: SiPython },
-      { name: 'Go', icon: SiGo },
-      { name: 'SQL', icon: TbSql },
+      { name: 'TypeScript', icon: 'SiTypescript' },
+      { name: 'JavaScript', icon: 'SiJavascript' },
+      { name: 'Python', icon: 'SiPython' },
+      { name: 'Go', icon: 'SiGo' },
+      { name: 'SQL', icon: 'TbSql' },
     ],
   },
   {
     id: 'frameworks',
     skills: [
-      { name: 'React / Next.js', icon: SiReact },
-      { name: 'React Query / TanStack', icon: SiReactquery },
-      { name: 'Node.js', detail: 'Express.js, Nest.js', icon: SiNodedotjs },
-      { name: 'Gin-Gonic', detail: 'Golang', icon: SiGin },
-      { name: 'Tailwind', icon: SiTailwindcss },
+      { name: 'React / Next.js', icon: 'SiReact' },
+      { name: 'React Query / TanStack', icon: 'SiReactquery' },
+      { name: 'Node.js', detail: 'Express.js, Nest.js', icon: 'SiNodedotjs' },
+      { name: 'Gin-Gonic', detail: 'Golang', icon: 'SiGin' },
+      { name: 'Tailwind', icon: 'SiTailwindcss' },
     ],
   },
   {
@@ -71,50 +40,50 @@ export const SKILL_GROUPS: SkillGroup[] = [
       {
         name: 'AWS',
         detail: 'RDS, CloudWatch, VPC, ECR, ECS, EC2, S3, Lambda, ELB, Fargate',
-        icon: FaAws,
+        icon: 'FaAws',
       },
-      { name: 'Docker & Docker Compose', icon: SiDocker },
-      { name: 'CI / CD', icon: TbInfinity },
-      { name: 'GitHub Actions', icon: SiGithubactions },
-      { name: 'Terraform', icon: SiTerraform },
-      { name: 'GCP', icon: SiGooglecloud },
-      { name: 'Cloudflare', icon: SiCloudflare },
-      { name: 'RabbitMQ', icon: SiRabbitmq },
+      { name: 'Docker & Docker Compose', icon: 'SiDocker' },
+      { name: 'CI / CD', icon: 'TbInfinity' },
+      { name: 'GitHub Actions', icon: 'SiGithubactions' },
+      { name: 'Terraform', icon: 'SiTerraform' },
+      { name: 'GCP', icon: 'SiGooglecloud' },
+      { name: 'Cloudflare', icon: 'SiCloudflare' },
+      { name: 'RabbitMQ', icon: 'SiRabbitmq' },
     ],
   },
   {
     id: 'databases',
     skills: [
-      { name: 'PostgreSQL', icon: SiPostgresql },
-      { name: 'MySQL', icon: SiMysql },
-      { name: 'MongoDB', icon: SiMongodb },
-      { name: 'Redis', icon: SiRedis },
+      { name: 'PostgreSQL', icon: 'SiPostgresql' },
+      { name: 'MySQL', icon: 'SiMysql' },
+      { name: 'MongoDB', icon: 'SiMongodb' },
+      { name: 'Redis', icon: 'SiRedis' },
     ],
   },
   {
     id: 'testing',
     skills: [
-      { name: 'Jest', icon: SiJest },
-      { name: 'Vitest', icon: SiVitest },
-      { name: 'Pytest', icon: SiPytest },
-      { name: 'SuperTest', icon: TbTestPipe },
-      { name: 'Cypress', icon: SiCypress },
+      { name: 'Jest', icon: 'SiJest' },
+      { name: 'Vitest', icon: 'SiVitest' },
+      { name: 'Pytest', icon: 'SiPytest' },
+      { name: 'SuperTest', icon: 'TbTestPipe' },
+      { name: 'Cypress', icon: 'SiCypress' },
     ],
   },
   {
     id: 'ai',
     skills: [
-      { name: 'OpenAI API', icon: TbBrandOpenai },
-      { name: 'Claude', icon: SiClaude },
-      { name: 'GitHub Copilot', icon: SiGithubcopilot },
+      { name: 'OpenAI API', icon: 'TbBrandOpenai' },
+      { name: 'Claude', icon: 'SiClaude' },
+      { name: 'GitHub Copilot', icon: 'SiGithubcopilot' },
     ],
   },
   {
     id: 'other',
     skills: [
-      { name: 'Linux', detail: 'Ubuntu', icon: SiLinux },
-      { name: 'Swagger', icon: SiSwagger },
-      { name: 'Figma', icon: SiFigma },
+      { name: 'Linux', detail: 'Ubuntu', icon: 'SiLinux' },
+      { name: 'Swagger', icon: 'SiSwagger' },
+      { name: 'Figma', icon: 'SiFigma' },
     ],
   },
 ];

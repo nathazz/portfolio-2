@@ -9,7 +9,7 @@ import {
   SourceCodeIcon,
   UserIcon,
   WhatsappIcon,
-} from '@hugeicons/core-free-icons';
+} from '../lib/icons';
 import type { IconSvgElement } from '@hugeicons/react';
 
 export const EMAIL = 'nathas0208@gmail.com';

@@ -1,4 +1,4 @@
-import { ArrowDown01Icon } from '@hugeicons/core-free-icons';
+import { ArrowDown01Icon } from '../../lib/icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { useTranslation } from 'react-i18next';
 import { FAQ } from '../../data/faq';

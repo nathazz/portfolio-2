@@ -10,6 +10,7 @@ Personal portfolio built with React, TypeScript, Vite and Tailwind CSS v4, in a 
 - `npm run lint` runs ESLint
 - `npm run deploy` builds and publishes `dist/` to GitHub Pages
 - `npm run wallpaper` and `npm run cursors` re-render the generated images (see below)
+- `npm run icons` regenerates `src/data/skill-icons.ts` after you add or change a skill's icon
 
 The contact form uses EmailJS and reads `VITE_SERVICE_ID`, `VITE_TEMPLATE_ID` and
 `VITE_PUBLIC_KEY` from `.env`.
@@ -33,7 +34,11 @@ The contact form uses EmailJS and reads `VITE_SERVICE_ID`, `VITE_TEMPLATE_ID` an
 stack), then add its translated copy under `experience.jobs.<id>` in each locale file. Dates are
 formatted per language automatically, and a job with `end: null` is shown as the current one.
 
-**Add a skill:** add it to the right group in `src/data/skills.ts`.
+**Add a skill:** add it to the right group in `src/data/skills.ts`, naming its react-icons
+export (e.g. `icon: 'SiDocker'`), then run `npm run icons`.
+
+**Add a UI icon:** add a line for it to `src/lib/icons.ts` and import it from there. Importing
+from `@hugeicons/core-free-icons` directly would load the whole set (about 8 MB) in development.
 
 ## Styling
 

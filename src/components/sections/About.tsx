@@ -1,4 +1,4 @@
-import { Location01Icon } from '@hugeicons/core-free-icons';
+import { Location01Icon } from '../../lib/icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { useTranslation } from 'react-i18next';
 import { Window } from '../layout/Window';

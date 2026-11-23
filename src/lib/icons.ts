@@ -1,0 +1,28 @@
+/**
+ * Every Hugeicons glyph the site uses, imported one file at a time.
+ * Importing from the package root pulls in all ~4,000 icons (about 8 MB),
+ * which the dev server would load on every page reload. Add new icons here.
+ */
+export { default as Alert02Icon } from '@hugeicons/core-free-icons/Alert02Icon';
+export { default as ArrowDown01Icon } from '@hugeicons/core-free-icons/ArrowDown01Icon';
+export { default as Briefcase01Icon } from '@hugeicons/core-free-icons/Briefcase01Icon';
+export { default as ChatUserIcon } from '@hugeicons/core-free-icons/ChatUserIcon';
+export { default as CheckmarkCircle02Icon } from '@hugeicons/core-free-icons/CheckmarkCircle02Icon';
+export { default as CodeFolderIcon } from '@hugeicons/core-free-icons/CodeFolderIcon';
+export { default as DocumentAttachmentIcon } from '@hugeicons/core-free-icons/DocumentAttachmentIcon';
+export { default as File01Icon } from '@hugeicons/core-free-icons/File01Icon';
+export { default as GithubIcon } from '@hugeicons/core-free-icons/GithubIcon';
+export { default as Home01Icon } from '@hugeicons/core-free-icons/Home01Icon';
+export { default as InternetIcon } from '@hugeicons/core-free-icons/InternetIcon';
+export { default as LanguageSquareIcon } from '@hugeicons/core-free-icons/LanguageSquareIcon';
+export { default as Linkedin01Icon } from '@hugeicons/core-free-icons/Linkedin01Icon';
+export { default as Location01Icon } from '@hugeicons/core-free-icons/Location01Icon';
+export { default as Mail01Icon } from '@hugeicons/core-free-icons/Mail01Icon';
+export { default as Mail02Icon } from '@hugeicons/core-free-icons/Mail02Icon';
+export { default as MailSend01Icon } from '@hugeicons/core-free-icons/MailSend01Icon';
+export { default as Moon02Icon } from '@hugeicons/core-free-icons/Moon02Icon';
+export { default as SecurityIcon } from '@hugeicons/core-free-icons/SecurityIcon';
+export { default as SourceCodeIcon } from '@hugeicons/core-free-icons/SourceCodeIcon';
+export { default as Sun01Icon } from '@hugeicons/core-free-icons/Sun01Icon';
+export { default as UserIcon } from '@hugeicons/core-free-icons/UserIcon';
+export { default as WhatsappIcon } from '@hugeicons/core-free-icons/WhatsappIcon';

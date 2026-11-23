@@ -5,7 +5,7 @@ import {
   InternetIcon,
   LanguageSquareIcon,
   SecurityIcon,
-} from '@hugeicons/core-free-icons';
+} from '../lib/icons';
 import type { IconSvgElement } from '@hugeicons/react';
 
 interface FaqEntry {
