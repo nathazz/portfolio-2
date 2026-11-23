@@ -8,19 +8,17 @@
       name="description"
       content="Nathan, full-stack software developer focused on backend: APIs, distributed systems, integrations and automation."
     />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
     <title>Nathan | Portfolio</title>
     <script>
       // Apply the theme before first paint so the page never flashes the wrong one.
-      // A saved choice wins; otherwise follow the system preference.
+      // A saved choice wins; otherwise start in light mode.
       (function () {
         var theme = null;
         try {
           theme = localStorage.getItem('theme');
         } catch (error) {}
-        if (theme !== 'light' && theme !== 'dark') {
-          theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
+        if (theme !== 'light' && theme !== 'dark') theme = 'light';
         document.documentElement.dataset.theme = theme;
       })();
     </script>
