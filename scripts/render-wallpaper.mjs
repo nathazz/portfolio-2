@@ -488,15 +488,44 @@ function render(format, palette) {
   return output;
 }
 
+const PREVIEW_WIDTH = 24;
+
+/**
+ * A tiny copy of a wallpaper, shown blurred while the full image loads.
+ * At under 1 kB, Vite inlines it straight into the CSS, so it appears on
+ * the very first paint instead of a flat colour.
+ */
+function preview(image) {
+  const shrink = (source, width) => {
+    const target = createCanvas(
+      width,
+      Math.max(1, Math.round((source.height * width) / source.width)),
+    );
+    const context = target.getContext('2d');
+    context.imageSmoothingQuality = 'high';
+    context.drawImage(source, 0, 0, target.width, target.height);
+    return target;
+  };
+
+  // Halve repeatedly so the colours average out instead of picking stray dither pixels.
+  let source = image;
+  while (source.width / 2 > PREVIEW_WIDTH) source = shrink(source, Math.round(source.width / 2));
+  return shrink(source, PREVIEW_WIDTH);
+}
+
 mkdirSync(OUT_DIR, { recursive: true });
 
 for (const [paletteName, palette] of Object.entries(PALETTES)) {
   for (const [formatName, format] of Object.entries(FORMATS)) {
     const started = Date.now();
-    const data = await render(format, palette).encode('png');
-    writeFileSync(join(OUT_DIR, `${paletteName}-${formatName}.png`), data);
+    const name = `${paletteName}-${formatName}`;
+    const image = render(format, palette);
+    const data = await image.encode('png');
+    writeFileSync(join(OUT_DIR, `${name}.png`), data);
+    const small = await preview(image).encode('png');
+    writeFileSync(join(OUT_DIR, `${name}.preview.png`), small);
     console.log(
-      `${paletteName}-${formatName}.png  ${(data.length / 1024).toFixed(0)} kB  ${Date.now() - started} ms`,
+      `${name}.png  ${(data.length / 1024).toFixed(0)} kB, preview ${small.length} B  ${Date.now() - started} ms`,
     );
   }
 }
