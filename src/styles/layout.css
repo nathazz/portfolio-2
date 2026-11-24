@@ -428,3 +428,142 @@
   color: var(--ink-soft);
   font-size: var(--text-fluid-sm);
 }
+
+.penguin {
+  position: fixed;
+  z-index: 40;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inline-size: 3rem;
+  block-size: 3rem;
+  padding: 0;
+  will-change: transform;
+}
+
+.penguin__body,
+.penguin__sprite {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.penguin__sprite {
+  background: url('../assets/penguin/penguin.png') 0 0 / 600% 100% no-repeat;
+  image-rendering: pixelated;
+}
+
+.penguin[data-dir='left'] .penguin__sprite {
+  transform: scaleX(-1);
+}
+
+.penguin[data-state='idle'] .penguin__sprite {
+  animation: penguin-blink 3.4s steps(1) infinite;
+}
+
+.penguin[data-state='walk'] .penguin__sprite {
+  animation: penguin-walk 0.36s steps(1) infinite;
+}
+
+.penguin[data-state='walk'] .penguin__body {
+  animation: penguin-waddle 0.36s steps(2) infinite;
+}
+
+.penguin[data-state='slide'] .penguin__sprite {
+  background-position-x: 80%;
+}
+
+.penguin[data-state='sleep'] .penguin__sprite {
+  background-position-x: 20%;
+}
+
+.penguin[data-state='happy'] .penguin__sprite {
+  background-position-x: 100%;
+}
+
+.penguin[data-state='happy'] .penguin__body {
+  animation: penguin-hop 0.45s ease-out 2;
+}
+
+.penguin::after {
+  position: absolute;
+  inset-block-end: 100%;
+  inset-inline-start: 60%;
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0;
+  text-shadow: 0 1px 0 var(--desk-shade);
+  pointer-events: none;
+}
+
+.penguin[data-state='sleep']::after {
+  color: var(--desk-ink);
+  content: 'z';
+  animation: penguin-float 1.8s ease-out infinite;
+}
+
+.penguin[data-state='happy']::after {
+  color: #ff4f7b;
+  content: '\2665';
+  animation: penguin-float 0.9s ease-out;
+}
+
+@keyframes penguin-blink {
+  0%,
+  92% {
+    background-position-x: 0%;
+  }
+
+  93%,
+  100% {
+    background-position-x: 20%;
+  }
+}
+
+@keyframes penguin-walk {
+  0% {
+    background-position-x: 40%;
+  }
+
+  50% {
+    background-position-x: 60%;
+  }
+}
+
+@keyframes penguin-waddle {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes penguin-hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.9rem);
+  }
+}
+
+@keyframes penguin-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0.3rem);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-0.9rem);
+  }
+}

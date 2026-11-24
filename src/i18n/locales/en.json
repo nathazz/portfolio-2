@@ -1,6 +1,7 @@
 {
   "a11y": {
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "petPenguin": "Pet the penguin"
   },
   "language": {
     "label": "Language"

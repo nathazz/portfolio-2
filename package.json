@@ -13,7 +13,8 @@
     "deploy": "gh-pages -d dist",
     "wallpaper": "node scripts/render-wallpaper.mjs",
     "cursors": "node scripts/render-cursors.mjs",
-    "icons": "node scripts/render-skill-icons.mjs"
+    "icons": "node scripts/render-skill-icons.mjs",
+    "penguin": "node scripts/render-penguin.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

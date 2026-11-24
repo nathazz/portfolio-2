@@ -1,6 +1,7 @@
 {
   "a11y": {
-    "skipToContent": "Pular para o conteúdo"
+    "skipToContent": "Pular para o conteúdo",
+    "petPenguin": "Fazer carinho no pinguim"
   },
   "language": {
     "label": "Idioma"

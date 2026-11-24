@@ -8,6 +8,7 @@ import { Contact } from './components/sections/Contact';
 import { Experience } from './components/sections/Experience';
 import { Hero } from './components/sections/Hero';
 import { Skills } from './components/sections/Skills';
+import { Penguin } from './components/ui/Penguin';
 
 export default function App() {
   const { t } = useTranslation();
@@ -29,6 +30,7 @@ export default function App() {
         </div>
       </main>
       <Footer />
+      <Penguin />
       <Dock />
     </>
   );

@@ -1,6 +1,7 @@
 {
   "a11y": {
-    "skipToContent": "Saltar al contenido"
+    "skipToContent": "Saltar al contenido",
+    "petPenguin": "Acariciar al pingüino"
   },
   "language": {
     "label": "Idioma"
