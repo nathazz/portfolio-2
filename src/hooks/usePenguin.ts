@@ -26,7 +26,8 @@ export function usePenguin() {
 
     const layout = (): { zones: Zone[]; lift: number } => {
       const dock = document.querySelector('.dock__shelf')?.getBoundingClientRect();
-      if (!dock) return { zones: [[MARGIN, maxX()]], lift: 0 };
+      const dockShown = dock && dock.top < window.innerHeight - 1;
+      if (!dock || !dockShown) return { zones: [[MARGIN, maxX()]], lift: 0 };
 
       const left: Zone = [MARGIN, dock.left - SIZE - MARGIN];
       const right: Zone = [dock.right + MARGIN, maxX()];
@@ -42,13 +43,14 @@ export function usePenguin() {
     const pickSpot = () => {
       const { zones, lift } = layout();
       const [from, to] = zones[Math.floor(Math.random() * zones.length)];
-      element.style.bottom = `${lift}px`;
+      element.style.bottom = `${Math.max(0, lift)}px`;
       return between(from, Math.max(from, to));
     };
 
     const hiddenByDock = (at: number) => {
       const dock = document.querySelector('.dock__shelf')?.getBoundingClientRect();
-      if (!dock || element.style.bottom !== '0px') return false;
+      if (!dock || dock.top >= window.innerHeight - 1 || element.style.bottom !== '0px')
+        return false;
       return at + SIZE > dock.left && at < dock.right;
     };
 
@@ -108,6 +110,7 @@ export function usePenguin() {
       }
 
       x = Math.min(Math.max(x, MARGIN), maxX());
+      element.style.bottom = `${Math.max(0, layout().lift)}px`;
       render();
       frameId = requestAnimationFrame(tick);
     };

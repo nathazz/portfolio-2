@@ -195,6 +195,18 @@
   display: flex;
   justify-content: center;
   pointer-events: none;
+  transition:
+    transform 260ms ease,
+    opacity 260ms ease,
+    visibility 260ms;
+}
+
+@media (max-width: 1366px), (max-height: 900px) {
+  .dock[data-at-top] {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(calc(100% + 1rem));
+  }
 }
 
 .dock__shelf {
