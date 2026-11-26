@@ -22,7 +22,8 @@ export function usePenguin() {
     if (!element) return;
 
     const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const maxX = () => Math.max(MARGIN, window.innerWidth - SIZE - MARGIN);
+    const maxX = () => Math.max(MARGIN, document.documentElement.clientWidth - SIZE - MARGIN);
+    const clampX = (value: number) => Math.min(Math.max(value, MARGIN), maxX());
 
     const layout = (): { zones: Zone[]; lift: number } => {
       const dock = document.querySelector('.dock__shelf')?.getBoundingClientRect();
@@ -44,7 +45,7 @@ export function usePenguin() {
       const { zones, lift } = layout();
       const [from, to] = zones[Math.floor(Math.random() * zones.length)];
       element.style.bottom = `${Math.max(0, lift)}px`;
-      return between(from, Math.max(from, to));
+      return clampX(between(from, Math.max(from, to)));
     };
 
     const hiddenByDock = (at: number) => {
@@ -96,6 +97,7 @@ export function usePenguin() {
           enter('idle', between(1500, 3000));
         } else {
           const step = (state === 'walk' ? WALK_SPEED : SLIDE_SPEED) * seconds;
+          target = clampX(target);
           const remaining = target - x;
           if (Math.abs(remaining) <= step) {
             x = target;
@@ -109,7 +111,7 @@ export function usePenguin() {
         else chooseNext();
       }
 
-      x = Math.min(Math.max(x, MARGIN), maxX());
+      x = clampX(x);
       element.style.bottom = `${Math.max(0, layout().lift)}px`;
       render();
       frameId = requestAnimationFrame(tick);
