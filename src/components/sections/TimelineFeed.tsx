@@ -111,7 +111,7 @@ function PostItem({ item, now, latest }: { item: FeedViewPost; now: Date; latest
       <article className="post__body">
         <header className="post__head">
           <time dateTime={post.record.createdAt} className="font-semibold">
-            {formatPostDate(createdAt, now, i18n.language)}
+            {formatPostDate(createdAt, i18n.language)}
           </time>
           <span className="text-ink-faint">{formatRelative(createdAt, now, i18n.language)}</span>
         </header>

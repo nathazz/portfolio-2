@@ -35,12 +35,11 @@ export function formatRelative(date: Date, now: Date, locale: string): string {
     ? format.format(Math.round(seconds / match[1]), match[0])
     : format.format(0, 'second');
 }
-export function formatPostDate(date: Date, now: Date, locale: string): string {
-  const sameYear = date.getFullYear() === now.getFullYear();
 
+export function formatPostDate(date: Date, locale: string): string {
   return new Intl.DateTimeFormat(locale, {
     day: 'numeric',
     month: 'short',
-    year: sameYear ? undefined : 'numeric',
+    year: 'numeric',
   }).format(date);
 }
