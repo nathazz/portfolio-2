@@ -91,6 +91,12 @@
     background: linear-gradient(180deg, var(--glass-sheen), transparent);
   }
 
+  .btn--small {
+    min-block-size: 2.1rem;
+    padding: 0.35em 1em;
+    font-size: var(--text-fluid-sm);
+  }
+
   .btn--icon {
     inline-size: 2.5rem;
     min-block-size: 2.5rem;
@@ -157,6 +163,10 @@
 
   .orb--leaf {
     --orb: #5cba1c;
+  }
+
+  .orb--danger {
+    --orb: #e2463b;
   }
 
   .segmented {

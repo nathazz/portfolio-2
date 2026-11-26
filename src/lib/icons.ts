@@ -1,3 +1,4 @@
+export { default as Activity01Icon } from '@hugeicons/core-free-icons/Activity01Icon';
 export { default as Alert02Icon } from '@hugeicons/core-free-icons/Alert02Icon';
 export { default as ArrowDown01Icon } from '@hugeicons/core-free-icons/ArrowDown01Icon';
 export { default as Briefcase01Icon } from '@hugeicons/core-free-icons/Briefcase01Icon';
@@ -16,8 +17,11 @@ export { default as Mail01Icon } from '@hugeicons/core-free-icons/Mail01Icon';
 export { default as Mail02Icon } from '@hugeicons/core-free-icons/Mail02Icon';
 export { default as MailSend01Icon } from '@hugeicons/core-free-icons/MailSend01Icon';
 export { default as Moon02Icon } from '@hugeicons/core-free-icons/Moon02Icon';
+export { default as RefreshIcon } from '@hugeicons/core-free-icons/RefreshIcon';
+export { default as RepeatIcon } from '@hugeicons/core-free-icons/RepeatIcon';
 export { default as SecurityIcon } from '@hugeicons/core-free-icons/SecurityIcon';
 export { default as SourceCodeIcon } from '@hugeicons/core-free-icons/SourceCodeIcon';
 export { default as Sun01Icon } from '@hugeicons/core-free-icons/Sun01Icon';
+export { default as TranslateIcon } from '@hugeicons/core-free-icons/TranslateIcon';
 export { default as UserIcon } from '@hugeicons/core-free-icons/UserIcon';
 export { default as WhatsappIcon } from '@hugeicons/core-free-icons/WhatsappIcon';

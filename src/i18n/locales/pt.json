@@ -16,6 +16,7 @@
     "experience": "Experiência",
     "skills": "Skills",
     "about": "Sobre",
+    "timeline": "Timeline",
     "contact": "Contato"
   },
   "hero": {
@@ -109,6 +110,22 @@
       "other": "Outros"
     },
     "status": "{{count}} tecnologias"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "Notas e novidades",
+    "reposted": "Repostado",
+    "updated": "Atualizado {{time}}",
+    "offline": "Não foi possível atualizar",
+    "loading": "Carregando…",
+    "refresh": "Atualizar posts",
+    "errorTitle": "Não foi possível carregar a timeline",
+    "errorText": "Algo deu errado ao carregar as novidades. Tente de novo em instantes.",
+    "retry": "Tentar de novo",
+    "emptyTitle": "Nada publicado ainda",
+    "emptyText": "Novidades vão aparecer aqui em breve.",
+    "loadMore": "Carregar posts antigos",
+    "translate": "Traduzir"
   },
   "about": {
     "title": "Sobre",

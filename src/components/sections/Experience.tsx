@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { JOBS, type Job, type JobCopy } from '../../data/experience';
-import { formatYearMonth } from '../../lib/format';
+import { formatYearMonth } from '../../utils/format';
 import { Window } from '../layout/Window';
 
 function Period({ start, end }: Pick<Job, 'start' | 'end'>) {

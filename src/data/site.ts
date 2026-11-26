@@ -1,4 +1,5 @@
 import {
+  Activity01Icon,
   Briefcase01Icon,
   File01Icon,
   GithubIcon,
@@ -12,8 +13,10 @@ import {
 } from '../lib/icons';
 import type { IconSvgElement } from '@hugeicons/react';
 
+export const OWNER_NAME = 'Nathan';
 export const EMAIL = 'nathas0208@gmail.com';
 export const GITHUB_USERNAME = 'nathazz';
+export const BLUESKY_HANDLE = 'nathazz.bsky.social';
 export const RESUME_URL =
   'https://drive.google.com/drive/folders/1iyZk7tzUxNuwv0AXRFAcBowORuKGVl9q?usp=sharing';
 
@@ -26,6 +29,7 @@ export const SECTIONS = [
   { id: 'experience', icon: Briefcase01Icon, color: '#1d7fe0' },
   { id: 'skills', icon: SourceCodeIcon, color: '#3aa53a' },
   { id: 'about', icon: UserIcon, color: '#8a4fd8' },
+  { id: 'timeline', icon: Activity01Icon, color: '#0a85ff' },
   { id: 'contact', icon: Mail01Icon, color: '#e8862a' },
 ] as const;
 

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { HOME_TIME_ZONE } from '../../data/site';
 import { useNow } from '../../hooks/useNow';
-import { formatTimeInZone } from '../../lib/format';
+import { formatTimeInZone } from '../../utils/format';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 import { ThemeToggle } from '../ui/ThemeToggle';
 

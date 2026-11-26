@@ -8,19 +8,18 @@ export function useActiveSection<Id extends string>(ids: readonly Id[]): Id | nu
 
     const observer = new IntersectionObserver(
       (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) visible.add(entry.target.id);
-          else visible.delete(entry.target.id);
-        }
+        entries.forEach(({ isIntersecting, target }) =>
+          isIntersecting ? visible.add(target.id) : visible.delete(target.id),
+        );
         setActive(ids.find((id) => visible.has(id)) ?? null);
       },
       { rootMargin: '-40% 0px -60% 0px' },
     );
 
-    for (const id of ids) {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    }
+    ids
+      .map((id) => document.getElementById(id))
+      .filter((element) => element !== null)
+      .forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
   }, [ids]);

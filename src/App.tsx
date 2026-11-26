@@ -9,6 +9,7 @@ import { Experience } from './components/sections/Experience';
 import { Hero } from './components/sections/Hero';
 import { Skills } from './components/sections/Skills';
 import { Penguin } from './components/ui/Penguin';
+import { Timeline } from './components/sections/Timeline';
 
 export default function App() {
   const { t } = useTranslation();
@@ -26,6 +27,7 @@ export default function App() {
           <Experience />
           <Skills />
           <About />
+          <Timeline />
           <Contact />
         </div>
       </main>

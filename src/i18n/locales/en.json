@@ -16,6 +16,7 @@
     "experience": "Experience",
     "skills": "Skills",
     "about": "About",
+    "timeline": "Timeline",
     "contact": "Contact"
   },
   "hero": {
@@ -110,6 +111,22 @@
       "other": "Other"
     },
     "status": "{{count}} skills"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "Notes & updates",
+    "reposted": "Reposted",
+    "updated": "Updated {{time}}",
+    "offline": "Couldn't refresh",
+    "loading": "Loading…",
+    "refresh": "Refresh posts",
+    "errorTitle": "Couldn't load the timeline",
+    "errorText": "Something went wrong while loading the latest updates. Try again in a moment.",
+    "retry": "Try again",
+    "emptyTitle": "Nothing posted yet",
+    "emptyText": "New updates will show up here soon.",
+    "loadMore": "Load older posts",
+    "translate": "Translate"
   },
   "about": {
     "title": "About",

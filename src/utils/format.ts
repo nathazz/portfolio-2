@@ -15,3 +15,23 @@ export function formatTimeInZone(date: Date, timeZone: string, locale: string): 
     date,
   );
 }
+
+const UNITS: Array<[Intl.RelativeTimeFormatUnit, number]> = [
+  ['year', 31_536_000],
+  ['month', 2_592_000],
+  ['week', 604_800],
+  ['day', 86_400],
+  ['hour', 3_600],
+  ['minute', 60],
+];
+
+export function formatRelative(date: Date, now: Date, locale: string): string {
+  const seconds = Math.round((date.getTime() - now.getTime()) / 1000);
+  const format = new Intl.RelativeTimeFormat(locale, { numeric: 'auto', style: 'short' });
+
+  const match = UNITS.find(([, size]) => Math.abs(seconds) >= size);
+
+  return match
+    ? format.format(Math.round(seconds / match[1]), match[0])
+    : format.format(0, 'second');
+}
