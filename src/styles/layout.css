@@ -590,18 +590,6 @@
   background: linear-gradient(180deg, var(--pane), var(--inset));
 }
 
-.feed-scroll {
-  max-block-size: min(38rem, 70svh);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-color: var(--rail) transparent;
-  scrollbar-width: thin;
-}
-
-.feed > li + li {
-  border-block-start: 1px solid var(--rule);
-}
-
 .avatar {
   display: grid;
   place-items: center;
@@ -618,12 +606,82 @@
   object-fit: cover;
 }
 
+.feed-scroll {
+  max-block-size: min(38rem, 70svh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--rail) transparent;
+  scrollbar-width: thin;
+}
+
+.feed {
+  padding-block: 0.5rem;
+}
+
 .post {
+  position: relative;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 0.75rem;
-  padding: 0.85rem var(--spacing-fluid-s);
+  grid-template-columns: 1rem minmax(0, 1fr);
+  column-gap: var(--spacing-fluid-xs);
+  padding: 0.75rem var(--spacing-fluid-s);
   transition: background-color 150ms ease;
+}
+
+.post::before {
+  position: absolute;
+  inset-block: calc(0.75rem + 1.6rem) -0.6rem;
+  inset-inline-start: calc(var(--spacing-fluid-s) + 0.5rem - 1px);
+  inline-size: 2px;
+  border-radius: 1px;
+  background: var(--rail);
+  content: '';
+}
+
+.post:last-child::before {
+  display: none;
+}
+
+.post__rail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block-start: 0.4rem;
+}
+
+.post__marker {
+  position: relative;
+  inline-size: 0.7rem;
+  block-size: 0.7rem;
+  border: 2px solid color-mix(in oklab, var(--accent), transparent 25%);
+  border-radius: 50%;
+  background: var(--pane);
+  box-shadow: 0 0 0 3px var(--pane);
+}
+
+.post__marker--latest {
+  border-color: color-mix(in oklab, #5cba1c, black 25%);
+  background:
+    radial-gradient(circle at 35% 30%, rgb(255 255 255 / 0.9) 0 18%, transparent 50%), #5cba1c;
+}
+
+.post__marker--latest::after {
+  position: absolute;
+  inset: -2px;
+  border: 2px solid #5cba1c;
+  border-radius: 50%;
+  content: '';
+  animation: marker-pulse 2.4s ease-out infinite;
+}
+
+.post--ghost .avatar {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ghost-dot {
+  inline-size: 0.7rem;
+  block-size: 0.7rem;
+  border-radius: 50%;
 }
 
 .post:hover {
@@ -632,10 +690,8 @@
 
 .post__context {
   display: flex;
-  grid-column: 2;
   gap: 0.35rem;
   align-items: center;
-  margin-block-end: 0.2rem;
   color: var(--ink-faint);
   font-size: var(--text-fluid-xs);
   font-weight: 600;
@@ -654,17 +710,10 @@
 
 .post__head {
   display: flex;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0 0.6rem;
   align-items: baseline;
-  min-inline-size: 0;
   font-size: var(--text-fluid-sm);
-}
-
-.post__time {
-  flex: none;
-  margin-inline-start: auto;
-  color: var(--ink-faint);
-  font-size: var(--text-fluid-xs);
 }
 
 .post__text {
@@ -787,11 +836,7 @@
   -webkit-line-clamp: 2;
 }
 
-.post--ghost .avatar {
-  border-color: transparent;
-  box-shadow: none;
-}
-
+.ghost-dot,
 .post--ghost .avatar,
 .ghost-line {
   background:
@@ -868,6 +913,18 @@
     background-position:
       -200% 0,
       0 0;
+  }
+}
+
+@keyframes marker-pulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(2.2);
   }
 }
 

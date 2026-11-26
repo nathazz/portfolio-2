@@ -115,7 +115,7 @@
   "timeline": {
     "title": "Timeline",
     "subtitle": "Notas y novedades",
-    "reposted": "Reposteado",
+    "repostedFrom": "Reposteado de {{name}}",
     "updated": "Actualizado {{time}}",
     "offline": "No se pudo actualizar",
     "loading": "Cargando…",

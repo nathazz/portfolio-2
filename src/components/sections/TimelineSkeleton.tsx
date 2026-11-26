@@ -5,7 +5,9 @@ export function FeedSkeleton() {
     <ul className="feed" aria-hidden="true">
       {[0, 1, 2].map((key) => (
         <li key={key} className="post post--ghost">
-          <span className="avatar" />
+          <span className="post__rail">
+            <span className="ghost-dot" />
+          </span>
           <div className="post__body">
             <span className="ghost-line w-1/3" />
             <span className="ghost-line w-full" />

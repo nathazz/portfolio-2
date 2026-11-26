@@ -2,7 +2,7 @@ import { HugeiconsIcon } from '@hugeicons/react';
 import type { CSSProperties, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BLUESKY_HANDLE, OWNER_NAME } from '../../data/site';
-import { formatRelative } from '../../utils/format';
+import { formatPostDate, formatRelative } from '../../utils/format';
 import { splitRichText } from '../../utils/richText';
 import { baseLanguage, needsTranslation, translateUrl } from '../../utils/translate';
 import { hostname } from '../../utils/url';
@@ -95,30 +95,35 @@ function Avatar({ src, name }: { src?: string; name: string }) {
   );
 }
 
-function PostItem({ item, now }: { item: FeedViewPost; now: Date }) {
+function PostItem({ item, now, latest }: { item: FeedViewPost; now: Date; latest: boolean }) {
   const { t, i18n } = useTranslation();
   const { post, reason } = item;
-  const name = post.author.displayName || post.author.handle;
   const reposted = reason?.$type === 'app.bsky.feed.defs#reasonRepost';
   const language = baseLanguage(i18n.language);
+  const createdAt = new Date(post.record.createdAt);
   const translatable = !!post.record.text && needsTranslation(post.record.langs, language);
 
   return (
     <li className="post">
-      {reposted && (
-        <p className="post__context">
-          <HugeiconsIcon icon={RepeatIcon} aria-hidden="true" />
-          {t('timeline.reposted')}
-        </p>
-      )}
-      <Avatar src={post.author.avatar} name={name} />
+      <span className="post__rail" aria-hidden="true">
+        <span className={latest ? 'post__marker post__marker--latest' : 'post__marker'} />
+      </span>
       <article className="post__body">
         <header className="post__head">
-          <strong className="truncate">{name}</strong>
-          <time dateTime={post.record.createdAt} className="post__time">
-            {formatRelative(new Date(post.record.createdAt), now, i18n.language)}
+          <time dateTime={post.record.createdAt} className="font-semibold">
+            {formatPostDate(createdAt, now, i18n.language)}
           </time>
+          <span className="text-ink-faint">{formatRelative(createdAt, now, i18n.language)}</span>
         </header>
+
+        {reposted && (
+          <p className="post__context">
+            <HugeiconsIcon icon={RepeatIcon} aria-hidden="true" />
+            {t('timeline.repostedFrom', {
+              name: post.author.displayName || post.author.handle,
+            })}
+          </p>
+        )}
 
         {post.record.text && <RichText text={post.record.text} facets={post.record.facets} />}
         {translatable && (
@@ -156,8 +161,8 @@ export default function TimelineFeed() {
   const now = useNow(60_000);
   const profile = useProfile(BLUESKY_HANDLE);
   const feed = useAuthorFeed(BLUESKY_HANDLE);
-  const items = feed.data?.pages.flatMap((page) => page.feed) ?? [];
   const name = profile.data?.displayName || OWNER_NAME;
+  const items = feed.data?.pages.flatMap((page) => page.feed) ?? [];
 
   const status = (
     <>
@@ -213,8 +218,13 @@ export default function TimelineFeed() {
     body = (
       <>
         <ul className="feed">
-          {items.map((item) => (
-            <PostItem key={`${item.post.cid}-${item.reason?.$type ?? ''}`} item={item} now={now} />
+          {items.map((item, index) => (
+            <PostItem
+              key={`${item.post.cid}-${item.reason?.$type ?? ''}`}
+              item={item}
+              now={now}
+              latest={index === 0}
+            />
           ))}
         </ul>
         {feed.hasNextPage && (
